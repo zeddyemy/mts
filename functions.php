@@ -57,3 +57,6 @@ if (!function_exists('mts_setup')) {
     }
 }
 add_action('after_setup_theme', 'mts_setup');
+
+// Load Clarusmod Customizer
+include_once get_template_directory() . '/inc/customizer/customizer.php';
