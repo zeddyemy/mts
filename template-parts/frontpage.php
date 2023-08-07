@@ -11,5 +11,13 @@
 ?>
 
 <section class="wrapper col-12">
-    Front Page
+    <?php
+    get_template_part('template-parts/frontpage-parts/home-section', get_post_format());
+
+    get_template_part('template-parts/frontpage-parts/about-section', get_post_format());
+    get_template_part('template-parts/frontpage-parts/goal-section', get_post_format());
+    get_template_part('template-parts/frontpage-parts/services-section', get_post_format());
+    get_template_part('template-parts/frontpage-parts/blog-section', get_post_format());
+    get_template_part('template-parts/frontpage-parts/portfolio-section', get_post_format());
+    ?>
 </section>
