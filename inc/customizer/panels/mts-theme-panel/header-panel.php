@@ -14,3 +14,5 @@ $wp_customize->add_panel($headerPanel);
 /**=====================================
  * CHILD PANELS / SECTIONS
 =======================================*/
+// site identity Section with its settings and controls.
+include_once dirname( __FILE__ ) . '/header-panel/site-identity.php';
