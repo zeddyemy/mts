@@ -24,15 +24,8 @@ class initialize_clarusmod_customizer_settings {
         $wp_customize->register_panel_type('Clarusmod_Customize_Panel');
         $wp_customize->register_section_type('Clarusmod_Customize_Section');
 
-        // MTS Theme Settings panel
-        $mtsThemePanel = new Clarusmod_Customize_Panel($wp_customize, 'mtsTheme_panel_id', array(
-            'title' => 'MTS Theme Settings',
-            'priority' => 10,
-        ));
-        $wp_customize->add_panel($mtsThemePanel);
-
-        /* #1.1 child panels, sections, settings, and controls for The MTS Theme Panel above */
-        include_once trailingslashit(dirname(__FILE__)) . 'mts-theme-panels/mts-theme-panels.php';
+        // MTS Theme Panel
+        include_once trailingslashit(dirname(__FILE__)) . 'panels/mts-theme-panels.php';
     }
 }
 

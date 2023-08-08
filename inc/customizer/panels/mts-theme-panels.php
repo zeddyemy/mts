@@ -1,0 +1,16 @@
+<?php
+
+/**=====================================
+ * MTS THEME SETTINGS PANEL
+=======================================*/
+$mtsThemePanel = new Clarusmod_Customize_Panel($wp_customize, 'mtsTheme_panel_id', array(
+    'title' => 'MTS Theme Settings',
+    'priority' => 10,
+));
+$wp_customize->add_panel($mtsThemePanel);
+
+
+/**=====================================
+ * CHILD PANELS / SECTIONS
+=======================================*/
+
