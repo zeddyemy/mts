@@ -13,4 +13,5 @@ $wp_customize->add_panel($mtsThemePanel);
 /**=====================================
  * CHILD PANELS / SECTIONS
 =======================================*/
-
+// Colors Panel
+include_once dirname(__FILE__) . '/mts-theme-panel/colors-panel.php';
