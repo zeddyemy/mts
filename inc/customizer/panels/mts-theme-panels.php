@@ -18,3 +18,6 @@ include_once dirname(__FILE__) . '/mts-theme-panel/colors-panel.php';
 
 // Header Panel
 include_once dirname(__FILE__) . '/mts-theme-panel/header-panel.php';
+
+// Frontpage Panel
+include_once dirname(__FILE__) . '/mts-theme-panel/frontpage-panel.php';
