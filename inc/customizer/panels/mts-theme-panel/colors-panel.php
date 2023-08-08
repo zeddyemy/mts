@@ -16,3 +16,9 @@ $wp_customize->add_panel($colorsPanel);
 =======================================*/
 // base colors Section with its settings and controls.
 include_once dirname(__FILE__) . '/colors-panel/base-colors.php';
+
+// header colors Section with its settings and controls.
+include_once dirname(__FILE__) . '/colors-panel/header-colors.php';
+
+// footer colors Section with its settings and controls.
+include_once dirname(__FILE__) . '/colors-panel/footer-colors.php';
