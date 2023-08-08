@@ -16,3 +16,6 @@ $wp_customize->add_panel($headerPanel);
 =======================================*/
 // site identity Section with its settings and controls.
 include_once dirname( __FILE__ ) . '/header-panel/site-identity.php';
+
+// Navigation Menu Section with its settings and controls.
+include_once dirname( __FILE__ ) . '/header-panel/nav-menu.php';
