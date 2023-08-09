@@ -62,5 +62,8 @@ add_action('after_setup_theme', 'mts_setup');
 // Helper Functions
 require get_template_directory() . '/inc/functions/helper-functions.php';
 
+// LazyLoad Images.
+require get_template_directory() . '/inc/functions/lazyload.php';
+
 // Load Clarusmod Customizer
 include_once get_template_directory() . '/inc/customizer/customizer.php';

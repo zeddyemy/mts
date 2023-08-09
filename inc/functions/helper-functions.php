@@ -21,7 +21,7 @@ function mts_menu() {
 add_action( 'init', 'mts_menu' );
 
 // FUNCTION TO FETCH POST THUMBNAIL
-function theme_post_thumb() {
+function theme_post_thumb($class) {
 
     $id = get_post_thumbnail_id(); // gets the id of the current post_thumbnail (in the loop)
     $alt = get_the_title($id); // gets the post thumbnail title
@@ -29,13 +29,13 @@ function theme_post_thumb() {
     $defaultImgPlaceholder = get_template_directory_uri() . '/assets/img/placeholder.jpg';
 
     if ( has_post_thumbnail() ) {
-        the_post_thumbnail('small-thumbnail', array('class' => 'pick-color lazyload'));
+        the_post_thumbnail('small-thumbnail', array('class' => 'lazyload ' . $class));
     }
     elseif ( $userSetImgPlaceholder == true ) {
-        ?> <img class="lazyload pick-color" src="<?php echo $userSetImgPlaceholder ?>" data-src=" <?php echo $userSetImgPlaceholder ?> " alt=" <?php echo $alt ?> " /> <?php
+        ?> <img class="lazyload" src="<?php echo $userSetImgPlaceholder ?>" data-src=" <?php echo $userSetImgPlaceholder ?> " alt=" <?php echo $alt ?> " /> <?php
     }
     else {
-        ?> <img class="lazyload pick-color" src="<?php echo $defaultImgPlaceholder ?>" data-src=" <?php echo $defaultImgPlaceholder ?> " alt=" <?php echo $alt ?> " /> <?php
+        ?> <img class="lazyload" src="<?php echo $defaultImgPlaceholder ?>" data-src=" <?php echo $defaultImgPlaceholder ?> " alt=" <?php echo $alt ?> " /> <?php
     }
 }
 
