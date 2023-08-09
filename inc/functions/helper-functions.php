@@ -83,3 +83,11 @@ function mts_author_url($url, $name) {
 			'<a href="' . esc_url($url) . '" target="_blank" rel="noopener noreferrer" title="' . esc_attr__($name, 'mts') . '">' . esc_html__($name, 'mts') . '</a>'
 		) . '</div>';
 }
+
+// Customizer assets url
+function mts_theme_assets($type = '') {
+    $assetsPath = !empty($type) ? 'assets/' . $type : 'assets';
+    $url = trailingslashit(get_template_directory_uri()) . $assetsPath;
+    
+    return trailingslashit($url);
+}
