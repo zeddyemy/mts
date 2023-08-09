@@ -58,6 +58,9 @@ if (!function_exists('mts_setup')) {
 }
 add_action('after_setup_theme', 'mts_setup');
 
+// REMOVE WP-EMOJI JAVASCRIPT & CSS
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
 
 // Helper Functions
 require get_template_directory() . '/inc/functions/helper-functions.php';
