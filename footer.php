@@ -16,6 +16,12 @@
 
 
 <?php wp_footer(); ?>
+<script>
+    AOS.init({
+        duration: 900,
+        once: false,
+    });
+</script>
 
 </body>
 
