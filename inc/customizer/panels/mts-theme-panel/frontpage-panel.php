@@ -20,3 +20,9 @@ include_once dirname(__FILE__) . '/frontpage-panel/about-section.php';
 
 // Goal Section with its settings and controls.
 include_once dirname(__FILE__) . '/frontpage-panel/goal-section.php';
+
+// services Section with its settings and controls.
+include_once dirname(__FILE__) . '/frontpage-panel/services-section.php';
+
+// "Other settings" Section with its settings and controls.
+include_once dirname(__FILE__) . '/frontpage-panel/other-settings-section.php';
