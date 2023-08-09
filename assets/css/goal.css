@@ -1,0 +1,13 @@
+#goal {
+    background-color: black;
+}
+#goal>.container {
+    display: flex;
+    flex-wrap: wrap;
+    clear: both;
+    width: 100%;
+}
+.imgBg {
+    background-image: url(../img/blog-1.jpg);
+    height: 400px;
+}

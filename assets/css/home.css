@@ -1,0 +1,40 @@
+#home {
+    --home-height: 350px;
+    height: var(--home-height);
+}
+#home>*, #goal>* {
+    color: #e9e9e9;
+}
+#home h1 {
+    font-size: 1.9em;
+}
+.slide {
+    height: var(--home-height);
+    overflow-y: hidden;
+}
+.slide .slideCard {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+    height: 100%;
+}
+.slideCard img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    border-style: none;
+}
+.slideContent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    align-items: normal;
+    padding: 0px var(--site-pad);
+    background-color: #05050570;
+    gap: 5px 0px;
+}
+#slideControl {
+    display: none;
+}

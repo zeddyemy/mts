@@ -1,0 +1,37 @@
+.blogCards {
+    grid-template-columns: 1fr;
+}
+@media screen and (min-width: 576px) {
+    .blogCards {
+        grid-template-columns: 1fr 1fr;
+    }
+    .blogCard:nth-child(1) {
+        grid-column: 1 / span 2;
+    }
+}
+@media screen and (min-width: 992px) {
+    .blogCards {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+.blogCard {
+    min-height: 23.75rem;
+}
+.blogCard>.cardImg {
+    border-radius: var(--round-conners);
+    margin: 0px;
+}
+.blogCard .cardBody {
+    left: 0;
+    bottom: 0;
+    padding: 1.5rem;
+    color: #e9e9e9;
+    position: absolute;
+    pointer-events: auto;
+}
+.blogCard .cardBody .title {
+    font-size: calc(1.25625rem + .075vw);
+}
+.blogCard:nth-child(1) .cardBody .title {
+    font-size: calc(1.3125rem + .75vw);
+}
