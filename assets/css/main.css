@@ -20,7 +20,7 @@
     background-color: var(--box-background);
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--theme-color);
+    background: var(--theme-clr);
     border-radius: 4px;
 }
 :root {
