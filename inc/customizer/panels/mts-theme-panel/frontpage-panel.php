@@ -15,5 +15,8 @@ $wp_customize->add_panel($frontpagePanel);
 /**=====================================
  * CHILD PANELS / SECTIONS
 =======================================*/
-// site identity Section with its settings and controls.
+// About Section with its settings and controls.
 include_once dirname(__FILE__) . '/frontpage-panel/about-section.php';
+
+// Goal Section with its settings and controls.
+include_once dirname(__FILE__) . '/frontpage-panel/goal-section.php';
