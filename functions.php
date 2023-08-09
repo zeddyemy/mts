@@ -74,5 +74,8 @@ require get_template_directory() . '/inc/functions/enqueues.php';
 // LazyLoad Images.
 require get_template_directory() . '/inc/functions/lazyload.php';
 
+// CUSTOM POST TYPES (CPT)
+require get_template_directory() . '/inc/custom-post-type/service-post-type.php';
+
 // Load Clarusmod Customizer
 include_once get_template_directory() . '/inc/customizer/customizer.php';
