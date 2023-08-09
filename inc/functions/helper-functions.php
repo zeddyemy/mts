@@ -21,7 +21,7 @@ function mts_menu() {
 add_action( 'init', 'mts_menu' );
 
 // FUNCTION TO FETCH POST THUMBNAIL
-function theme_post_thumb($class) {
+function theme_post_thumb($class='') {
 
     $id = get_post_thumbnail_id(); // gets the id of the current post_thumbnail (in the loop)
     $alt = get_the_title($id); // gets the post thumbnail title
