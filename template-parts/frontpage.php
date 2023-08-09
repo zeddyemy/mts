@@ -13,8 +13,8 @@
 
 */
 
-    $toggle_about_sec  = get_theme_mod('toggle_about_sec');
-    $toggle_goal_sec  = get_theme_mod('toggle_goal_sec');
+    $toggle_about_sec  = get_theme_mod('toggle_about_sec', 'true');
+    $toggle_goal_sec  = get_theme_mod('toggle_goal_sec', 'true');
 ?>
 
 <section class="wrapper col-12">
