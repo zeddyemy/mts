@@ -39,7 +39,7 @@ function get_default_card() { ?>
     <div class="card blogCard" data-aos="zoom-in" data-aos-easing="ease-in-out-quart">
         <div class="fitImg cardImg">
             <a href="<?php the_permalink() ?>">
-                <?php theme_post_thumb('lazyload'); ?>
+                <?php theme_post_thumb(); ?>
             </a>
         </div>
         <div class="ovrLay">
