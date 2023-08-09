@@ -85,7 +85,7 @@ function mts_author_url($url, $name) {
 }
 
 // Customizer assets url
-function mts_theme_assets($type = '') {
+function get_mts_assets($type = '') {
     $assetsPath = !empty($type) ? 'assets/' . $type : 'assets';
     $url = trailingslashit(get_template_directory_uri()) . $assetsPath;
     
