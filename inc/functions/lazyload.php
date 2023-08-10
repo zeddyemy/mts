@@ -33,10 +33,7 @@ function modify_post_thumbnail_html($html, $post_id, $post_thumbnail_id, $size, 
 add_filter('post_thumbnail_html', 'modify_post_thumbnail_html', 99, 5);
 
 
-
 function lazyload_scripts() {
-
-	wp_enqueue_script('lazysizes', get_template_directory_uri().'/assets/js/lazysizes.min.5.3.0.js');
-
+	wp_enqueue_script('lazysizes', get_mts_assets('library/lazysizes').'lazysizes.min.5.3.0.js');
 }
 add_action( 'wp_enqueue_scripts', 'lazyload_scripts' );
