@@ -1,11 +1,11 @@
 <?php
 
-$service_section_title = get_theme_mod('service_section_title', 'Our Services');
+global $mtsThemeMods;
 
 $service_ids = array(
-    get_theme_mod('frontpage_service_card_1', 0),
-    get_theme_mod('frontpage_service_card_2', 0),
-    get_theme_mod('frontpage_service_card_3', 0),
+    $mtsThemeMods['frontpage_service_card_1'],
+    $mtsThemeMods['frontpage_service_card_2'],
+    $mtsThemeMods['frontpage_service_card_3'],
 );
 
 // Custom query to retrieve services
@@ -20,7 +20,7 @@ $services_query = new WP_Query(array(
 <section id="services" class="services">
     <div class="container col-12">
         <div class="secTitle flex flexCenter row" data-aos="zoom-in" data-aos-easing="ease-in-out-quart">
-            <span class="title"> <?php echo $service_section_title; ?> </span>
+            <span class="title"> <?php echo $mtsThemeMods['service_section_title']; ?> </span>
         </div>
         <?php if ($services_query->have_posts()) : ?>
             <div class="grid theServices">

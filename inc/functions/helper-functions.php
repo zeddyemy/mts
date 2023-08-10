@@ -22,9 +22,10 @@ add_action( 'init', 'mts_menu' );
 // FUNCTION TO FETCH POST THUMBNAIL
 function theme_post_thumb($class='') {
 
+    global $mtsThemeMods;
     $id = get_post_thumbnail_id(); // gets the id of the current post_thumbnail (in the loop)
     $alt = get_the_title($id); // gets the post thumbnail title
-    $userSetImgPlaceholder = get_theme_mod('placeholder_img');
+    $userSetImgPlaceholder = $mtsThemeMods['placeholder_img'];
     $defaultImgPlaceholder = get_template_directory_uri() . '/assets/img/placeholder.jpg';
 
     if ( has_post_thumbnail() ) {

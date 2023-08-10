@@ -11,6 +11,7 @@ $mts_settings = new initialize_clarusmod_customizer_settings($panels_path);
 if (!function_exists('mts_theme_mods')) {
     function mts_theme_mods() {
         $mts_mods = array(
+            'placeholder_img'               => get_theme_mod('placeholder_img'),
             'background_color'              => get_theme_mod('background_color', get_theme_support('custom-background', 'default-color')),
 
             'your_theme_logo'               => get_theme_mod('your_theme_logo'),
@@ -26,7 +27,7 @@ if (!function_exists('mts_theme_mods')) {
             'nav_text_transform'            => get_theme_mod('nav_text_transform', 'capitalize'),
             // 'title text transform'          => get_theme_mod('title_text_transform', 'capitalize'),
 
-            'toggle_about_sec'              => get_theme_mod('toggle_about_sec', 'true'),
+            'toggle_about_sec'              => get_theme_mod('toggle_about_sec', true),
             'toggle_about_title'            => get_theme_mod('toggle_about_title'),
             'about_sec_title'               => get_theme_mod('about_sec_title', 'Who Are We?'),
             'about_sec_content'             => get_theme_mod('about_sec_content', 'Here at Meridian Tech Solutions, we believe creating a website shouldn’t be difficult or complicated. We build quality products and tools that are simple to use, affordable, and reliable to help entrepreneurs, professionals, and bloggers grow online. <p>We’ve kept the small business feel while competing with the big boys. Our high level of expertise and success keeps driving us to learn and grow. We all know that in today’s fast paced tech world, if you’re not growing, you’re dying. Just like your website.</p>'),
@@ -36,7 +37,7 @@ if (!function_exists('mts_theme_mods')) {
             'toggle_about_sec_img'          => get_theme_mod('toggle_about_sec_img', true),
             'about_sec_img'                 => get_theme_mod('about_sec_img'),
 
-            'toggle_goal_sec'               => get_theme_mod('toggle_goal_sec', 'true'),
+            'toggle_goal_sec'               => get_theme_mod('toggle_goal_sec', true),
             'goal_sec_img' => get_theme_mod('goal_sec_img', get_mts_assets('img') . 'team.jpg'),
             'goal_sec_title' => get_theme_mod('goal_sec_title', 'Our Goal'),
             'goal_sec_content' => get_theme_mod('goal_sec_content', 'Our goal is to empower businesses with innovative tech solutions, delivering seamless web and mobile experiences, captivating design, and cutting-edge SEO strategies, enabling them to thrive in the digital world.'),

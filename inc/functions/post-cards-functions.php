@@ -24,11 +24,12 @@ function get_service_card() {
 
 <?php }
 
-function viewMore_service_card() { ?>
+function viewMore_service_card() { 
+    global $mtsThemeMods; ?>
     <div class="card serCard" data-aos="zoom-in" data-aos-easing="ease-in-out-quart">
-        <label><?php echo esc_html(get_theme_mod('additional_card_title', 'We offer More')); ?></label>
-        <span><?php echo esc_html(get_theme_mod('additional_card_content', 'Our team of creative thinkers simplify the complex challenges businesses face everyday. Our services are tailored to offer the most effective solutions, to grow your business.')); ?></span>
-        <a href="<?php echo esc_html(get_post_type_archive_link('services')); ?>" class="btn plainBtn"><?php echo esc_html(get_theme_mod('additional_card_btn', 'Explore More')); ?></a>
+        <label><?php echo esc_html( $mtsThemeMods['additional_card_title']); ?></label>
+        <span><?php echo esc_html( $mtsThemeMods['additional_card_content']); ?></span>
+        <a href="<?php echo esc_html(get_post_type_archive_link('services')); ?>" class="btn plainBtn"><?php echo esc_html( $mtsThemeMods['additional_card_btn']); ?></a>
     </div>
     
 <?php }

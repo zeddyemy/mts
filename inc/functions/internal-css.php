@@ -1,35 +1,26 @@
 <?php
 
-function internal_css()
-{
+function internal_css() {
+    global $mtsThemeMods;
 
-    $bgColor = get_theme_mod('background_color', get_theme_support('custom-background', 'default-color')); // Custom background Color
-    $themeColor = get_theme_mod('mts_theme_color', '#2869ff'); // Theme Color
-    $headerTextColor = get_theme_mod('header_text_color', '#000000'); // Text Color In The Header
-    $footerTextColor = get_theme_mod('footer_text_color', '#f2f2f2'); // Text Color In The Footer
-    $headerBgColor = get_theme_mod('header_bg_color', '#ffffff'); // Background Color Of Header
-    $headerBgImage = get_theme_mod('header_bg_image'); // Background Image Of Header
-    $footerBgColor = get_theme_mod('footer_bg_color', '#212121;'); // Background Color Of Footer
-    $footerBgImage = get_theme_mod('footer_bg_image'); // Background Image Of Footer
-
-    $navbarCaseMod  = get_theme_mod('nav_text_transform', 'capitalize'); // To check If Uppercase is set for the nav items
+    $navbarCaseMod  = $mtsThemeMods['nav_text_transform']; // To check If Uppercase is set for the nav items
     $navbarCase = ($navbarCaseMod == 'capitalize') ? 'capitalize' : (($navbarCaseMod == 'uppercase') ? 'uppercase' : 'lowercase');
 
-    $titleCaseMod  = get_theme_mod('title_text_transform', 'capitalize');
+    $titleCaseMod  = $mtsThemeMods['title_text_transform'];
     $titleCase = ($titleCaseMod == 'capitalize') ? 'capitalize' : (($titleCaseMod == 'uppercase') ? 'uppercase' : 'lowercase');
 
     $adminBar = is_admin_bar_showing(); ?>
 
     <style>
         body {
-            --theme-clr: <?php echo $themeColor;  ?>;
-            --header-text-color: <?php echo $headerTextColor;  ?>;
-            --header-background-color: <?php echo $headerBgColor;  ?>;
-            --navbar-background-color: <?php echo $headerBgColor . 'c5'; ?>;
-            --header-background-image: url(' <?php echo $headerBgImage; ?> ');
-            --footer-background-color: <?php echo $footerBgColor;  ?>;
-            --footer-background-image: url(' <?php echo $footerBgImage; ?> ');
-            --footer-text-color: <?php echo $footerTextColor;  ?>;
+            --theme-clr: <?php echo $mtsThemeMods['mts_theme_color'];  ?>;
+            --header-text-color: <?php echo $mtsThemeMods['header_text_color'];  ?>;
+            --header-background-color: <?php echo $mtsThemeMods['header_bg_color'];  ?>;
+            --navbar-background-color: <?php echo $mtsThemeMods['header_bg_color'] . 'c5'; ?>;
+            --header-background-image: url(' <?php echo $mtsThemeMods['header_bg_image']; ?> ');
+            --footer-background-color: <?php echo $mtsThemeMods['footer_bg_color'];  ?>;
+            --footer-background-image: url(' <?php echo $mtsThemeMods['footer_bg_image']; ?> ');
+            --footer-text-color: <?php echo $mtsThemeMods['footer_text_color'];  ?>;
 
             --title-text-transform: <?php echo $navbarCase; ?>;
             --navbar-text-transform: <?php echo $titleCase; ?>;
@@ -37,11 +28,11 @@ function internal_css()
 
         <?php
         // if custom background color is not set
-        if (!$bgColor) {
+        if (!$mtsThemeMods['background_color']) {
             echo 'body { background-image: var(--body-background); }';
         }
         ?>
-    </style> <?php
-
-            }
-            add_action('wp_head', 'internal_css');
+    </style> 
+    <?php
+}
+add_action('wp_head', 'internal_css');
