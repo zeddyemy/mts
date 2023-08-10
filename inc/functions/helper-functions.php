@@ -84,10 +84,19 @@ function mts_author_url($url, $name) {
 		) . '</div>';
 }
 
-// Customizer assets url
+// Theme's assets url
 function get_mts_assets($type = '') {
     $assetsPath = !empty($type) ? 'assets/' . $type : 'assets';
     $url = trailingslashit(get_template_directory_uri()) . $assetsPath;
     
     return trailingslashit($url);
+}
+
+// Function to render a button
+function mts_render_btn($btn_txt='Button', $url='#', $class='') {
+    $btn_style = get_theme_mod('button_style', 'normal');
+    $class = $btn_style . ' ' . $class;
+    echo '<a href="' . esc_url($url) . '">
+            <span class="btn ' . esc_attr($class) . '">' . esc_html($btn_txt) . '</span>
+        </a>';
 }
