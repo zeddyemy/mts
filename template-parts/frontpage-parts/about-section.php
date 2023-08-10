@@ -8,7 +8,7 @@ $toggle_about_readMore_btn  = get_theme_mod('toggle_about_readMore_btn', true);
 $about_readMore_btn_text  = get_theme_mod('about_readMore_btn_text', 'Read More');
 $about_readMore_btn_url  = mts_format_url(get_theme_mod('about_readMore_btn_url', 'about.com'));
 
-$toggle_about_sec_img  = get_theme_mod('toggle_about_sec_img');
+$toggle_about_sec_img  = get_theme_mod('toggle_about_sec_img', true);
 $about_sec_img  = get_theme_mod('about_sec_img');
 ?>
 
