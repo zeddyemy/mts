@@ -23,11 +23,9 @@ $about_sec_img  = get_theme_mod('about_sec_img');
                         </div>
                     <?php endif; ?>
                     <p><?php echo $about_sec_content; ?></p>
-                    <?php if ($toggle_about_readMore_btn == true) : ?>
-                        <a href="<?php echo $about_readMore_btn_url; ?>">
-                            <span class="btn" style="display: inline-block;"> <?php echo $about_readMore_btn_text; ?> </span>
-                        </a>
-                    <?php endif; ?>
+                    <?php if ($toggle_about_readMore_btn == true) :
+                        mts_render_btn($about_readMore_btn_text, $about_readMore_btn_url);
+                    endif; ?>
                 </div>
             </div>
             <?php if ($toggle_about_sec_img == true) : ?>
