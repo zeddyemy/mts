@@ -8,7 +8,7 @@
  */
 
 
-if (class_exists('WP_Customize_Panel')) :
+if (class_exists('WP_Customize_Panel')) {
 
     /**
      * Extend Customizer panel
@@ -27,9 +27,9 @@ if (class_exists('WP_Customize_Panel')) :
             return $array;
         }
     }
-endif;
+}
 
-if (class_exists('WP_Customize_Section')) :
+if (class_exists('WP_Customize_Section')) {
     // Extend Customizer Section
 
     class Clarusmod_Customize_Section extends WP_Customize_Section {
@@ -51,7 +51,7 @@ if (class_exists('WP_Customize_Section')) :
             return $array;
         }
     }
-endif;
+}
 
 // ENQUEUE SCRIPTS TO EXTEND CUSTOMIZER PANEL AND SECTION
 function clarusmod_customize_controls_scripts() {

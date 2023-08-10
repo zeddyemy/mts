@@ -22,7 +22,7 @@ if (!function_exists('clarusmod_customizer_default_vals')) {
 // Customizer assets url
 if (!function_exists('clarusmod_customizer_assets')) {
     function clarusmod_customizer_assets($type = '') {
-        $assetsPath = !empty($type) ? 'inc/customizer/assets/' . $type : 'inc/customizer/assets';
+        $assetsPath = !empty($type) ? 'inc/clarusmod/assets/' . $type : 'inc/clarusmod/assets';
 
         $dirPath = wp_normalize_path(__DIR__);
         $pluginsDir = wp_normalize_path(WP_PLUGIN_DIR);
