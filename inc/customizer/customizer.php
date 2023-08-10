@@ -55,3 +55,5 @@ if (!function_exists('mts_theme_mods')) {
         return apply_filters('mts_theme_mods', $mts_mods);
     }
 }
+global $mtsThemeMods;
+$mtsThemeMods = mts_theme_mods();

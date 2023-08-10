@@ -8,7 +8,6 @@
  * @package MTS
  */
 
-
 // function to register nav menus
 function mts_menu() {
     register_nav_menus(
@@ -94,8 +93,8 @@ function get_mts_assets($type = '') {
 
 // Function to render a button
 function mts_render_btn($btn_txt='Button', $url='#', $class='') {
-    $btn_style = get_theme_mod('button_style', 'normal');
-    $class = $btn_style . ' ' . $class;
+    global $mtsThemeMods;
+    $class = $mtsThemeMods['button_style'] . ' ' . $class;
     echo '<a href="' . esc_url($url) . '">
             <span class="btn ' . esc_attr($class) . '">' . esc_html($btn_txt) . '</span>
         </a>';
