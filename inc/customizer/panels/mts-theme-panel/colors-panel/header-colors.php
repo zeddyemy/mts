@@ -3,7 +3,7 @@
 	// Add section and controls to color panel
 	$wp_customize->add_section( 'header_color_sections',
 		array(
-			'title' => __( 'Header Colors', 'wedsite' ),
+			'title' => __( 'Header Colors', 'mts' ),
 			'description' => esc_html__( 'Colors applied to the header will on be visible on tablet and mobile screens. Switch to tablet or mobile view to see your changes. Also, if dark mode is enabled, the header background will always be dark even if you applied a custom color.' ),
 			'priority'    => 30,
 			'capability'  => 'edit_theme_options',
@@ -43,7 +43,7 @@
 			$wp_customize,
 			'h_bg_color', //give it an ID
 			array(
-              	'label'      => __( 'Header Background color', 'wedsite' ), //set the label to appear in the Customizer
+              	'label'      => __( 'Header Background color', 'mts' ), //set the label to appear in the Customizer
             	'section'    => 'header_color_sections', //select the section for it to appear under  
               	'settings'   => 'header_bg_color' //pick the setting it applies to
 			)
@@ -56,7 +56,7 @@
 			$wp_customize,
 			'h_text_color', //give it an ID
 			array(
-              	'label'      => __( ' Header Text Color', 'wedsite' ), //set the label to appear in the Customizer
+              	'label'      => __( ' Header Text Color', 'mts' ), //set the label to appear in the Customizer
             	'section'    => 'header_color_sections', //select the section for it to appear under  
               	'settings'   => 'header_text_color' //pick the setting it applies to
 			)
