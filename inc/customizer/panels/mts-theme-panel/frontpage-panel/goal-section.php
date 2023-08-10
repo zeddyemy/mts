@@ -40,7 +40,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
 $wp_customize->add_setting(
     'goal_sec_img',
     array(
-        'default' => '',
+        'default' => get_mts_assets('img') . 'team.jpg',
         'transport' => 'refresh',
         'sanitize_callback' => 'esc_url_raw'
     )
