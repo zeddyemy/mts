@@ -25,7 +25,7 @@ if (!function_exists('mts_theme_mods')) {
             'footer_bg_image'               => get_theme_mod('footer_bg_image'),
 
             'nav_text_transform'            => get_theme_mod('nav_text_transform', 'capitalize'),
-            // 'title text transform'          => get_theme_mod('title_text_transform', 'capitalize'),
+            'title_text_transform'          => get_theme_mod('title_text_transform', 'capitalize'),
 
             'toggle_about_sec'              => get_theme_mod('toggle_about_sec', true),
             'toggle_about_title'            => get_theme_mod('toggle_about_title'),
@@ -46,8 +46,8 @@ if (!function_exists('mts_theme_mods')) {
             'frontpage_service_card_1'      => get_theme_mod('frontpage_service_card_1', 0),
             'frontpage_service_card_2'      => get_theme_mod('frontpage_service_card_2', 0),
             'frontpage_service_card_3'      => get_theme_mod('frontpage_service_card_3', 0),
-            'additional_card_title'         => get_theme_mod('additional_card_title'),
-            'additional_card_content'       => get_theme_mod('additional_card_content'),
+            'additional_card_title'         => get_theme_mod('additional_card_title', 'We offer More'),
+            'additional_card_content'       => get_theme_mod('additional_card_content', 'Our team of creative thinkers simplify the complex challenges businesses face everyday. Our services are tailored to offer the most effective solutions, to grow your business.'),
             'additional_card_btn'           => get_theme_mod('additional_card_btn', 'Explore More'),
 
             'button_style'                  => get_theme_mod('button_style', 'normal'),
