@@ -29,7 +29,7 @@ function viewMore_service_card() {
     <div class="card serCard" data-aos="zoom-in" data-aos-easing="ease-in-out-quart">
         <label><?php echo esc_html( $mtsThemeMods['additional_card_title']); ?></label>
         <span><?php echo esc_html( $mtsThemeMods['additional_card_content']); ?></span>
-        <a href="<?php echo esc_html(get_post_type_archive_link('services')); ?>" class="btn plainBtn"><?php echo esc_html( $mtsThemeMods['additional_card_btn']); ?></a>
+        <?php mts_render_btn($mtsThemeMods['additional_card_btn'], get_post_type_archive_link('services'), 'plainBtn'); ?>
     </div>
     
 <?php }
