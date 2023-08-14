@@ -82,3 +82,6 @@ require get_template_directory() . '/inc/functions/post-cards-functions.php';
 
 // Load Clarusmod Customizer
 include_once get_template_directory() . '/inc/customizer/customizer.php';
+
+// CUSTOM WP NAV
+require get_template_directory() . '/inc/functions/custom-wp-nav.php';
