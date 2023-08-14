@@ -30,6 +30,29 @@
                 </a>
             </div>
             <span class="menuBtn"> <i class='bx bx-menu'></i> </span>
-            <nav class=" nav nav-links"></nav>
+            <nav class=" nav nav-links">
+                <div class="nav-logo">
+                    <span class="logo-name"> <?php echo get_bloginfo('name'); ?> </span>
+                    <i class='bx bx-x'></i>
+                </div>
+                <?php
+                if (has_nav_menu('main-nav-menu')) {
+                    wp_nav_menu(array(
+                        'menu_class' => 'links',
+                        'menu_id' => 'items',
+                        'theme_location' => 'main-nav-menu',
+                        'container' => '',
+                        'walker' => new Custom_Nav_Menu()
+                    ));
+                } else {
+                    wp_nav_menu(array(
+                        'menu_class' => 'links',
+                        'menu_id' => 'items',
+                        'theme_location' => 'main-nav-menu',
+                        'container' => ''
+                    ));
+                }
+                ?>
+            </nav>
         </div>
     </header>
