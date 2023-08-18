@@ -102,7 +102,7 @@
     border-radius: 10%;
 }
 
-.header-overlay {
+.nav-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -113,7 +113,7 @@
     background: #00000066;
     transition: var(--transition);
 }
-.header-c.is-active>.header-overlay {
+.header-c.is-active>.nav-overlay {
     opacity: 1;
     visibility: visible;
 }
@@ -153,7 +153,7 @@
         color: #fffff0;
     }
 
-    .header-c.is-active>.header-overlay {
+    .header-c.is-active>.nav-overlay {
         opacity: 0;
         visibility: hidden;
     }

@@ -55,9 +55,9 @@
             </nav>
             <div class="actionBtns">
                 <span class="searchBtn icoBtn"> <i class='bx bx-search'></i> </span>
-                <span class="searchBtn icoBtn"> <i class='bx bxs-moon'></i> </span>
+                <span class="themeBtn icoBtn"> <i class='bx bxs-moon'></i> </span>
                 <span class="menuBtn icoBtn"> <i class='bx bx-menu'></i> </span>
             </div>
-            <div class="header-overlay"></div>
+            <div class="nav-overlay"></div>
         </div>
     </header>
