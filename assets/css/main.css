@@ -46,8 +46,13 @@
 }
 @media screen and (min-width: 768px) {
     :root {
-        --site-pad: 80px;
+        --site-pad: 40px;
         --title-size: 24px;
+    }
+}
+@media screen and (min-width: 1280px) {
+    :root {
+        --site-pad: 80px;
     }
 }
 

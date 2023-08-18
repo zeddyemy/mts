@@ -10,12 +10,13 @@
 }
 
 #header>.header-c {
-    min-height: var(--header-height);
-    padding: 0px var(--site-pad);
+    gap: 20px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    padding: 0px var(--site-pad);
     justify-content: space-between;
+    min-height: var(--header-height);
 }
 
 .header-c>.actionBtns {
@@ -27,6 +28,7 @@
 }
 .header-c>.logo {
     position: inherit;
+    flex: 1;
 }
 
 .header-c>nav {
@@ -35,9 +37,9 @@
     right: -100%;
     width: 100%;
     height: 100%;
-    z-index: 2000;
+    z-index: 10;
     display: block;
-    max-width: 300px;
+    max-width: 350px;
     line-height: 50px;
     padding: 10px 25px 20px;
     backdrop-filter: blur(6px);
@@ -146,14 +148,15 @@
 }
 .search-block {
     position: fixed;
+    z-index: 90;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--overlay-clr);
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
+    background: var(--overlay-clr);
 }
 .search-block.active {
     opacity: 1;
@@ -203,7 +206,7 @@ input#search-field {
     width: 100%;
     padding: 10px 16px;
     border: 0;
-    outline: 2px solid transparent;
+    outline: 2px solid var(--outline);
     background-color: #fff;
     box-sizing: border-box;
     transition: var(--transition);
@@ -234,12 +237,13 @@ button.search-btn {
         display: flex;
         flex-grow: 1;
         padding: 0px;
-        max-width: 80%;
+        max-width: 70%;
         z-index: 0;
         position: unset;
         justify-content: flex-end;
         backdrop-filter: blur(0px);
         background: transparent;
+        transition: all 0s;
     }
     .nav-logo {
         display: none;
@@ -270,5 +274,11 @@ button.search-btn {
     .search-card {
         width: 600px;
         height: 400px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .header-c>nav {
+        max-width: 75%;
     }
 }
