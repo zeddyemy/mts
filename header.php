@@ -29,9 +29,8 @@
                     </h1>
                 </a>
             </div>
-            <span class="menuBtn"> <i class='bx bx-menu'></i> </span>
             <nav class=" nav nav-links">
-                <div class="nav-logo">
+                <div class="nav-logo flex">
                     <span class="logo-name"> <?php echo get_bloginfo('name'); ?> </span>
                     <i class='bx bx-x'></i>
                 </div>
@@ -54,5 +53,11 @@
                 }
                 ?>
             </nav>
+            <div class="actionBtns">
+                <span class="searchBtn icoBtn"> <i class='bx bx-search'></i> </span>
+                <span class="searchBtn icoBtn"> <i class='bx bxs-moon'></i> </span>
+                <span class="menuBtn icoBtn"> <i class='bx bx-menu'></i> </span>
+            </div>
+            <div class="header-overlay"></div>
         </div>
     </header>
