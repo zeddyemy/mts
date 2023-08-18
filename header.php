@@ -59,5 +59,14 @@
                 <span class="menuBtn icoBtn"> <i class='bx bx-menu'></i> </span>
             </div>
             <div class="nav-overlay"></div>
+            <div class="search-block flex flexCenter">
+                <div class="search-card card flex flexCenter">
+                    <span class="close-search icoBtn">
+                        <i class='bx bx-x'></i>
+                    </span>
+                    <span class="search-title">What are you searching for?</span>
+                    <?php get_search_form(); ?>
+                </div>
+            </div>
         </div>
     </header>
