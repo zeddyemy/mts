@@ -51,9 +51,10 @@
     }
 }
 @media screen and (min-width: 1280px) {
-    :root {
-        --site-pad: 80px;
-    }
+    :root { --site-pad: 80px; }
+}
+@media screen and (min-width: 1440px) {
+    :root { --site-pad: 150px; }
 }
 
 *{
