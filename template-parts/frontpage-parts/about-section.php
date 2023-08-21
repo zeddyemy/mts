@@ -6,7 +6,7 @@ global $mtsThemeMods;
 <section id="about" class="about">
     <div class="container col-12">
         <div class="container col-12 noPad flex flexCenter row">
-            <div class="noPad" data-aos="fade-right" data-aos-easing="ease-in-out-quart">
+            <div class="noPad flex flexCenter" data-aos="fade-right" data-aos-easing="ease-in-out-quart">
                 <div class="txtContain">
                     <?php if ($mtsThemeMods['toggle_about_title'] == true) : ?>
                         <div class="secTitle flex flexStart row">

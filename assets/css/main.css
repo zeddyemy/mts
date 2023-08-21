@@ -188,7 +188,10 @@ span {
     align-items: baseline;
 }
 .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     flex-direction: row;
     gap: 10px;
@@ -278,10 +281,10 @@ span {
     display: none;
 }
 .secTitle.flexStart::after {
-    width: 30%;
+    width: 10%;
 }
 .secTitle .title {
-    max-width: 50%;
+    max-width: 80%;
     text-align: center;
 }
 
