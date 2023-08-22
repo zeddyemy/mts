@@ -1,5 +1,5 @@
 #goal {
-    background-color: black;
+    background-color: transparent;
 }
 #goal>.container {
     display: flex;
@@ -10,4 +10,13 @@
 .imgBg {
     background-image: url(../img/blog-1.jpg);
     height: 400px;
+}
+.goalTags {
+    gap: 20px;
+}
+.goalTags>div {
+    padding: 10px 20px;
+    box-sizing: var(--box-shadow);
+    background: var(--theme-clr);
+    border-radius: 10px;
 }

@@ -31,12 +31,12 @@
     --site-pad: 30px;
     --btn-height: 40px;
     --title-size: 22px;
-    --round-conners: 10px;
+    --round-conners: 20px;
     --txt-shadow: 2px 2px 8px #000;
     --transition: all ease-in-out 0.3s;
 
     --outline: #8585857d;
-    --overlay-clr: #00000066;
+    --overlay-clr: #00000096;
     --sidebar-outline: #636568;
     --box-shadow: 0rem 0.125rem 0.25rem #1f21241a,
         0rem 0.0625rem 0.375rem #1f21243d;
@@ -160,9 +160,9 @@ span {
 
 /* -- UI COMPONENTS -- */
 .fitImg {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
 }
 .txtShadowDrk {
     text-shadow: 1px 1px 1px #252525;
@@ -242,7 +242,7 @@ span {
 }
 .btn[class*="-rounded"],
 .btn.rounded {
-    --btn-radius: 10px;
+    --btn-radius: var(--round-conners);
 }
 .btn[class*="ghost-"],
 .plainBtn {
@@ -339,10 +339,62 @@ span {
 .cardBody .title {
     font-size: 1.15em;
     font-weight: 700;
+    line-height: 1.2em;
 }
 .cardBody p {
     margin: 8px 0 1px 0px;
     font-size: 0.95em;
+}
+.secCard {
+    --sec-radius: 0px;
+    flex-wrap: wrap;
+    background: black;
+    min-height: 300px;
+    border-radius: var(--sec-radius);
+    position: relative;
+    width: auto !important;
+    padding: 40px var(--site-pad);
+    margin: 0px calc(0% - var(--site-pad));
+}
+.secCard::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: var(--sec-radius);
+    background: var(--overlay-clr);
+}
+.secCard .cardBody {
+    padding: 0px;
+    color: #fff;
+    text-shadow: var(--txt-shadow);
+}
+.secCard .title {
+    display: block;
+    font-size: 2.4em;
+    word-spacing: 0px;
+}
+.secCard p {
+    font-size: 1.10em;
+    margin: 0px;
+}
+@media screen and (min-width: 950px) {
+    .secCard {
+        --sec-radius: var(--round-conners);
+        padding: 0px 90px;
+        gap: 30px;
+        flex-wrap: nowrap;
+        width: 100% !important;
+        margin: auto !important;
+    }
+    .secCard .title {
+        font-size: 3em;
+    }
+    .secCard p {
+        font-size: 1.20em;
+    }
 }
 
 
