@@ -10,7 +10,7 @@
     z-index: 90;
 }
 .headerBg {
-    background-color: var(--box-bg-clr-solid) !important;
+    background-color: var(--header-background-color) !important;
     box-shadow: var(--shadow-large);
 }
 
