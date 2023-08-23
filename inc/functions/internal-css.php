@@ -1,7 +1,11 @@
 <?php
 
-function internal_css() {
+function internal_css()
+{
     global $mtsThemeMods;
+
+    $headerTxtColor = !empty($mtsThemeMods['header_text_color']) ? $mtsThemeMods['header_text_color'] : 'var(--body-txt-clr)';
+    $headerBgColor = !empty($mtsThemeMods['header_bg_color']) ? $mtsThemeMods['header_bg_color'] : 'var(--box-bg-clr-solid)';
 
     $navbarCaseMod  = $mtsThemeMods['nav_text_transform']; // To check If Uppercase is set for the nav items
     $navbarCase = ($navbarCaseMod == 'capitalize') ? 'capitalize' : (($navbarCaseMod == 'uppercase') ? 'uppercase' : 'lowercase');
@@ -12,16 +16,19 @@ function internal_css() {
     $adminBar = is_admin_bar_showing(); ?>
 
     <style>
+        #header {
+            --navbar-background-color: <?php echo $headerBgColor; ?> !important;
+        }
+        .headerBg {
+            --header-text-color: <?php echo $headerTxtColor;  ?> !important;
+            --header-background-color: <?php echo $headerBgColor; ?> !important;
+            --header-background-image: url(' <?php echo $mtsThemeMods['header_bg_image']; ?> ');
+        }
         body {
             --theme-clr: <?php echo $mtsThemeMods['mts_theme_color'];  ?>;
-            --header-text-color: <?php echo $mtsThemeMods['header_text_color'];  ?>;
-            --header-background-color: <?php echo $mtsThemeMods['header_bg_color'];  ?>;
-            --navbar-background-color: <?php echo $mtsThemeMods['header_bg_color'] . 'c5'; ?>;
-            --header-background-image: url(' <?php echo $mtsThemeMods['header_bg_image']; ?> ');
             --footer-background-color: <?php echo $mtsThemeMods['footer_bg_color'];  ?>;
             --footer-background-image: url(' <?php echo $mtsThemeMods['footer_bg_image']; ?> ');
             --footer-text-color: <?php echo $mtsThemeMods['footer_text_color'];  ?>;
-
             --title-text-transform: <?php echo $navbarCase; ?>;
             --navbar-text-transform: <?php echo $titleCase; ?>;
         }
@@ -32,7 +39,7 @@ function internal_css() {
             echo 'body { background-image: var(--body-background); }';
         }
         ?>
-    </style> 
-    <?php
+    </style>
+<?php
 }
 add_action('wp_head', 'internal_css');

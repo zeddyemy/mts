@@ -16,8 +16,8 @@ if (!function_exists('mts_theme_mods')) {
 
             'your_theme_logo'               => get_theme_mod('your_theme_logo'),
             'mts_theme_color'               => get_theme_mod('mts_theme_color', '#2869ff'),
-            'header_text_color'             => get_theme_mod('header_text_color', '#000000'),
-            'header_bg_color'               => get_theme_mod('header_bg_color', '#ffffff'),
+            'header_text_color'             => get_theme_mod('header_text_color', ''),
+            'header_bg_color'               => get_theme_mod('header_bg_color', ''),
             'header_bg_image'               => get_theme_mod('header_bg_image'),
             
             'footer_text_color'             => get_theme_mod('footer_text_color', '#f2f2f2'),
@@ -38,9 +38,9 @@ if (!function_exists('mts_theme_mods')) {
             'about_sec_img'                 => get_theme_mod('about_sec_img'),
 
             'toggle_goal_sec'               => get_theme_mod('toggle_goal_sec', true),
-            'goal_sec_img' => get_theme_mod('goal_sec_img', get_mts_assets('img') . 'team.jpg'),
-            'goal_sec_title' => get_theme_mod('goal_sec_title', 'Our Goal'),
-            'goal_sec_content' => get_theme_mod('goal_sec_content', 'Our goal is to empower businesses with innovative tech solutions, delivering seamless web and mobile experiences, captivating design, and cutting-edge SEO strategies, enabling them to thrive in the digital world.'),
+            'goal_sec_img'                  => get_theme_mod('goal_sec_img', get_mts_assets('img') . 'team.jpg'),
+            'goal_sec_title'                => get_theme_mod('goal_sec_title', 'Our Goal'),
+            'goal_sec_content'              => get_theme_mod('goal_sec_content', 'Our goal is to empower businesses with innovative tech solutions, delivering seamless web and mobile experiences, captivating design, and cutting-edge SEO strategies, enabling them to thrive in the digital world.'),
 
             'service_section_title'         => get_theme_mod('service_section_title', 'Our Services'),
             'frontpage_service_card_1'      => get_theme_mod('frontpage_service_card_1', 0),

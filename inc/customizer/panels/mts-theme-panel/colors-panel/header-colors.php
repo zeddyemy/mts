@@ -18,14 +18,16 @@
 	// add a setting for header background color
 	$wp_customize->add_setting( 'header_bg_color',
 		array(
-			'default' => '#ffffff',
+			'default' 			=> '',
+			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
 
 	// add a setting for header text color
 	$wp_customize->add_setting( 'header_text_color',
 		array(
-			'default' => '#000000',
+			'default' 			=> '',
+			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
 
@@ -41,7 +43,7 @@
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'h_bg_color', //give it an ID
+			'header_bg_color', //give it an ID
 			array(
               	'label'      => __( 'Header Background color', 'mts' ), //set the label to appear in the Customizer
             	'section'    => 'header_color_sections', //select the section for it to appear under  
@@ -54,7 +56,7 @@
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'h_text_color', //give it an ID
+			'header_text_color', //give it an ID
 			array(
               	'label'      => __( ' Header Text Color', 'mts' ), //set the label to appear in the Customizer
             	'section'    => 'header_color_sections', //select the section for it to appear under  
