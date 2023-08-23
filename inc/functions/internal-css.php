@@ -3,6 +3,7 @@
 function internal_css()
 {
     global $mtsThemeMods;
+    $mtsThemeMods = mts_theme_mods();
 
     $headerTxtColor = !empty($mtsThemeMods['header_text_color']) ? $mtsThemeMods['header_text_color'] : 'var(--body-txt-clr)';
     $headerBgColor = !empty($mtsThemeMods['header_bg_color']) ? $mtsThemeMods['header_bg_color'] : 'var(--box-bg-clr-solid)';

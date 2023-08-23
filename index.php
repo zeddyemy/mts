@@ -5,7 +5,8 @@
  *
  * @package MTS
  */
-
+global $mtsThemeMods;
+$mtsThemeMods = mts_theme_mods();
 
 get_header();
 
