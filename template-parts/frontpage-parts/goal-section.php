@@ -12,21 +12,24 @@ global $mtsThemeMods;
                     <p> <?php echo $mtsThemeMods['goal_sec_content']; ?> </p>
                 </div>
             </div>
-            <div class="col-4 noPad" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
-                <div class="cardBody">
-                    <div class="flex goalTags">
-                        <div class="">
-                            <span>Insightfull</span>
-                        </div>
-                        <div class="">
-                            <span>Fast</span>
-                        </div>
-                        <div class="">
-                            <span>Captivating</span>
+
+            <?php if ($mtsThemeMods['toggle_goal_tags'] == true) : ?>
+                <div class="col-4 noPad" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
+                    <div class="cardBody">
+                        <div class="flex goalTags">
+                            <div class="">
+                                <span>Insightfull</span>
+                            </div>
+                            <div class="">
+                                <span>Fast</span>
+                            </div>
+                            <div class="">
+                                <span>Captivating</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>

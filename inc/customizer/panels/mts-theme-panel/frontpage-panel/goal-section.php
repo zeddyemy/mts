@@ -6,7 +6,7 @@
 $wp_customize->add_section(
     'ourGoal_Sec',
     array(
-        'title'    => __("Goal Section", "Clarusmod" ),
+        'title'    => __("Goal Section", "mts" ),
 		'description' => esc_html__( "Your Goal as an Individual or as a Brand" ),
 		'priority' => 20,
 		'panel' => 'frontpage_panel_id',
@@ -16,7 +16,7 @@ $wp_customize->add_section(
 /**========================================
  * SETTINGS AND CONTROLS FOR GOAL SECTION
 ==========================================*/
-// setting and control To disable About Section
+// setting and control To disable Goal Section
 $wp_customize->add_setting(
     'toggle_goal_sec',
     array(
@@ -27,7 +27,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
     $wp_customize,
     'toggle_goal_sec',
     array(
-        'label' => __('Goal Section', 'Clarusmod'),
+        'label' => __('Goal Section', 'mts'),
         'description' => esc_html__('Use The Toggle Button to Disable or Enable the Goal section'),
 
         'section' => 'ourGoal_Sec',
@@ -107,5 +107,25 @@ $wp_customize->add_control(new Clarusmod_TinyMCE_Custom_control(
             'toolbar1' => 'undo redo blocks bold italic bullist numlist alignleft aligncenter alignright link',
             'mediaButtons' => true,
         )
+    )
+));
+
+
+// setting and control To disable goal Tags
+$wp_customize->add_setting(
+    'toggle_goal_tags',
+    array(
+        'default' => 'true',
+    )
+);
+$wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
+    $wp_customize,
+    'toggle_goal_tags',
+    array(
+        'label' => __('Goal Tags', 'mts'),
+        'description' => esc_html__('Use The Toggle Button to Disable or Enable the Goal Tags'),
+        'section' => 'ourGoal_Sec',
+        'settings'   => 'toggle_goal_tags',
+        'capability' => 'edit_theme_options',
     )
 ));

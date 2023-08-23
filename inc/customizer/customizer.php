@@ -41,6 +41,7 @@ if (!function_exists('mts_theme_mods')) {
             'goal_sec_img'                  => get_theme_mod('goal_sec_img', get_mts_assets('img') . 'team.jpg'),
             'goal_sec_title'                => get_theme_mod('goal_sec_title', 'Our Goal'),
             'goal_sec_content'              => get_theme_mod('goal_sec_content', 'Our goal is to empower businesses with innovative tech solutions, delivering seamless web and mobile experiences, captivating design, and cutting-edge SEO strategies, enabling them to thrive in the digital world.'),
+            'toggle_goal_tags'              => get_theme_mod('toggle_goal_tags', true),
 
             'service_section_title'         => get_theme_mod('service_section_title', 'Our Services'),
             'frontpage_service_card_1'      => get_theme_mod('frontpage_service_card_1', 0),
