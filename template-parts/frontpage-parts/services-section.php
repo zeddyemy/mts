@@ -19,7 +19,7 @@ $services_query = new WP_Query(array(
 
 <section id="services" class="services">
     <div class="container col-12">
-        <div class="secTitle flex flexCenter row" data-aos="zoom-in" data-aos-easing="ease-in-out-quart">
+        <div class="secTitle flex flexCenter row" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
             <span class="title"> <?php echo $mtsThemeMods['service_section_title']; ?> </span>
         </div>
         <?php if ($services_query->have_posts()) : ?>

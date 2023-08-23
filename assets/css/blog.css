@@ -35,3 +35,6 @@
 .blogCard:nth-child(1) .cardBody .title {
     font-size: calc(1.3125rem + .75vw);
 }
+.blogCard a {
+    color: #e9e9e9
+}

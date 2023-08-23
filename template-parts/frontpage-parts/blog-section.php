@@ -9,7 +9,7 @@ $query = new WP_Query(array(
 ?>
 <section id="blog" class="blog">
     <div class="container col-12">
-        <div class="secTitle flex flexCenter row" data-aos="zoom-in" data-aos-easing="ease-in-out-quart">
+        <div class="secTitle flex flexCenter row" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
             <span class="title"> Our Latest Blogs </span>
         </div>
         <div class="grid blogCards">

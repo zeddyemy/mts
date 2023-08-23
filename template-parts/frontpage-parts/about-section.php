@@ -6,7 +6,7 @@ global $mtsThemeMods;
 <section id="about" class="about">
     <div class="container col-12">
         <div class="container col-12 noPad flex flexCenter row">
-            <div class="noPad flex flexCenter" data-aos="fade-right" data-aos-easing="ease-in-out-quart">
+            <div class="noPad flex flexCenter" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
                 <div class="txtContain">
                     <?php if ($mtsThemeMods['toggle_about_title'] == true) : ?>
                         <div class="secTitle flex flexStart row">
@@ -20,7 +20,7 @@ global $mtsThemeMods;
                 </div>
             </div>
             <?php if ($mtsThemeMods['toggle_about_sec_img'] == true) : ?>
-                <div class="noPad" data-aos="fade-left" data-aos-easing="ease-in-out-quart">
+                <div class="noPad" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
                     <div class="card logo">
                         <div class="cardImg">
                             <img src="<?php echo $mtsThemeMods['about_sec_img']; ?>" alt="<?php echo $mtsThemeMods['about_sec_title'] ?>">

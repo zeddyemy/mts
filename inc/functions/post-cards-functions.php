@@ -10,13 +10,14 @@
 
 
 // POST CARD FOR EACH SERVICE POST TYPE
-function get_service_card() {
+function get_service_card()
+{
     // Retrieve service data
     $service_title = get_the_title();
     $service_excerpt = get_the_excerpt();
     $service_icon = get_post_meta(get_the_ID(), 'service_icon', true); ?>
 
-    <article class="card serCard" data-aos="zoom-in" data-aos-easing="ease-in-out-quart">
+    <article class="card serCard" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
         <i class="<?php echo $service_icon ?>"></i>
         <label><?php echo $service_title ?></label>
         <span> <?php echo $service_excerpt ?></span>
@@ -24,20 +25,22 @@ function get_service_card() {
 
 <?php }
 
-function viewMore_service_card() { 
+function viewMore_service_card()
+{
     global $mtsThemeMods; ?>
-    <div class="card serCard" data-aos="zoom-in" data-aos-easing="ease-in-out-quart">
-        <label><?php echo esc_html( $mtsThemeMods['additional_card_title']); ?></label>
-        <span><?php echo esc_html( $mtsThemeMods['additional_card_content']); ?></span>
+    <div class="card serCard" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
+        <label><?php echo esc_html($mtsThemeMods['additional_card_title']); ?></label>
+        <span><?php echo esc_html($mtsThemeMods['additional_card_content']); ?></span>
         <?php mts_render_btn($mtsThemeMods['additional_card_btn'], get_post_type_archive_link('services'), 'plainBtn'); ?>
     </div>
-    
+
 <?php }
 
 
 // POST CARD FOR EACH DEFAULT POST TYPE
-function get_default_card() { ?>
-    <div class="card blogCard" data-aos="zoom-in" data-aos-easing="ease-in-out-quart">
+function get_default_card()
+{ ?>
+    <article class="card blogCard" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
         <div class="fitImg cardImg">
             <a href="<?php the_permalink() ?>">
                 <?php theme_post_thumb(); ?>
@@ -50,5 +53,5 @@ function get_default_card() { ?>
                 </h3>
             </div>
         </div>
-    </div>
+    </article>
 <?php }
