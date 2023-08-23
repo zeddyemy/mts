@@ -153,6 +153,7 @@ p {
     font-family: var(--font-two);
     margin-bottom: 0.5rem;
     line-height: 1.4;
+    transition: var(--transition);
 }
 span {
     font-family: var(--font-four);
