@@ -16,7 +16,7 @@ headerNav.addEventListener('click', (e) => {
     if (e.target.classList.contains('menuBtn')) {
         headerNav.classList.add('is-active');
     }
-    if (e.target.classList.contains('bx-x') || e.target.classList.contains('nav-overlay')) {
+    if (e.target.classList.contains('menuCloseBtn') || e.target.classList.contains('nav-overlay')) {
         headerNav.classList.remove('is-active');
     }
     // open & close search box modal

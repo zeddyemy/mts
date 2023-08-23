@@ -20,6 +20,11 @@ function internal_css()
         #header {
             --navbar-background-color: <?php echo $headerBgColor; ?> !important;
         }
+        @media screen and (max-width: 1024px) {
+            .nav {
+                --header-text-color: <?php echo $headerTxtColor;  ?> !important;
+            }
+        }
         .headerBg {
             --header-text-color: <?php echo $headerTxtColor;  ?> !important;
             --header-background-color: <?php echo $headerBgColor; ?> !important;

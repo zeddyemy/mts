@@ -54,7 +54,13 @@
     :root { --site-pad: 80px; }
 }
 @media screen and (min-width: 1440px) {
-    :root { --site-pad: 150px; }
+    :root { --site-pad: 160px; }
+}
+@media screen and (min-width: 1534px) {
+    :root { --site-pad: 180px; }
+}
+@media screen and (min-width: 1920px) {
+    :root { --site-pad: 210px; }
 }
 
 *{
@@ -143,9 +149,6 @@ p {
     font-family: var(--font-four);
     margin-bottom: 1rem;
 }
-a {
-    text-decoration: none;
-}
 .title,h1,h2,h3,h4,h5 {
     font-family: var(--font-two);
     margin-bottom: 0.5rem;
@@ -201,7 +204,7 @@ span {
     grid-template-columns: repeat(auto-fit, minmax(26ch, 1fr));
     grid-gap: 1.5em;
 }
-.fSB {
+.flexSB {
     display: flex;
     justify-content: space-between;
 }

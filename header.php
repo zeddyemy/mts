@@ -29,9 +29,12 @@
                 </a>
             </div>
             <nav class=" nav nav-links">
-                <div class="nav-logo flex">
-                    <span class="logo-name"> <?php echo get_bloginfo('name'); ?> </span>
-                    <i class='bx bx-x'></i>
+                <div class="nav-actionBtns flexSB">
+                    <div class="actionBtns flex flexCenter">
+                        <span class="searchBtn icoBtn"> <i class='bx bx-search'></i> </span>
+                        <span class="themeBtn icoBtn"> <i class='bx bxs-moon'></i> </span>
+                    </div>
+                    <span class="menuCloseBtn icoBtn"> <i class='bx bx-x'></i> </span>
                 </div>
                 <?php
                 if (has_nav_menu('main-nav-menu')) {
@@ -52,10 +55,10 @@
                 }
                 ?>
             </nav>
-            <div class="actionBtns">
+            <div class="actionBtns flex flexCenter">
                 <span class="searchBtn icoBtn"> <i class='bx bx-search'></i> </span>
                 <span class="themeBtn icoBtn"> <i class='bx bxs-moon'></i> </span>
-                <span class="menuBtn icoBtn"> <i class='bx bx-menu'></i> </span>
+                <span class="menuBtn icoBtn btn"> <i class='bx bx-menu'></i> </span>
             </div>
             <div class="nav-overlay"></div>
             <div class="search-block flex flexCenter">
