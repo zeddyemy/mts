@@ -17,15 +17,14 @@ global $mtsThemeMods;
                 <div class="col-4 noPad" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
                     <div class="cardBody">
                         <div class="flex goalTags">
-                            <div class="">
-                                <span>Insightfull</span>
-                            </div>
-                            <div class="">
-                                <span>Fast</span>
-                            </div>
-                            <div class="">
-                                <span>Captivating</span>
-                            </div>
+                            <?php
+                            if (!empty($mtsThemeMods['goal_tags'])) :
+                                $tags_array = explode(',', $mtsThemeMods['goal_tags']);
+                                foreach ($tags_array as $tag) {
+                                    echo '<div class=""> <span>' . esc_html(trim($tag)) . ' </span> </div>';
+                                }
+                            endif;
+                            ?>
                         </div>
                     </div>
                 </div>
