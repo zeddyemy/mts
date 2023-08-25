@@ -339,7 +339,7 @@ div#qt_about_content_toolbar {
 
 .pill_checkbox_control .dashicons-sort {
 	margin: 5px 0 0 1px;
-	color: #d4d4d4;
+	color: var(--color3);
 	cursor: move;
 }
 
@@ -476,7 +476,7 @@ div#qt_about_content_toolbar {
 
 .slider-custom-control .dashicons-image-rotate {
 	margin-top: 10px;
-	color: #d4d4d4;
+	color: var(--color3);
 	size: 16px;
 }
 
@@ -576,51 +576,58 @@ div#qt_about_content_toolbar {
 }
 
 /* ==========================================================================
-	Sortable Repeater
+	Repeater
 ========================================================================== */
-.sortable {
+.theRepeater {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
 
-.sortable input[type="text"] {
-	margin: 5px 5px 5px 0;
+.theRepeater input[type="text"] {
 	width: 80%;
+	flex-grow: 1;
 }
 
-.sortable div {
+.theRepeater.sortable div {
 	cursor: move;
 }
-
-.customize-control-sortable-repeater-delete {
-	color: #d4d4d4;
+.repeater {
+	display: flex;
+	gap: 13px;
+	margin: 0px 0px 8px;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
-.customize-control-sortable-repeater-delete:hover {
+.customize-control-repeater-delete {
+	color: var(--color3);
+}
+
+.customize-control-repeater-delete:hover {
 	color: #f00;
 }
 
-.customize-control-sortable-repeater-delete .dashicons-no-alt {
+.customize-control-repeater-delete .dashicons-no-alt,
+.customize-control-repeater-delete .dashicons-trash-alt {
 	text-decoration: none;
-	margin: 8px 0 0 0;
 	font-weight: 600;
 }
 
-.customize-control-sortable-repeater-delete:active,
-.customize-control-sortable-repeater-delete:focus {
+.customize-control-repeater-delete:active,
+.customize-control-repeater-delete:focus {
 	outline: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
 .repeater .dashicons-sort {
-	margin: 8px 5px 0 5px;
-	color: #d4d4d4;
+	color: var(--color3);
 }
 
 .repeater .dashicons-sort:hover {
-	color: #a7a7a7;
+	color: var(--color5);
 }
 
 /* ==========================================================================
@@ -982,8 +989,10 @@ URL Custom Control / Input prefix
 	display: none;
 }
 .invalid-url {
+    font-weight: 800;
+    word-spacing: 5px;
 	display: block !important;
-	color:red !important;
+	color: var(--error) !important;
 }
 
 /*============================

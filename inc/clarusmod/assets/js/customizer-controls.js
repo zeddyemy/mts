@@ -38,11 +38,7 @@ jQuery(document).ready(function ($) {
      * @author Zeddy Emmanuel <https://zeddyemy.github.io/>
      * @license http://www.gnu.org/licenses/gpl-2.0.html
      */
-    // Function to check if the URL is valid
-    function isValidUrl(url) {
-        return url && /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})(\/([^\s\/?#]+)?)?(\?([^\s\/?#]*))?(#([^\s\/?#]*))?$/i.test(url);
-    }
-
+    
     // Listen for changes in the input field and apply the "invalid-url" class
     $('.customize-control-url input[type="url"]').on('input', function () {
         var url = $(this).val();
@@ -68,4 +64,134 @@ jQuery(document).ready(function ($) {
 		var select2Val = $(this).val();
 		$(this).parent().find('.customize-ctrl-searchable-select').val(select2Val).trigger('change');
 	});
+
+
+    
+
+    /**
+	 * Repeater Custom Control
+	 *
+	 * @author Zeddy Emmanuel <https://zeddyemy.github.io/>
+     * @license http://www.gnu.org/licenses/gpl-3.0.html
+	 */
+
+	// cache frequently accessed DOM elements
+	const theRepeater = $(this).find('.theRepeater');
+	const inputType = theRepeater.data('input-type');
+	
+	// Update the values for all our input fields and initialize the repeater
+	$('.repeater_control').each(function() {
+		// If there is an existing customizer value, populate our rows
+		var defaultValuesArray = $(this).find('.customize-control-repeater').val().split(',');
+		var numRepeaterItems = defaultValuesArray.length;
+
+		if(numRepeaterItems > 0) {
+			// Add the first item to our existing input field
+			$(this).find('.repeater-input').val(defaultValuesArray[0]);
+			// Create a new row for each new value
+			if(numRepeaterItems > 1) {
+				var i;
+				for (i = 1; i < numRepeaterItems; ++i) {
+					clarusmodAddNewRow($(this), defaultValuesArray[i]);
+				}
+			}
+		}
+	});
+
+	// Make the Repeater fields sortable
+	if (theRepeater.hasClass('sortable')) {
+		theRepeater.sortable({
+			update: function(event, ui) {
+				clarusmodGetAllInputs($(this).parent());
+			}
+		});
+	}
+
+	// Remove item starting from it's parent element
+	theRepeater.on('click', '.customize-control-repeater-delete', function(event) {
+		event.preventDefault();
+		var numItems = $(this).parent().parent().find('.repeater').length;
+
+		if(numItems > 1) {
+			$(this).parent().slideUp('fast', function() {
+				var parentContainer = $(this).parent().parent();
+				$(this).remove();
+				clarusmodGetAllInputs(parentContainer);
+			})
+		}
+		else {
+			$(this).parent().find('.repeater-input').val('');
+			clarusmodGetAllInputs($(this).parent().parent().parent());
+		}
+	});
+
+	// Add new item
+	$('.customize-control-repeater-add').click(function(event) {
+		event.preventDefault();
+		clarusmodAddNewRow($(this).parent());
+		clarusmodGetAllInputs($(this).parent());
+	});
+
+	// Refresh our hidden field if any fields change
+	$('.theRepeater').change(function() {
+		clarusmodGetAllInputs($(this).parent());
+	})
+
+	// URL Validation Check Based on input_type
+	if (inputType === 'url') {
+		theRepeater.on('input', '.repeater-input', function () {
+			var url = $(this).val();
+			var isValid = isValidUrl(url);
+			$('.customize-control-repeater p.input-msg').toggleClass('invalid-url', !isValid);
+			$(this).toggleClass('invalid-url', !isValid);
+		});
+		theRepeater.on('blur', '.repeater-input', function () {
+			var input = $(this);
+			var val = input.val();
+	
+			// Add https:// to the start of the URL if it doesn't have it
+			if (val && !hasHTTPS(val)) {
+				// trigger change event so Customizer knows it has to save the field
+				input.val('https://' + val).trigger('change');
+			}
+		});
+	}
+
+	// Append a new row to our list of elements
+	function clarusmodAddNewRow($element, defaultValue = '') {
+		var newRow = $element.find('.repeater:first').clone();
+		newRow.find('.repeater-input').val('');
+
+		$element.find('.theRepeater').append(newRow);
+		$element.find('.theRepeater').find('.repeater:last').slideDown('slow', function(){
+			$(this).find('.repeater-input').focus();
+		});
+	}
+
+	// Get the values from the repeater input fields and add to our hidden field
+	function clarusmodGetAllInputs($element) {
+		var inputValues = $element.find('.repeater-input').map(function() {
+			return $(this).val();
+		}).toArray();
+		// Add all the values from our repeater fields to the hidden field (which is the one that actually gets saved)
+		$element.find('.customize-control-repeater').val(inputValues);
+		// Important! Make sure to trigger change event so Customizer knows it has to save the field
+		$element.find('.customize-control-repeater').trigger('change');
+	}
+
+	/**
+	 * Help Functions
+	 * 
+	 * @author Zeddy Emmanuel <https://zeddyemy.github.io/>
+     * @license http://www.gnu.org/licenses/gpl-3.0.html
+	 */
+	
+	// check if the URL is valid
+	function isValidUrl(url) {
+		return url && /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})(\/([^\s\/?#]+)?)?(\?([^\s\/?#]*))?(#([^\s\/?#]*))?$/i.test(url);
+	}
+	// check if url has 'http://' Or 'https://'
+	function hasHTTPS(url) {
+		return url.startsWith("http://") || url.startsWith("https://");
+	}
 });

@@ -36,6 +36,9 @@ if (class_exists('WP_Customize_Control')) {
     // Button Style custom control class
     require_once trailingslashit(dirname(__FILE__)) . 'custom-controls/class-btn-style-custom-control.php';
 
+    // Repeater custom control class
+    require_once trailingslashit(dirname(__FILE__)) . 'custom-controls/class-repeater-custom-control.php';
+
 
     // CUSTOM SANITIZE CALLBACKS
     require_once trailingslashit(dirname(__FILE__)) . 'custom-sanitize-callbacks.php';

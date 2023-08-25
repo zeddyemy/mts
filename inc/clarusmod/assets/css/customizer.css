@@ -11,6 +11,7 @@
     --color4: #32373c;
 	--color5: #cbcbcbab;
 	--outline: #8585857d;
+	--error: #f35f3f;
 	--round-conners: 7px;
 	--input-height: 30px;
 	--input-font-size: 14px;
@@ -44,6 +45,8 @@ body {
 .wp-full-overlay-sidebar-content {
 	background: var(--color1) !important;
 	border: none;
+	width: 99.5% !important;
+    overflow-x: hidden;
 }
 
 .wp-full-overlay-sidebar ::-moz-selection {
@@ -373,6 +376,7 @@ body.adding-widget .add-new-widget:hover {
 	color: var(--color3) !important;
 	min-height: var(--input-height) !important;
 	font-size: var(--input-font-size) !important;
+	font-weight: 400 !important;
 }
 .wp-customizer input[type="text"]:focus,
 .wp-customizer input[type="search"]:focus,
@@ -392,7 +396,6 @@ body.adding-widget .add-new-widget:hover {
 .wp-customizer select:focus,
 .wp-customizer textarea:focus {
 	box-shadow: 0 0 0 1px var(--color2) !important;
-	border: 2px solid var(--color2) !important;
 	background-color: var(--color1) !important;
 	color: white !important;
 }
@@ -402,6 +405,9 @@ body.adding-widget .add-new-widget:hover {
     width: 1.5625rem !important;
 	height: 1.5625rem !important;
 	min-height: 1.5625rem !important;
+}
+.wp-customizer input.invalid-url {
+	border: 1px solid var(--error) !important;
 }
 .wp-customizer select::-webkit-scrollbar,
 .wp-customizer textarea::-webkit-scrollbar {
@@ -492,7 +498,7 @@ body.adding-widget .add-new-widget:hover {
 }
 
 .widget-control-remove:hover {
-	color: #f00 !important;
+	color: var(--error) !important;
 }
 
 .widget-control-close:hover {
@@ -629,7 +635,7 @@ body.adding-widget .add-new-widget:hover {
 	background: transparent;
 }
 .wp-core-ui .button-link-delete {
-    color: #f53f3f !important;
+    color: var(--error) !important;
 }
 
 #customize-controls .notice.notification-overlay.notification-loading:before {
@@ -681,4 +687,8 @@ ul#sub-accordion-section-custom_css::-webkit-scrollbar {
 .wp-core-ui .customize-control .attachment-media-view .button-add-media:focus {
 	border: 1px solid var(--color2) !important;
 	box-shadow: 0 0 0 1px var(--color2) !important;
+}
+
+.dashicons-trash-alt::before {
+	content: "\f182";
 }
