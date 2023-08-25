@@ -129,3 +129,30 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
         'capability' => 'edit_theme_options',
     )
 ));
+
+
+// setting and Control to add goal tags
+$wp_customize->add_setting(
+    'goal_tags',
+    array(
+        'default' => '',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'clarusmod_text_sanitization'
+    )
+);
+$wp_customize->add_control(new Clarusmod_Repeater_Custom_Control(
+    $wp_customize,
+    'goal_tags',
+    array(
+        'label' => __('Add Tags', 'mts'),
+        'description' => esc_html__('Use the input field to add as many tags as you desire.', 'mts'),
+        'section' => 'ourGoal_Sec',
+        'settings'   => 'goal_tags',
+        'button_labels' => array(
+            'add' => __('Add New Tag', 'mts'),
+        ),
+        'input_type' => 'text', // specify input type here (url or text)
+        'placeholder' => 'input tag', // placeholder for the input field (default : new)
+        'is_sortable' => true,
+    )
+));
