@@ -9,8 +9,8 @@
 class Clarusmod_Customize_Control extends WP_Customize_Control
 {
     protected $clarusmodCustomCtrlsVersions = array(
-        'css'    => '1.0',
-        'js'     => '1.0'
+        'css'    => '1.0.2',
+        'js'     => '1.0.2'
     );
 
     protected function clarusmod_customizer_assets_url($type)

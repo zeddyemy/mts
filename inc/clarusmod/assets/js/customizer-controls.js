@@ -172,7 +172,10 @@ jQuery(document).ready(function ($) {
 	function clarusmodGetAllInputs($element) {
 		var inputValues = $element.find('.repeater-input').map(function() {
 			return $(this).val();
+		}).filter(function(index, value) {
+			return $.trim(value) !== ''; // filter out empty values
 		}).toArray();
+
 		// Add all the values from our repeater fields to the hidden field (which is the one that actually gets saved)
 		$element.find('.customize-control-repeater').val(inputValues);
 		// Important! Make sure to trigger change event so Customizer knows it has to save the field

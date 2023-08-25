@@ -45,7 +45,6 @@ body {
 .wp-full-overlay-sidebar-content {
 	background: var(--color1) !important;
 	border: none;
-	width: 99.5% !important;
     overflow-x: hidden;
 }
 
