@@ -37,7 +37,7 @@ if (!function_exists('mts_setup')) {
         add_theme_support('title-tag');
 
         // Enable support for Post Thumbnails on posts and pages.
-        add_theme_support('post-thumbnails', array('post', 'page', 'events', 'gallery'));
+        add_theme_support('post-thumbnails', array('post', 'page', 'events', 'gallery', 'portfolios'));
 
         // Set up the WordPress core custom background feature.
         $defaults = array(
@@ -76,6 +76,7 @@ require get_template_directory() . '/inc/functions/lazyload.php';
 
 // Custom Post Types (CPT)
 require get_template_directory() . '/inc/custom-post-type/service-post-type.php';
+require get_template_directory() . '/inc/custom-post-type/portfolio-post-type.php';
 
 // Post Card Functions
 require get_template_directory() . '/inc/functions/post-cards-functions.php';
