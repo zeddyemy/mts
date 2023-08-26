@@ -18,7 +18,9 @@ global $mtsThemeMods;
 
 <section class="wrapper col-12">
     <?php
-    get_template_part('template-parts/frontpage-parts/home-section', get_post_format());
+    if ($mtsThemeMods['toggle_home_sec'] == true) {
+        get_template_part('template-parts/frontpage-parts/home-section', get_post_format());
+    }
 
     if ($mtsThemeMods['toggle_about_sec'] == true) {
         get_template_part('template-parts/frontpage-parts/about-section', get_post_format());
