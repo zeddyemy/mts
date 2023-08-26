@@ -10,7 +10,7 @@ $query = new WP_Query(array(
 <section id="blog" class="blog">
     <div class="container col-12">
         <div class="secTitle flex flexCenter row" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
-            <span class="title"> Our Latest Blogs </span>
+            <span class="title"> <?php echo $mtsThemeMods['blog_sec_title']; ?> </span>
         </div>
         <div class="grid blogCards">
             <?php while ($query->have_posts()) :
