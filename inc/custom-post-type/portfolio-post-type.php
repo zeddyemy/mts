@@ -2,7 +2,8 @@
 
 // Register Custom Post Type for Portfolios
 if (!function_exists('custom_post_type_portfolios')) {
-    function custom_post_type_portfolios() {
+    function custom_post_type_portfolios()
+    {
         $labels = array(
             'name'               => __('Portfolios'),
             'singular_name'      => __('Portfolio'),
@@ -43,6 +44,44 @@ if (!function_exists('custom_post_type_portfolios')) {
         );
 
         register_post_type('portfolios', $args);
+
+        // Add custom meta box for portfolio url
+        add_action('add_meta_boxes', 'add_portfolio_url_meta_box');
+        add_action('save_post', 'save_portfolio_url_meta_box');
+
+        function add_portfolio_url_meta_box() {
+            add_meta_box(
+                'portfolio_url',
+                'Portfolio URL',
+                'render_portfolio_url_meta_box',
+                'portfolios', // custom post type name
+                'normal',
+                'default'
+            );
+        }
+
+        // Render the contents of the meta box
+        function render_portfolio_url_meta_box($post) {
+            $portfolio_url = get_post_meta($post->ID, 'portfolio_url', true);
+            
+            echo '<label for="portfolio_url">Portfolio URL:</label> &nbsp;&nbsp;&nbsp;';
+            echo '<input type="url" id="portfolio_url" name="portfolio_url" value="' . esc_url($portfolio_url) . '" size="30" placeholder="Add url" />';
+        }
+
+        // Save the meta box data
+        function save_portfolio_url_meta_box($post_id) {
+            if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+                return;
+            }
+
+            if (!current_user_can('edit_post', $post_id)) {
+                return;
+            }
+            
+            if ($post_id && isset($_POST['portfolio_url'])) {
+                update_post_meta($post_id, 'portfolio_url', esc_url($_POST['portfolio_url']));
+            }
+        }
     }
 }
 add_action('init', 'custom_post_type_portfolios', 1);
