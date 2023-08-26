@@ -15,6 +15,9 @@ $wp_customize->add_panel($frontpagePanel);
 /**=====================================
  * CHILD PANELS / SECTIONS
 =======================================*/
+// Home Section with its settings and controls.
+include_once dirname(__FILE__) . '/frontpage-panel/home-section.php';
+
 // About Section with its settings and controls.
 include_once dirname(__FILE__) . '/frontpage-panel/about-section.php';
 

@@ -27,6 +27,14 @@ if (!function_exists('mts_theme_mods')) {
             'nav_text_transform'            => get_theme_mod('nav_text_transform', 'capitalize'),
             'title_text_transform'          => get_theme_mod('title_text_transform', 'capitalize'),
 
+            'toggle_home_sec'               => get_theme_mod('toggle_home_sec', true),
+            'home_sec_img'                  => get_theme_mod('home_sec_img', true),
+            'home_sec_title'                => get_theme_mod('home_sec_title', true),
+            'home_sec_info'                 => get_theme_mod('home_sec_info', true),
+            'toggle_home_sec_btn'           => get_theme_mod('toggle_home_sec_btn', true),
+            'home_sec_btn_url'              => get_theme_mod('home_sec_btn_url', true),
+            'home_sec_btn_text'             => get_theme_mod('home_sec_btn_text', true),
+            
             'toggle_about_sec'              => get_theme_mod('toggle_about_sec', true),
             'toggle_about_title'            => get_theme_mod('toggle_about_title'),
             'about_sec_title'               => get_theme_mod('about_sec_title', 'Who Are We?'),
