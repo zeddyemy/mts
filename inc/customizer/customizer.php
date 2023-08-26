@@ -60,6 +60,9 @@ if (!function_exists('mts_theme_mods')) {
             'additional_card_content'       => get_theme_mod('additional_card_content', 'Our team of creative thinkers simplify the complex challenges businesses face everyday. Our services are tailored to offer the most effective solutions, to grow your business.'),
             'additional_card_btn'           => get_theme_mod('additional_card_btn', 'Explore More'),
 
+            'toggle_blog_sec'               => get_theme_mod('toggle_blog_sec', true),
+            'blog_sec_title'                => get_theme_mod('blog_sec_title', 'Our Latest Blogs'),
+
             'button_style'                  => get_theme_mod('button_style', 'normal'),
         );
 
