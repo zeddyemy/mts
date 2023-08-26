@@ -4,7 +4,7 @@
 	$wp_customize->add_section( 'header_color_sections',
 		array(
 			'title' => __( 'Header Colors', 'mts' ),
-			'description' => esc_html__( 'Colors applied to the header will on be visible on tablet and mobile screens. Switch to tablet or mobile view to see your changes. Also, if dark mode is enabled, the header background will always be dark even if you applied a custom color.' ),
+			'description' => esc_html__( 'Colors applied to the header will on be visible when you scroll down a little. You can go ahead and scroll down to be able to see your changes.' ),
 			'priority'    => 30,
 			'capability'  => 'edit_theme_options',
 			'panel' => 'colors_panel_id',
