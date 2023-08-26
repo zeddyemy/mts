@@ -135,7 +135,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
 $wp_customize->add_setting(
     'goal_tags',
     array(
-        'default' => '',
+        'default' => 'Captivating, Insightful, fast',
         'transport' => 'refresh',
         'sanitize_callback' => 'clarusmod_text_sanitization'
     )
