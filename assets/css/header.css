@@ -125,7 +125,7 @@
 
 #header .header-c .links li a {
     font-family: var(--font-four);
-    text-transform: var(--navbar-item-text-transform);
+    text-transform: var(--navbar-text-transform);
     color: var(--header-text-color);
 }
 

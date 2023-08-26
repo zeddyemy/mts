@@ -160,6 +160,7 @@ span {
 }
 .title {
     font-size: var(--title-size);
+    text-transform: var(--title-text-transform);
 }
 
 /* -- UI COMPONENTS -- */

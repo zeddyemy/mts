@@ -35,8 +35,8 @@ function internal_css()
             --footer-background-color: <?php echo $mtsThemeMods['footer_bg_color'];  ?>;
             --footer-background-image: url(' <?php echo $mtsThemeMods['footer_bg_image']; ?> ');
             --footer-text-color: <?php echo $mtsThemeMods['footer_text_color'];  ?>;
-            --title-text-transform: <?php echo $navbarCase; ?>;
-            --navbar-text-transform: <?php echo $titleCase; ?>;
+            --title-text-transform: <?php echo $titleCase; ?>;
+            --navbar-text-transform: <?php echo $navbarCase; ?>;
         }
 
         <?php
