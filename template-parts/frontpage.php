@@ -8,8 +8,8 @@
                         2) about section template part
                         3) goal section template part
                         4) service section template part
-                        5) blog section template part
-                        6) portfolio section template part
+                        5) portfolio section template part
+                        6) blog section template part
 
 */
 
@@ -28,7 +28,9 @@ global $mtsThemeMods;
     if ($mtsThemeMods['toggle_goal_sec'] == true) {
         get_template_part('template-parts/frontpage-parts/goal-section', get_post_format());
     }
-    get_template_part('template-parts/frontpage-parts/services-section', get_post_format());
+    if ($mtsThemeMods['toggle_services_sec'] == true) {
+        get_template_part('template-parts/frontpage-parts/services-section', get_post_format());
+    }
 
     if ($mtsThemeMods['toggle_portfolios_sec'] == true) {
         get_template_part('template-parts/frontpage-parts/portfolio-section', get_post_format());

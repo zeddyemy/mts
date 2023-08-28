@@ -16,6 +16,25 @@ $wp_customize->add_section(
 /**========================================
  * SETTINGS AND CONTROLS FOR SERVICES SECTION
 ==========================================*/
+// setting and control To disable or enable Services Section
+$wp_customize->add_setting(
+    'toggle_services_sec',
+    array(
+        'default' => 'true',
+    )
+);
+$wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
+    $wp_customize,
+    'toggle_services_sec',
+    array(
+        'label' => __('Services Section', 'mts'),
+        'description' => esc_html__('Use The Toggle Button to Disable or Enable the Services section', 'mts'),
+        'section' => 'services_Sec',
+        'settings'   => 'toggle_services_sec',
+    )
+));
+
+
 // setting and control To Change TitLE For The Service Section
 $wp_customize->add_setting(
     'service_section_title',

@@ -52,6 +52,7 @@ if (!function_exists('mts_theme_mods')) {
             'toggle_goal_tags'              => get_theme_mod('toggle_goal_tags', true),
             'goal_tags'                     => get_theme_mod('goal_tags', 'Captivating, Insightful, fast'),
 
+            'toggle_services_sec'           => get_theme_mod('toggle_services_sec', true),
             'service_section_title'         => get_theme_mod('service_section_title', 'Our Services'),
             'frontpage_service_card_1'      => get_theme_mod('frontpage_service_card_1', 0),
             'frontpage_service_card_2'      => get_theme_mod('frontpage_service_card_2', 0),
