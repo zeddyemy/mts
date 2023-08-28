@@ -13,14 +13,8 @@
     color: var(--theme-clr)
 }
 .serCard label {
-    display: block;
-    font-size: 1.2em;
     margin-top: 15px;
     margin-bottom: 10px;
-    font-family: var(--font-two);
-    font-weight: 500;
-    line-height: 1.1;
-    color: inherit;
 }
 .serCard label::after {
     content: "";

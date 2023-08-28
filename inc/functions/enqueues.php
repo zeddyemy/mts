@@ -58,5 +58,8 @@ function mts_scripts() {
     if (is_front_page() || is_home() || is_post_type_archive('services')) {
         wp_enqueue_style('services', get_mts_assets('css') . 'services.css');
     }
+    if (is_front_page() || is_home() || is_post_type_archive('portfolios')) {
+        wp_enqueue_style('portfolios', get_mts_assets('css') . 'portfolios.css');
+    }
 }
 add_action('wp_enqueue_scripts', 'mts_scripts');

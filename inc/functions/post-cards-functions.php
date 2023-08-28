@@ -37,6 +37,30 @@ function viewMore_service_card()
 <?php }
 
 
+// POST CARD FOR EACH PORTFOLIO POST TYPE
+function get_portfolio_card() {
+    // Retrieve portfolio data
+    $portfolio_title = get_the_title();
+    $portfolio_excerpt = get_the_excerpt();
+    $portfolio_url = get_post_meta(get_the_ID(), 'portfolio_url', true); ?>
+
+    <article class="card folioCard" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
+        <div class="fitImg cardImg">
+            <a href="<?php the_permalink() ?>">
+                <?php theme_post_thumb(); ?>
+            </a>
+        </div>
+        <div class="ovrLay flex flexCenter">
+            <div class="cardBody txtShadowDrk">
+                <a href="<?php the_permalink() ?>" rel="bookmark"> <label><?php echo $portfolio_title; ?></label> </a>
+                <span> <?php echo $portfolio_excerpt ?></span>
+            </div>
+        </div>
+    </article>
+    <?php
+}
+
+
 // POST CARD FOR EACH DEFAULT POST TYPE
 function get_default_card()
 { ?>

@@ -205,6 +205,7 @@ span {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(26ch, 1fr));
     grid-gap: 1.5em;
+    padding: 10px 0px;
 }
 .flexSB {
     display: flex;
@@ -279,7 +280,7 @@ span {
     padding: 50px var(--site-pad);
 }
 .secTitle {
-    padding: 10px 0px;
+    padding: 0px 0px 10px;
     font-size: 1.7em;
     font-family: var(--font-two);
 }
@@ -304,6 +305,10 @@ span {
 
 .noneCard {
     width: 100%;
+    padding: 40px 8px;
+    text-align: center;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
 }
 @media screen and (min-width: 550px) { .noneCard { width: 400px; } }
 .card {
@@ -316,14 +321,22 @@ span {
     background-color: var(--box-bg-clr);
     transition: var(--transition);
 }
+.card label {
+    display: block;
+    font-size: 1.2em;
+    margin: 4px 0px 10px;
+    font-family: var(--font-two);
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
 .cardImg {
     width: 100%;
     height: 100%;
     overflow: hidden;
     position: relative;
-    border-top-right-radius: var(--round-conners);
-    border-top-left-radius: var(--round-conners);
-    margin-bottom: 5px;
+    border-radius: var(--round-conners);
+    margin: 0px;
 }
 .cardImg img {
     width: 100%;
@@ -344,7 +357,7 @@ span {
     transition: var(--transition);
     border-radius: var(--round-conners);
     filter: brightness(80%) contrast(1.5);
-    background-image: linear-gradient(transparent 40%, #00000080 77%);
+    background-image: linear-gradient(transparent 40%, #0000009c 67%);
 }
 .cardBody {
     padding: 6px 8px 14px;
@@ -361,13 +374,14 @@ span {
 }
 .secCard {
     --sec-radius: 0px;
+    color: #fff;
     flex-wrap: wrap;
-    background: black;
     min-height: 300px;
-    border-radius: var(--sec-radius);
     position: relative;
+    background: black;
     width: auto !important;
     padding: 40px var(--site-pad);
+    border-radius: var(--sec-radius);
     margin: 0px calc(0% - var(--site-pad));
 }
 .secCard::before{
@@ -380,38 +394,41 @@ span {
     border-radius: var(--sec-radius);
     background: var(--overlay-clr);
 }
+.secCard .title {
+    color: #fff;
+}
 .secCard .cardBody {
     padding: 0px;
     color: #fff;
     text-shadow: var(--txt-shadow);
 }
-.secCard .title {
+.secCard .cardBody .title{
     display: block;
     font-size: 2.4em;
     word-spacing: 0px;
 }
-.secCard p {
+.secCard .cardBody p {
     font-size: 1em;
     margin: 0px;
 }
 @media screen and (min-width: 950px) {
     .secCard {
         --sec-radius: var(--round-conners);
-        padding: 0px 90px;
+        padding: 40px 90px;
         gap: 30px;
         flex-wrap: nowrap;
         width: 100% !important;
         margin: auto !important;
     }
-    .secCard .title {
+    .secCard .cardBody .title{
         font-size: 3em;
     }
-    .secCard p {
+    .secCard .cardBody p {
         font-size: 1.10em;
     }
 }
 @media screen and (min-width: 1024px) {
-    .secCard p {
+    .secCard .cardBody p {
         font-size: 1.20em;
     }
 }

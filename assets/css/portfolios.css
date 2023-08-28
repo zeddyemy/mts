@@ -1,0 +1,64 @@
+.thePortfolios {
+    grid-template-columns: 1fr;
+}
+
+.folioCard {
+    color: #fff;
+    overflow: hidden;
+    min-height: 14.75rem;
+    border: 1px solid var(--outline);
+    background: var(--overlay-clr);
+}
+.folioCard .ovrLay {
+    opacity: 1;
+    backdrop-filter: blur(5px);
+    background: var(--overlay-clr);
+}
+
+.folioCard .cardBody {
+    padding: 0.8rem;
+    color: #fff;
+    position: relative;
+}
+.folioCard a {
+    color: #fff
+}
+
+.folioCard label {
+    font-size: 1.5em;
+}
+
+.folioCard span {
+    font-family: var(--font-four);
+    font-size: .95em;
+    display: inline-block;
+}
+
+.folioCard .btn {
+    margin: 10px auto;
+    color: inherit;
+}
+
+@media screen and (min-width: 576px) {
+    .thePortfolios {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 992px) {
+    .thePortfolios {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .folioCard .ovrLay {
+        opacity: 0;
+        backdrop-filter: blur(5px);
+        background: var(--overlay-clr);
+    }
+    .folioCard:hover .ovrLay {
+        opacity: 1;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .folioCard label {
+        font-size: 1.4em;
+    }
+}

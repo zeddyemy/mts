@@ -30,9 +30,10 @@ global $mtsThemeMods;
     }
     get_template_part('template-parts/frontpage-parts/services-section', get_post_format());
 
+    get_template_part('template-parts/frontpage-parts/portfolio-section', get_post_format());
+    
     if ($mtsThemeMods['toggle_blog_sec'] == true) {
         get_template_part('template-parts/frontpage-parts/blog-section', get_post_format());
     }
-    get_template_part('template-parts/frontpage-parts/portfolio-section', get_post_format());
     ?>
 </section>

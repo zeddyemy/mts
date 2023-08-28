@@ -85,3 +85,5 @@ if (!function_exists('custom_post_type_portfolios')) {
     }
 }
 add_action('init', 'custom_post_type_portfolios', 1);
+
+include_once dirname(__FILE__) . '/none/no-portfolio.php';
