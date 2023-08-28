@@ -248,7 +248,7 @@ span {
 }
 .btn[class*="-rounded"],
 .btn.rounded {
-    --btn-radius: var(--round-conners);
+    --btn-radius: calc(var(--round-conners) - 11px);
 }
 .btn[class*="ghost-"],
 .plainBtn {
