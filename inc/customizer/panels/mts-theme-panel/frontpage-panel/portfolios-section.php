@@ -62,17 +62,18 @@ $wp_customize->add_setting(
         'sanitize_callback' => 'absint',
     )
 );
-$wp_customize->add_control(
+$wp_customize->add_control(new Clarusmod_Numeric_Input_Custom_Control(
+    $wp_customize,
     'portfolios_count',
     array(
         'label' => __("Number of portfolios", 'mts'),
         'description' => __('Specify the total number of portfolios to be displayed. Maximum number allowed is 12', 'mts'),
         'settings' => 'portfolios_count',
         'section' => 'portfolios_sec',
-        'type' => 'text',
         'input_attrs' => array(
             'min' => 1,
-            'max' => 12
+            'max' => 12,
+            'step' => 1,
         ),
     )
-);
+));
