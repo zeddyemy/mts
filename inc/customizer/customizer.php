@@ -28,12 +28,12 @@ if (!function_exists('mts_theme_mods')) {
             'title_text_transform'          => get_theme_mod('title_text_transform', 'capitalize'),
 
             'toggle_home_sec'               => get_theme_mod('toggle_home_sec', true),
-            'home_sec_img'                  => get_theme_mod('home_sec_img', true),
-            'home_sec_title'                => get_theme_mod('home_sec_title', true),
-            'home_sec_info'                 => get_theme_mod('home_sec_info', true),
+            'home_sec_img'                  => get_theme_mod('home_sec_img', get_mts_assets('img') . 'team.jpg'),
+            'home_sec_title'                => get_theme_mod('home_sec_title', 'Stay ahead of the curve with our forward thinking.'),
+            'home_sec_info'                 => get_theme_mod('home_sec_info', 'We take extreme pride at being the very best at what we do.'),
             'toggle_home_sec_btn'           => get_theme_mod('toggle_home_sec_btn', true),
-            'home_sec_btn_url'              => get_theme_mod('home_sec_btn_url', true),
-            'home_sec_btn_text'             => get_theme_mod('home_sec_btn_text', true),
+            'home_sec_btn_url'              => get_theme_mod('home_sec_btn_url', '#'),
+            'home_sec_btn_text'             => get_theme_mod('home_sec_btn_text', 'Get in touch'),
             
             'toggle_about_sec'              => get_theme_mod('toggle_about_sec', true),
             'toggle_about_title'            => get_theme_mod('toggle_about_title'),
