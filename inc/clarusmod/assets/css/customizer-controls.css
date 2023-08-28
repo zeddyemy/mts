@@ -988,7 +988,7 @@ URL Custom Control / Input prefix
 .input-msg {
 	display: none;
 }
-.invalid-url {
+.invalid {
     font-weight: 800;
     word-spacing: 5px;
 	display: block !important;

@@ -405,7 +405,7 @@ body.adding-widget .add-new-widget:hover {
 	height: 1.5625rem !important;
 	min-height: 1.5625rem !important;
 }
-.wp-customizer input.invalid-url {
+.wp-customizer input.invalid {
 	border: 1px solid var(--error) !important;
 }
 .wp-customizer select::-webkit-scrollbar,

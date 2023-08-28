@@ -39,13 +39,50 @@ jQuery(document).ready(function ($) {
      * @license http://www.gnu.org/licenses/gpl-2.0.html
      */
     
-    // Listen for changes in the input field and apply the "invalid-url" class
+    // Listen for changes in the input field and apply the "invalid" class
     $('.customize-control-url input[type="url"]').on('input', function () {
         var url = $(this).val();
         var isValid = isValidUrl(url);
-        $('.customize-control-url p.input-msg').toggleClass('invalid-url', !isValid);
-        $(this).toggleClass('invalid-url', !isValid);
+        $('.customize-control-url p.input-msg').toggleClass('invalid', !isValid);
+        $(this).toggleClass('invalid', !isValid);
+		changePublishState(isValid);
     });
+	
+
+	/**
+	 * Numeric Input Custom Control
+	 *
+	 * @author Zeddy Emmanuel <https://zeddyemy.github.io/>
+	 * @license http://www.gnu.org/licenses/gpl-2.0.html
+	 */
+	// Listen for changes in the input field and apply the "invalid" class
+	$('.customize-control-numeric_input input[type="number"]').on('input', function () {
+		let msg = '';
+		let isValid = true;
+		const val = parseFloat($(this).val());
+		const min = parseFloat($(this).attr('min'));
+		const max = parseFloat($(this).attr('max'));
+		const msgBox = $(this).siblings('p.input-msg'); // select the message box
+
+		if (isNaN(val)) {
+			isValid = false;
+			msg = 'Please enter a number';
+		} else if (!isNaN(min) && val < min) {
+			isValid = false;
+			msg = 'Number must be greater than or equal to ' + min;
+		} else if (!isNaN(max)  && val > max){
+			isValid = false;
+			msg = 'Number must be less than or equal to ' + max;
+		}
+		msgBox.text(msg); // set the text content of the message
+
+		// toggle the 'invalid' class based on validation
+		msgBox.toggleClass('invalid', !isValid);
+		$(this).toggleClass('invalid', !isValid);
+
+		// change state of publish based on validation
+		changePublishState(isValid);
+	});
 
     /**
      * Searchable Select Control
@@ -142,8 +179,10 @@ jQuery(document).ready(function ($) {
 		theRepeater.on('input', '.repeater-input', function () {
 			var url = $(this).val();
 			var isValid = isValidUrl(url);
-			$('.customize-control-repeater p.input-msg').toggleClass('invalid-url', !isValid);
-			$(this).toggleClass('invalid-url', !isValid);
+			$('.customize-control-repeater p.input-msg').toggleClass('invalid', !isValid);
+			$(this).toggleClass('invalid', !isValid);
+			// change state of publish based on validation
+			changePublishState(isValid);
 		});
 		theRepeater.on('blur', '.repeater-input', function () {
 			var input = $(this);
@@ -196,5 +235,11 @@ jQuery(document).ready(function ($) {
 	// check if url has 'http://' Or 'https://'
 	function hasHTTPS(url) {
 		return url.startsWith("http://") || url.startsWith("https://");
+	}
+
+	function changePublishState(valid) {
+		// get publish button
+		const publishBtn = $('#customize-header-actions .button-primary.save');
+		publishBtn.prop('disabled', !valid);
 	}
 });

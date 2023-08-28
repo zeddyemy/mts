@@ -39,6 +39,9 @@ if (class_exists('WP_Customize_Control')) {
     // Repeater custom control class
     require_once trailingslashit(dirname(__FILE__)) . 'custom-controls/class-repeater-custom-control.php';
 
+    // Numeric Input custom control class
+    require_once trailingslashit(dirname(__FILE__)) . 'custom-controls/class-numeric-input-custom-control.php';
+
 
     // CUSTOM SANITIZE CALLBACKS
     require_once trailingslashit(dirname(__FILE__)) . 'custom-sanitize-callbacks.php';
