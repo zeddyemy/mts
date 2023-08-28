@@ -69,6 +69,8 @@ if (!function_exists('mts_theme_mods')) {
             'blog_sec_title'                => get_theme_mod('blog_sec_title', 'Our Latest Blogs'),
 
             'button_style'                  => get_theme_mod('button_style', 'normal'),
+
+            'toggle_single_sidebar'         => get_theme_mod('toggle_single_sidebar', 'normal'),
         );
 
         return apply_filters('mts_theme_mods', $mts_mods);
