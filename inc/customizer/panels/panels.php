@@ -22,5 +22,8 @@ include_once dirname(__FILE__) . '/mts-theme-panel/header-panel.php';
 // Frontpage Panel
 include_once dirname(__FILE__) . '/mts-theme-panel/frontpage-panel.php';
 
+// Single Page panel
+include_once dirname(__FILE__) . '/mts-theme-panel/single-page-panel.php';
+
 // Other settings section
 include_once dirname(__FILE__) . '/mts-theme-panel/other-settings-section.php';
