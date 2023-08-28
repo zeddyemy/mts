@@ -27,6 +27,9 @@ include_once dirname(__FILE__) . '/frontpage-panel/goal-section.php';
 // services Section with its settings and controls.
 include_once dirname(__FILE__) . '/frontpage-panel/services-section.php';
 
+// portfolios Section with its settings and controls.
+include_once dirname(__FILE__) . '/frontpage-panel/portfolios-section.php';
+
 // blog Section with its settings and controls.
 include_once dirname(__FILE__) . '/frontpage-panel/blog-section.php';
 
