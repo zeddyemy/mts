@@ -70,7 +70,7 @@ if (!function_exists('mts_theme_mods')) {
 
             'button_style'                  => get_theme_mod('button_style', 'normal'),
 
-            'toggle_single_sidebar'         => get_theme_mod('toggle_single_sidebar', 'normal'),
+            'toggle_single_sidebar'         => get_theme_mod('toggle_single_sidebar', false),
         );
 
         return apply_filters('mts_theme_mods', $mts_mods);
