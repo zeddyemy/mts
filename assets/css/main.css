@@ -28,7 +28,7 @@
     --font-two: 'ARSMaquettePro', sans-serif;
     --font-three: 'RobotoSerif', sans-serif;
     --font-four: 'Poppins', sans-serif;
-    --site-pad: 30px;
+    --site-pad: 20px;
     --btn-height: 40px;
     --title-size: 22px;
     --round-conners: 20px;
@@ -135,6 +135,9 @@ body::after {
     content: "";
     clear: both;
     display: table;
+}
+.noHome .layout {
+    padding: 110px 0px 40px;
 }
 a {
     text-decoration: none;

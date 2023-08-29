@@ -25,6 +25,8 @@ function internal_css()
                 --header-text-color: <?php echo $headerTxtColor;  ?> !important;
             }
         }
+        
+        .noHome #header,
         .headerBg {
             --header-text-color: <?php echo $headerTxtColor;  ?> !important;
             --header-background-color: <?php echo $headerBgColor; ?> !important;

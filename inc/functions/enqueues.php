@@ -91,3 +91,12 @@ function mts_scripts() {
     }
 }
 add_action('wp_enqueue_scripts', 'mts_scripts');
+
+// add noHome class to body tag
+function add_noHome_body_class($classes) {
+    if (!is_front_page() && !is_home() && !is_page()) {
+        $classes[] = 'noHome';
+    }
+    return $classes;
+}
+add_filter( 'body_class', 'add_noHome_body_class');
