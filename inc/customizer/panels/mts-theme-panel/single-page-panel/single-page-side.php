@@ -1,7 +1,7 @@
 <?php
 
 /**======================================================
- * CREATE SECTION TO MODIFY THE FRONTPAGE'S ABOUT SECTION
+ * CREATE SECTION TO MODIFY THE SIDE BAR
 ========================================================*/
 $wp_customize->add_section(
     'single_blog_page_sidebar',
@@ -13,13 +13,13 @@ $wp_customize->add_section(
 );
 
 /**========================================
- * SETTINGS AND CONTROLS FOR ABOUT SECTION
+ * SETTINGS AND CONTROLS FOR SIDE BAR
 ==========================================*/
 // Setting and Control To Disable or Enable Sidebar on the single page
 $wp_customize->add_setting(
     'toggle_single_sidebar',
     array(
-        'default' => false,
+        'default' => True,
     )
 );
 $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(

@@ -10,12 +10,11 @@
 
 */
 global $mtsThemeMods;
-$disable_sidebar  = $mtsThemeMods['toggle_single_sidebar'];
 
 ?>
 
 <section class="wrapper singlePage col-12 flex layout">
-    <section class=" <?php if ($disable_sidebar == false) { ?> col-8 <?php } ?> main">
+    <section class=" <?php if ($mtsThemeMods['toggle_single_sidebar'] == true) { echo 'col-8'; } ?> main">
         <?php if (have_posts()) :
 
             while (have_posts()) : the_post();
@@ -32,7 +31,7 @@ $disable_sidebar  = $mtsThemeMods['toggle_single_sidebar'];
         endif; ?>
     </section>
 
-    <?php if ($disable_sidebar == false) { ?>
+    <?php if ($mtsThemeMods['toggle_single_sidebar'] == true) { ?>
         <section class="col-4 side">
             <?php get_sidebar('single'); // The Side Bar. 
             ?>

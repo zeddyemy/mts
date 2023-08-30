@@ -15,5 +15,14 @@ $wp_customize->add_panel($singlePagePanel);
 /**=====================================
  * CHILD PANELS / SECTIONS
 =======================================*/
-// single blog page sidebar with its settings and controls.
+// single blog page 'Share Buttons' section with its settings and controls.
+include_once dirname(__FILE__) . '/single-page-panel/share-buttons.php';
+
+// single blog page 'Excerpt' section with its settings and controls.
+include_once dirname(__FILE__) . '/single-page-panel/excerpt.php';
+
+// single blog page 'featured image' section with its settings and controls.
+include_once dirname(__FILE__) . '/single-page-panel/featured-image.php';
+
+// single blog page 'sidebar' section with its settings and controls.
 include_once dirname(__FILE__) . '/single-page-panel/single-page-side.php';

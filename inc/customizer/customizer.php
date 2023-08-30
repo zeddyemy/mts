@@ -70,7 +70,17 @@ if (!function_exists('mts_theme_mods')) {
 
             'button_style'                  => get_theme_mod('button_style', 'normal'),
 
-            'toggle_single_sidebar'         => get_theme_mod('toggle_single_sidebar', false),
+            'toggle_single_sidebar'         => get_theme_mod('toggle_single_sidebar', true),
+            'toggle_single_featured_img'    => get_theme_mod('toggle_single_featured_img', true),
+            'toggle_single_excerpt'         => get_theme_mod('toggle_single_excerpt', true),
+            'toggle_excerpt_italics'        => get_theme_mod('toggle_excerpt_italics', false),
+            'toggle_share_btns'             => get_theme_mod('toggle_share_btns', true),
+            'toggle_facebook_btn'           => get_theme_mod('toggle_facebook_btn', true),
+            'toggle_x_btn'                  => get_theme_mod('toggle_x_btn', true),
+            'toggle_whatsapp_btn'           => get_theme_mod('toggle_whatsapp_btn', true),
+            'toggle_telegram_btn'           => get_theme_mod('toggle_telegram_btn', false),
+            'toggle_pinterest_btn'          => get_theme_mod('toggle_pinterest_btn', false),
+            'toggle_linkedin_btn'           => get_theme_mod('toggle_linkedin_btn', false),
         );
 
         return apply_filters('mts_theme_mods', $mts_mods);
