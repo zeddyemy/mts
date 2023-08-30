@@ -86,3 +86,6 @@ include_once get_template_directory() . '/inc/customizer/customizer.php';
 
 // CUSTOM WP NAV
 require get_template_directory() . '/inc/functions/custom-wp-nav.php';
+
+// WIDGET AREAS.
+require get_template_directory() . '/inc/functions/widgets.php';

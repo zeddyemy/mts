@@ -5,17 +5,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Kandor
+ * @package mts
  */
 
 ?>
 <div id="secondary" class="side-content widget-area" role="complementary">
-    <?php
-    if (is_active_sidebar('sidebar-home')) :
-        dynamic_sidebar('sidebar-home');
-    else :
-        echo 'theme_no_widgets()';
-
-    endif;
-    ?>
+    <?php mts_dynamic_sidebar('sidebar-home'); ?>
 </div>
