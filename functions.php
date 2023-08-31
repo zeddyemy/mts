@@ -67,6 +67,7 @@ require get_template_directory() . '/inc/functions/helper-functions.php';
 
 // Theme's Dynamic Internal CSS.
 require get_template_directory() . '/inc/functions/internal-css.php';
+require get_template_directory() . '/inc/functions/internal-css-single-page.php';
 
 // Enqueue Theme's CSS and JavaScripts.
 require get_template_directory() . '/inc/functions/enqueues.php';

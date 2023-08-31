@@ -95,7 +95,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
 $wp_customize->add_setting(
     'toggle_telegram_btn',
     array(
-        'default' => true,
+        'default' => false,
     )
 );
 $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
@@ -114,7 +114,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
 $wp_customize->add_setting(
     'toggle_pinterest_btn',
     array(
-        'default' => true,
+        'default' => false,
     )
 );
 $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
@@ -133,7 +133,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
 $wp_customize->add_setting(
     'toggle_linkedin_btn',
     array(
-        'default' => true,
+        'default' => false,
     )
 );
 $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(

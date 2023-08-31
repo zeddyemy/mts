@@ -31,8 +31,7 @@ h1.article-card-title {
     font-style: var(--excerpt-font-style);
     font-weight: 500;
     font-size: 1.1em;
-    text-transform: var(--excerpt-text-transform);
-    color: var(--excerpt-clr);
+    color: var(--tertiary-clr);
     line-height: 1.1em;
 }
 @media screen and (min-width: 999px) {
@@ -55,7 +54,7 @@ h1.article-card-title {
 .author-date span,
 .author-date .author a,
 .author-date time {
-    color: var(--time-clr);
+    color: var(--tertiary-clr);
     font-family: var(--font-four);
     font-size: 14px;
     font-weight: 600;

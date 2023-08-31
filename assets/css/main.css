@@ -81,7 +81,7 @@ body {
     --body-txt-clr: #444;
     --box-bg-clr: #ffffffcc;
     --box-bg-clr-solid: #ffffff;
-    --tertiary-clr: #ece9e8;
+    --tertiary-clr: #59626f;
     --brightness: brightness(100%) contrast(1);
 }
 body.dark-theme {
@@ -89,7 +89,7 @@ body.dark-theme {
     --body-txt-clr: #e9e9e9;
     --box-bg-clr: #21212278;
     --box-bg-clr-solid: #212122;
-    --tetiary-color: #000;
+    --tertiary-clr: #afafaf;
     --brightness: brightness(70%) contrast(1.1);
 }
 @media (prefers-color-scheme: dark) {
@@ -98,7 +98,7 @@ body.dark-theme {
         --body-txt-clr: #e9e9e9;
         --box-bg-clr: #21212278;
         --box-bg-clr-solid: #212122;
-        --tetiary-color: #000;
+        --tertiary-clr: #afafaf;
         --brightness: brightness(70%) contrast(1.1);
     }
 
@@ -107,7 +107,7 @@ body.dark-theme {
         --body-txt-clr: #444;
         --box-bg-clr: #ffffffcc;
         --box-bg-clr-solid: #ffffff;
-        --tertiary-clr: #ece9e8;
+        --tertiary-clr: #59626f;
         --brightness: brightness(100%) contrast(1);
     }
 }
@@ -284,7 +284,7 @@ span {
     display: -ms-flexbox;
     align-items: start;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 30px 40px;
     padding: 0px var(--site-pad);
 }
 .layout::after {
