@@ -14,8 +14,21 @@
  */
 
 
-get_header();
+?>
 
-get_template_part('template-parts/pages', get_post_format());
 
-get_footer();
+
+<section class="article-card card">
+	<header>
+		<h2 class="article-card-title"> <?php the_title(); ?> </h2>
+	</header>
+
+
+	<div class="featured-image">
+		<?php theme_post_thumb(); ?>
+	</div>
+
+	<div class="article-content">
+		<?php the_content(__('(more...)')); ?>
+	</div>
+</section>

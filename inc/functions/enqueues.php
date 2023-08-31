@@ -80,6 +80,11 @@ function mts_scripts() {
         }
     }
 
+    if (is_page()) {
+        wp_enqueue_style('home',     get_mts_assets('css') . 'home.css');
+        wp_enqueue_style('pages-home',     get_mts_assets('css') . 'pages.css');
+    }
+
     if (is_author()) {
         // enqueue stylesheet for Author page.
         wp_enqueue_style('author-css', get_mts_assets('css') . 'author.css');
