@@ -20,7 +20,9 @@ global $mtsThemeMods;
 
 <section class="article-card card">
 	<header>
-		<h2 class="article-card-title"> <?php the_title(); ?> </h2>
+		<?php if ($mtsThemeMods['toggle_pages_hero_header'] == false) { ?>
+			<h2 class="article-card-title"> <?php the_title(); ?> </h2>
+		<?php } ?>
 	</header>
 
 

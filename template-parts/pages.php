@@ -10,6 +10,7 @@
 */
 global $mtsThemeMods;
 $mainSecWidth = ($mtsThemeMods['toggle_pages_sidebar'] == true) ? 'col-8' : 'col-9';
+
 ?>
 
 <?php

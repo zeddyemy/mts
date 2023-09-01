@@ -97,11 +97,21 @@ function mts_scripts() {
 }
 add_action('wp_enqueue_scripts', 'mts_scripts');
 
-// add noHome class to body tag
-function add_noHome_body_class($classes) {
+// add noHero class to body tag
+function add_noHero_body_class($classes) {
     if (!is_front_page() && !is_home() && !is_page()) {
-        $classes[] = 'noHome';
+        $classes[] = 'noHero';
     }
     return $classes;
 }
-add_filter( 'body_class', 'add_noHome_body_class');
+add_filter( 'body_class', 'add_noHero_body_class');
+function add_noHero_body_class_pages($classes) {
+    global $mtsThemeMods;
+    if (is_page()) {
+        if ($mtsThemeMods['toggle_pages_hero_header'] == false) {
+            $classes[] = 'noHero';
+        }
+    }
+    return $classes;
+}
+add_filter( 'body_class', 'add_noHero_body_class_pages');

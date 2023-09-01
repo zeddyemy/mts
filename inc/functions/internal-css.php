@@ -26,7 +26,7 @@ function internal_css()
             }
         }
         
-        .noHome #header,
+        .noHero #header,
         .headerBg {
             --header-text-color: <?php echo $headerTxtColor;  ?> !important;
             --header-background-color: <?php echo $headerBgColor; ?> !important;

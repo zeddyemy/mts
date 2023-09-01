@@ -19,6 +19,9 @@
 .pages-home-isActive.layout {
     margin-top: -80px;
 }
+.noHero .pages-home-isActive.layout {
+    margin-top: 0px;
+}
 .pages-home #home {
     --home-height: unset !important;
 }

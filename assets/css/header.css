@@ -9,7 +9,7 @@
     transition: var(--transition);
     z-index: 90;
 }
-.noHome #header,
+.noHero #header,
 .headerBg {
     background-color: var(--header-background-color) !important;
     box-shadow: var(--shadow-large);
@@ -65,7 +65,7 @@
 .header-c .menuBtn {
     border-radius: 10%;
 }
-.noHome #header .header-c .menuBtn,
+.noHero #header .header-c .menuBtn,
 .headerBg .header-c .menuBtn {
     background: transparent !important;
     box-shadow: unset;
