@@ -151,3 +151,16 @@ function social_share_btns() {
     </div>
 <?php
 }
+
+
+// GET ALL PAGES
+$args = array(
+    'sort_order'    => 'asc',
+    'sort_column'   => 'post_title',
+    'hierarchical'  => 1,
+    'number'        => -1,
+    'post_type'     => 'page',
+    'post_status'   => 'publish',
+);
+global $pubPages;
+$pubPages = get_pages($args);

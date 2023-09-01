@@ -9,19 +9,8 @@ $eachPagesPanel = new Clarusmod_Customize_Panel($wp_customize, 'each_pages', arr
 $wp_customize->add_panel($eachPagesPanel);
 
 
-
-// GET ALL PAGES
-$args = array(
-    'sort_order'    => 'asc',
-    'sort_column'   => 'post_title',
-    'hierarchical'  => 1,
-    'number'        => -1,
-    'post_type'     => 'page',
-    'post_status'   => 'publish',
-);
-$pages = get_pages($args);
-
-foreach ($pages as $page) {
+global $pubPages;
+foreach ($pubPages as $page) {
     $wp_customize->add_section(
         'pages_' . $page->post_name,
         array(
