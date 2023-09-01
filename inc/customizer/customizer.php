@@ -81,6 +81,12 @@ if (!function_exists('mts_theme_mods')) {
             'toggle_telegram_btn'           => get_theme_mod('toggle_telegram_btn', false),
             'toggle_pinterest_btn'          => get_theme_mod('toggle_pinterest_btn', false),
             'toggle_linkedin_btn'           => get_theme_mod('toggle_linkedin_btn', false),
+
+            'toggle_pages_hero_header'      => get_theme_mod('toggle_pages_hero_header', true),
+            'pages_hero_header_img'         => get_theme_mod('pages_hero_header_img', get_mts_assets('img') . 'pages-img.jpg'),
+            'pages_hero_header_subtext'     => get_theme_mod('pages_hero_header_subtext', ''),
+            'toggle_pages_featured_img'     => get_theme_mod('toggle_pages_featured_img', false),
+            'toggle_pages_sidebar'          => get_theme_mod('toggle_pages_sidebar', true),
         );
 
         return apply_filters('mts_theme_mods', $mts_mods);
