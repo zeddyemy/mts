@@ -10,11 +10,11 @@
 
 */
 global $mtsThemeMods;
-
+$mainSecWidth = ($mtsThemeMods['toggle_single_sidebar'] == true) ? 'col-8' : 'col-9';
 ?>
 
 <section class="wrapper singlePage col-12 flex layout">
-    <section class=" <?php if ($mtsThemeMods['toggle_single_sidebar'] == true) { echo 'col-8'; } ?> main">
+    <section class=" <?php echo $mainSecWidth; ?> main">
         <?php if (have_posts()) :
 
             while (have_posts()) : the_post();

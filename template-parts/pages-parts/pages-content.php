@@ -24,7 +24,7 @@ global $mtsThemeMods;
 	</header>
 
 
-	<?php if ($mtsThemeMods['toggle_single_featured_img'] == true) { ?>
+	<?php if ($mtsThemeMods['toggle_pages_featured_img'] == true) { ?>
 		<div class="featured-image">
 			<?php theme_post_thumb(); ?>
 		</div>
