@@ -13,7 +13,7 @@
  * @package mts
  */
 
-
+global $mtsThemeMods;
 ?>
 
 
@@ -24,9 +24,11 @@
 	</header>
 
 
-	<div class="featured-image">
-		<?php theme_post_thumb(); ?>
-	</div>
+	<?php if ($mtsThemeMods['toggle_single_featured_img'] == true) { ?>
+		<div class="featured-image">
+			<?php theme_post_thumb(); ?>
+		</div>
+	<?php } ?>
 
 	<div class="article-content">
 		<?php the_content(__('(more...)')); ?>

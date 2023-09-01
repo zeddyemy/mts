@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
     Template part : Pages
     Description : This Template Part Is For The Pages Of The Site.
@@ -8,19 +8,18 @@
 						2) The Side Bar.
 
 */
-
+global $mtsThemeMods;
 ?>
 
-<section class="wrapper col-12 pages-home">
-	<?php
-	get_template_part('template-parts/pages-parts/home-section', get_post_format());
-	?>
-</section>
+<?php
+    if ($mtsThemeMods['toggle_pages_hero_header'] == true) {
+		get_template_part('template-parts/pages-parts/hero-header', get_post_format());
+    }
+?>
 
 <section class="wrapper pages pages-home-isActive col-12 flex layout">
 
-	<section class="  col-8 main" >
-		
+	<section class="<?php if ($mtsThemeMods['toggle_pages_sidebar'] == true) { echo 'col-8'; } ?> main" >
 		<?php if (have_posts()) :
 
 			while (have_posts()) : the_post();
@@ -35,11 +34,12 @@
 			get_template_part( 'template-parts/none', get_post_format() );
 
 		endif; ?>
-
 	</section>
 
-	<div class="col-4 side">
-			<?php get_sidebar('pages'); // The Side Bar. 
-            ?>
-	</div>
+	<?php if ($mtsThemeMods['toggle_pages_sidebar'] == true) { ?>
+		<div class="col-4 side">
+				<?php get_sidebar('pages'); // The Side Bar. 
+				?>
+		</div>
+	<?php } ?>
 </section>
