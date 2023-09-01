@@ -4,10 +4,10 @@
  * CREATE SECTION TO MODIFY HERO HEADER
 ========================================================*/
 $wp_customize->add_section(
-    'pages_hero_header',
+    'pages_default_settings',
     array(
-        'title'    => __('Pages Hero Header', 'mts'),
-        'description' => esc_html__('customizer the Hero Header on pages. Visit a page to see your changes reflect there.', 'mts'),
+        'title'    => __('Default Settings For Pages', 'mts'),
+        'description' => esc_html__('The settings on here, are the defualt settings for all pages across your website. Visit a page to see your changes reflect there.', 'mts'),
         'panel' => 'pages_panel_id',
     )
 );
@@ -28,7 +28,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
     array(
         'label' => __('Hero Header', 'mts'),
         'description' => esc_html__('Use this toggle to Disable or Enable the Hero Header on your site\'s pages.', 'mts'),
-        'section'  => 'pages_hero_header',
+        'section'  => 'pages_default_settings',
         'settings'   => 'toggle_pages_hero_header',
     )
 ));
@@ -49,7 +49,7 @@ $wp_customize->add_control(new WP_Customize_Image_Control(
     array(
         'label' => __('Hero Header Background Image', 'mts'),
         'description' => esc_html__('This is the Background Image the Hero Header. You can change it to your own image below.', 'mts'),
-        'section'  => 'pages_hero_header',
+        'section'  => 'pages_default_settings',
         'settings' => 'pages_hero_header_img',
         'button_labels' => array( // Optional.
             'select' => __('Select Image'),
@@ -77,7 +77,45 @@ $wp_customize->add_control(
         'label' => __('Hero Subtext', 'mts'),
         'description' => __('Input your desired subtext for the Hero Header. (Optional)', 'mts'),
         'settings' => 'pages_hero_header_subtext',
-        'section'  => 'pages_hero_header',
+        'section'  => 'pages_default_settings',
         'type' => 'textarea',
     )
 );
+
+
+// Setting and Control To disable featured image
+$wp_customize->add_setting(
+    'toggle_pages_featured_img',
+    array(
+        'default' => false,
+    )
+);
+$wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
+    $wp_customize,
+    'toggle_pages_featured_img',
+    array(
+        'label' => __('Featured Image', 'mts'),
+        'description' => esc_html__('Use this toggle to Disable or Enable the Featured Image on your site\'s pages.', 'mts'),
+        'section'  => 'pages_default_settings',
+        'settings'   => 'toggle_pages_featured_img',
+    )
+));
+
+
+// Setting and Control To Disable or Enable Sidebar on wordpress pages
+$wp_customize->add_setting(
+    'toggle_pages_sidebar',
+    array(
+        'default' => true,
+    )
+);
+$wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
+    $wp_customize,
+    'toggle_pages_sidebar',
+    array(
+        'label' => __('Sidebar', 'mts'),
+        'description' => esc_html__('Use this toggle to Disable or Enable the Sidebar on your site\'s pages.', 'mts'),
+        'section'  => 'pages_default_settings',
+        'settings'   => 'toggle_pages_sidebar',
+    )
+));

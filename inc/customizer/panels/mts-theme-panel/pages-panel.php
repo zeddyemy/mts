@@ -15,11 +15,8 @@ $wp_customize->add_panel($singlePagePanel);
 /**=====================================
  * CHILD PANELS / SECTIONS
 =======================================*/
-// wordpress pages 'Hero Header' section with its settings and controls.
-include_once dirname(__FILE__) . '/pages-panel/hero-header.php';
+// Settings and control for default wordpress pages
+include_once dirname(__FILE__) . '/pages-panel/default-pages.php';
 
-// wordpress pages 'featured image' section with its settings and controls.
-include_once dirname(__FILE__) . '/pages-panel/featured-image.php';
-
-// wordpress pages 'sidebar' section with its settings and controls.
-include_once dirname(__FILE__) . '/pages-panel/pages-side.php';
+// Settings and control for each wordpress pages
+include_once dirname(__FILE__) . '/pages-panel/each-pages.php';
