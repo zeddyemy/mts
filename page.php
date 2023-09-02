@@ -13,6 +13,10 @@
  * @package mts
  */
 
+global $mtsThemeMods;
+global $mtsPageThemeMods;
+$mtsThemeMods = mts_theme_mods();
+$mtsPageThemeMods = mts_page_theme_mods();
 
 get_header();
 

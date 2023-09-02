@@ -153,7 +153,7 @@ function social_share_btns() {
 }
 
 
-// GET ALL PAGES
+// Get all Published Pages
 $args = array(
     'sort_order'    => 'asc',
     'sort_column'   => 'post_title',
@@ -164,3 +164,10 @@ $args = array(
 );
 global $pubPages;
 $pubPages = get_pages($args);
+
+// Get all the IDs of all Published Pages
+global $pubPageIDs;
+$pubPageIDs = array();
+foreach ($pubPages as $page) {
+    $pubPageIDs[] = $page->ID;
+}

@@ -82,15 +82,43 @@ if (!function_exists('mts_theme_mods')) {
             'toggle_pinterest_btn'          => get_theme_mod('toggle_pinterest_btn', false),
             'toggle_linkedin_btn'           => get_theme_mod('toggle_linkedin_btn', false),
 
-            'toggle_pages_hero_header'      => get_theme_mod('toggle_pages_hero_header', true),
             'pages_hero_header_img'         => get_theme_mod('pages_hero_header_img', get_mts_assets('img') . 'pages-img.jpg'),
-            'pages_hero_header_subtext'     => get_theme_mod('pages_hero_header_subtext', ''),
             'toggle_pages_featured_img'     => get_theme_mod('toggle_pages_featured_img', false),
-            'toggle_pages_sidebar'          => get_theme_mod('toggle_pages_sidebar', true),
         );
 
         return apply_filters('mts_theme_mods', $mts_mods);
     }
 }
+
+if (!function_exists('mts_page_theme_mods')) {
+    function mts_page_theme_mods() {
+        global $pubPageIDs, $post;
+        // check if $post is not null and if the current post is a page
+        if (!is_null($post) && $post->post_type === 'page') {
+            $current_pageID = $post->ID; // get the current page ID from wp global $post object
+            $mts_page_mods = array();
+
+            // Check if current page ID exist in $pubPageIDs array
+            if (in_array($current_pageID, $pubPageIDs)) {
+                // get theme mods for the current page
+                $mts_page_mods['toggle_hero_header'] = get_theme_mod('toggle_hero_header_' . $current_pageID, true);
+                $mts_page_mods['hero_header_img'] = get_theme_mod('hero_header_img_' . $current_pageID, '');
+                $mts_page_mods['hero_header_subtext'] = get_theme_mod('hero_header_subtext_' . $current_pageID, '');
+                $mts_page_mods['toggle_sidebar'] = get_theme_mod('toggle_sidebar_' . $current_pageID, true);
+            } else {
+                // Set default values
+                $mts_page_mods['toggle_hero_header'] = true;
+                $mts_page_mods['hero_header_img'] = '';
+                $mts_page_mods['hero_header_subtext'] = '';
+                $mts_page_mods['toggle_sidebar'] = true;
+            }
+    
+            return apply_filters('mts_page_theme_mods', $mts_page_mods);
+        }
+    }
+}
+
 global $mtsThemeMods;
+global $mtsPageThemeMods;
 $mtsThemeMods = mts_theme_mods();
+$mtsPageThemeMods = mts_page_theme_mods();

@@ -9,12 +9,13 @@
 
 */
 global $mtsThemeMods;
-$mainSecWidth = ($mtsThemeMods['toggle_pages_sidebar'] == true) ? 'col-8' : 'col-9';
+global $mtsPageThemeMods;
+$mainSecWidth = ($mtsPageThemeMods['toggle_sidebar']) ? 'col-8' : 'col-9';
 
 ?>
 
 <?php
-    if ($mtsThemeMods['toggle_pages_hero_header'] == true) {
+    if ($mtsPageThemeMods['toggle_hero_header']) {
 		get_template_part('template-parts/pages-parts/hero-header', get_post_format());
     }
 ?>
@@ -38,10 +39,9 @@ $mainSecWidth = ($mtsThemeMods['toggle_pages_sidebar'] == true) ? 'col-8' : 'col
 		endif; ?>
 	</section>
 
-	<?php if ($mtsThemeMods['toggle_pages_sidebar'] == true) { ?>
+	<?php if ($mtsPageThemeMods['toggle_sidebar']) { ?>
 		<div class="col-4 side">
-				<?php get_sidebar('pages'); // The Side Bar. 
-				?>
+			<?php get_sidebar('pages'); ?>
 		</div>
 	<?php } ?>
 </section>

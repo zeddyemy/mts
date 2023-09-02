@@ -14,19 +14,20 @@
  */
 
 global $mtsThemeMods;
+global $mtsPageThemeMods;
 ?>
 
 
 
 <section class="article-card card">
 	<header>
-		<?php if ($mtsThemeMods['toggle_pages_hero_header'] == false) { ?>
+		<?php if (!$mtsPageThemeMods['toggle_hero_header']) { ?>
 			<h2 class="article-card-title"> <?php the_title(); ?> </h2>
 		<?php } ?>
 	</header>
 
 
-	<?php if ($mtsThemeMods['toggle_pages_featured_img'] == true) { ?>
+	<?php if ($mtsThemeMods['toggle_pages_featured_img']) { ?>
 		<div class="featured-image">
 			<?php theme_post_thumb(); ?>
 		</div>

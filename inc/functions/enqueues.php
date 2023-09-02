@@ -106,9 +106,9 @@ function add_noHero_body_class($classes) {
 }
 add_filter( 'body_class', 'add_noHero_body_class');
 function add_noHero_body_class_pages($classes) {
-    global $mtsThemeMods;
+    global $mtsPageThemeMods;
     if (is_page()) {
-        if ($mtsThemeMods['toggle_pages_hero_header'] == false) {
+        if (!$mtsPageThemeMods['toggle_hero_header']) {
             $classes[] = 'noHero';
         }
     }
