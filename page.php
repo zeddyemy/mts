@@ -13,10 +13,13 @@
  * @package mts
  */
 
-global $mtsThemeMods;
-global $mtsPageThemeMods;
+global $mtsThemeMods, $mtsPageThemeMods, $mtsBodyClass;
 $mtsThemeMods = mts_theme_mods();
 $mtsPageThemeMods = mts_page_theme_mods();
+
+if (!$mtsPageThemeMods['toggle_hero_header']) {
+    $mtsBodyClass[] = 'noHero';
+}
 
 get_header();
 

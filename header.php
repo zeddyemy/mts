@@ -6,6 +6,10 @@
  * @package MTS
  */
 
+global $mtsThemeMods, $mtsBodyClass;
+$mtsThemeMods = mts_theme_mods();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +22,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(''); ?>>
+<body <?php body_class($mtsBodyClass); ?>>
     <header id="header">
         <div class="header-c">
             <div class="logo">

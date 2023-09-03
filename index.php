@@ -5,8 +5,11 @@
  *
  * @package MTS
  */
-global $mtsThemeMods;
-$mtsThemeMods = mts_theme_mods();
+
+global $mtsBodyClass;
+if (!$mtsThemeMods['toggle_hero_header_sec']) {
+    $mtsBodyClass[] = 'noHero';
+}
 
 get_header();
 

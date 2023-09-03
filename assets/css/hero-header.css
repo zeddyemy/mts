@@ -1,10 +1,10 @@
-#home {
-    --home-height: 550px;
-    min-height: var(--home-height);
+#heroHeader {
+    --heroHeader-height: 550px;
+    min-height: var(--heroHeader-height);
     position: relative;
     color: #e9e9e9;
 }
-#home::before {
+#heroHeader::before {
     position: absolute;
     content: "";
     top: 0;
@@ -13,13 +13,13 @@
     right: 0;
     background: rgba(0, 0, 0, 0.5);
 }
-#home h1 {
+#heroHeader h1 {
     font-size: 1.6em;
     max-width: 100%;
     text-shadow: var(--txt-shadow);
 }
 .slide {
-    height: var(--home-height);
+    height: var(--heroHeader-height);
     overflow-y: hidden;
 }
 .slide .slideCard {
@@ -49,7 +49,7 @@
     display: none;
 }
 
-.home-content {
+.heroHeader-content {
     position: relative;
     text-align: center;
 }
@@ -104,25 +104,25 @@
 
 
 @media screen and (min-width: 768px) {
-    #home {
-        --home-height: 550px;
+    #heroHeader {
+        --heroHeader-height: 550px;
     }
-    #home h1 {
+    #heroHeader h1 {
         font-size: 2.5em;
         max-width: 600px
     }
 }
 @media screen and (min-width: 1024px) {
-    #home {
-        --home-height: 100vh;
+    #heroHeader {
+        --heroHeader-height: 100vh;
     }
-    #home h1 {
+    #heroHeader h1 {
         font-size: 2.6em;
         max-width: 700px
     }
 }
 @media screen and (min-width: 1440px) {
-    #home h1 {
+    #heroHeader h1 {
         font-size: 3.5em;
         max-width: 790px
     }

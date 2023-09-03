@@ -4,8 +4,10 @@
     Description : This Template Part Is For The Pages Of The Site.
     It Also Consists Of Other Template Parts That Brings About The Design And Looks Of The Single Page.
 
-    Template Parts : 	1) None template part.
-						2) The Side Bar.
+    Template Parts : 	1) hero-header
+						2) page content
+						3) None template part.
+						4) The Side Bar.
 
 */
 global $mtsThemeMods;
@@ -20,7 +22,7 @@ $mainSecWidth = ($mtsPageThemeMods['toggle_sidebar']) ? 'col-8' : 'col-9';
     }
 ?>
 
-<section class="wrapper pages pages-home-isActive col-12 flex layout">
+<section class="wrapper pages pages-heroHeader-isActive col-12 flex layout">
 
 	<section class="<?php echo $mainSecWidth; ?> main" >
 		<?php if (have_posts()) :
