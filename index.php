@@ -7,6 +7,7 @@
  */
 
 global $mtsBodyClass;
+$mtsThemeMods = mts_theme_mods();
 if (!$mtsThemeMods['toggle_hero_header_sec']) {
     $mtsBodyClass[] = 'noHero';
 }
