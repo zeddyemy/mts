@@ -101,6 +101,30 @@ function mts_render_btn($btn_txt='Button', $url='#', $class='') {
         </a>';
 }
 
+// function to install page
+function installPage($title, $new_page_content='', $new_page_template = '') {
+    $page_check = get_page_by_title($title);
+    if (!isset($page_check->ID)) { # if page doesn't exist
+        $new_Page = array(
+            'post_type' => 'page',
+            'post_title' => $title,
+            'post_content' => $new_page_content,
+            'post_status' => 'publish',
+            'post_author' => 1,
+        );
+
+        $new_page_id = wp_insert_post($new_Page); # create the page
+
+        if (!empty($new_page_template)) {
+            update_post_meta($new_page_id, '_wp_page_template', $new_page_template);
+        }
+
+        return $new_page_id; // Return the new page ID
+    }
+
+    return $page_check->ID; // Return the existing page ID if it already exists
+}
+
 // Function to add Social share buttons to blog post
 function social_share_btns() {
     global $mtsThemeMods;
