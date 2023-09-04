@@ -90,3 +90,30 @@ require get_template_directory() . '/inc/functions/custom-wp-nav.php';
 
 // WIDGET AREAS.
 require get_template_directory() . '/inc/functions/widgets.php';
+
+
+// Install Blog Page
+if (isset($_GET['activated']) && is_admin()) {
+    // Create the Blog Page
+    $blog_page_id = installPage('Blog', '', 'archive-blog.php');
+
+    // Add the Blog Page to the Navigation Menu
+    if ($blog_page_id > 0) {
+        $menu_name = 'main-nav-menu';
+        $menu = wp_get_nav_menu_object($menu_name);
+        if ($menu) {
+            wp_update_nav_menu_item($menu->term_id, 0, array(
+                'menu-item-title' => 'Blog',
+                'menu-item-object-id' => $blog_page_id,
+                'menu-item-object' => 'page',
+                'menu-item-type' => 'post_type',
+                'menu-item-status' => 'publish',
+            ));
+        }
+    }
+
+    // Set the Blog Page as the "Post Page" in Reading Settings
+    if ($blog_page_id > 0) {
+        update_option('page_for_posts', $blog_page_id);
+    }
+}
