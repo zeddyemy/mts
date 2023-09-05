@@ -177,7 +177,8 @@ function social_share_btns() {
 }
 
 
-// Get all Published Pages
+// Get all Published Pages except blog page
+$blog_page = get_page_by_title( 'Blog' );
 $args = array(
     'sort_order'    => 'asc',
     'sort_column'   => 'post_title',
@@ -185,6 +186,7 @@ $args = array(
     'number'        => -1,
     'post_type'     => 'page',
     'post_status'   => 'publish',
+    'exclude'       => $blog_page->ID, // Exclude The Blog Page
 );
 global $pubPages;
 $pubPages = get_pages($args);
