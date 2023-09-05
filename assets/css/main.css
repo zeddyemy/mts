@@ -212,7 +212,7 @@ span {
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(26ch, 1fr));
-    grid-gap: 1.5em;
+    grid-gap: 1.2em;
     padding: 10px 0px;
 }
 .flexSB {
@@ -608,10 +608,5 @@ footer p {
     }
     .txtContain {
         padding: 70px 20px;
-    }
-}
-@media screen and (min-width: 1280px) {
-    .blogCard .cardBody .title {
-        font-size: 1.3125rem;
     }
 }

@@ -94,6 +94,10 @@ function mts_scripts() {
         // enqueue stylesheet for 404 page.
         wp_enqueue_style('404-css', get_mts_assets('css') . '404.css');
     }
+
+    if (is_page('blog')) {
+        wp_enqueue_style('blog', get_mts_assets('css') . 'blog.css');
+    }
 }
 add_action('wp_enqueue_scripts', 'mts_scripts');
 

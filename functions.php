@@ -115,5 +115,6 @@ if (isset($_GET['activated']) && is_admin()) {
     // Set the Blog Page as the "Post Page" in Reading Settings
     if ($blog_page_id > 0) {
         update_option('page_for_posts', $blog_page_id);
+        flush_rewrite_rules();
     }
 }
