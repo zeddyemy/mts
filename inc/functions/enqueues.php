@@ -96,10 +96,15 @@ function mts_scripts() {
     }
 
     if (is_post_type_archive('portfolios')) {
-        
+
         wp_enqueue_style('portfolios', get_mts_assets('css') . 'portfolios.css');
 
+    } elseif (is_post_type_archive('services')) {
+
+        wp_enqueue_style('services', get_mts_assets('css') . 'services.css');
+
     } elseif (is_category() || is_search() || is_archive() || is_author()) {
+
         wp_enqueue_style('blog', get_mts_assets('css') . 'blog.css');
     }
 }
