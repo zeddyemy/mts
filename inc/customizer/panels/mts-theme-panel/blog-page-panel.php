@@ -15,5 +15,8 @@ $wp_customize->add_panel($blogPagePanel);
 /**=====================================
  * CHILD PANELS / SECTIONS
 =======================================*/
+// blog page 'Title' section with its settings and controls.
+include_once dirname(__FILE__) . '/blog-page-panel/blog-title.php';
+
 // blog page 'Sidebar' section with its settings and controls.
 include_once dirname(__FILE__) . '/blog-page-panel/blog-sidebar.php';

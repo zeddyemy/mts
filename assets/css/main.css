@@ -490,6 +490,7 @@ span {
 }
 .page-numbers:hover {
     background: var(--theme-clr);
+    color: #fff;
 }
 
 /*--------------

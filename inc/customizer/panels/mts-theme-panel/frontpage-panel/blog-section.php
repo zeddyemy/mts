@@ -20,7 +20,7 @@ $wp_customize->add_section(
 $wp_customize->add_setting(
     'toggle_blog_sec',
     array(
-        'default' => 'true',
+        'default' => true,
     )
 );
 $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(

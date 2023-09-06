@@ -86,6 +86,8 @@ if (!function_exists('mts_theme_mods')) {
             'toggle_pages_featured_img'     => get_theme_mod('toggle_pages_featured_img', false),
 
             'toggle_blog_sidebar'           => get_theme_mod('toggle_blog_sidebar', true),
+            'toggle_blogPage_title'         => get_theme_mod('toggle_blogPage_title', true),
+            'blogPage_title'                => get_theme_mod('blogPage_title', 'Blog Posts'),
         );
 
         return apply_filters('mts_theme_mods', $mts_mods);

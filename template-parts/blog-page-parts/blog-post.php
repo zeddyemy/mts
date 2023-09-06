@@ -1,5 +1,7 @@
 <?php
 
+global $mtsThemeMods;
+
 $posts_per_page = get_option('posts_per_page'); // get the number from wordpress settings
 $paged = get_query_var('paged') ? get_query_var('paged') : 1; // get the current page number
 $offset = ($paged - 1) * $posts_per_page;
@@ -14,9 +16,11 @@ $blog_query = new WP_Query(array(
 <section class="all-post">
     <?php if ($blog_query->have_posts()) : ?>
 
-        <div class="all-post-title">
-            <div class="title"> Blog Posts </div>
-        </div>
+        <?php if ($mtsThemeMods['toggle_blogPage_title']) : ?>
+            <div class="all-post-title">
+                <div class="title"> <?php echo $mtsThemeMods['blogPage_title']; ?> </div>
+            </div>
+        <?php endif; ?>
 
         <article class="grid blogCards">
             <?php
