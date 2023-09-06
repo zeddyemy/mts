@@ -10,18 +10,21 @@
 */
 
 global $mtsThemeMods;
+$mainSecWidth = ($mtsThemeMods['toggle_blog_sidebar'] == true) ? 'col-9' : 'col-12';
 
 ?>
 
 <section class="wrapper blogPage col-12 flex layout">
-    <section class=" <?php echo '$mainSecWidth col-9'; ?> main">
+    <section class=" <?php echo $mainSecWidth; ?> main">
         <?php
         // blog template part
         get_template_part('template-parts/blog-page-parts/blog-post', get_post_format());
         ?>
     </section>
 
-    <section class="col-3 side">
-        <?php get_sidebar(); // The Side Bar. ?>
-    </section>
+    <?php if ($mtsThemeMods['toggle_blog_sidebar']) { ?>
+        <section class="col-3 side">
+            <?php get_sidebar(); // The Side Bar. ?>
+        </section>
+    <?php } ?>
 </section>
