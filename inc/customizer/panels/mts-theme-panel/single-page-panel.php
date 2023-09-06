@@ -6,7 +6,7 @@
 $singlePagePanel = new Clarusmod_Customize_Panel($wp_customize, 'single_blog_panel_id', array(
     'title' => 'Single Blog Page',
     'description' => esc_html__('Customize how the blog pages looks like', 'mts'),
-    'priority' => 40,
+    'priority' => 50,
     'panel' => 'mtsTheme_panel_id',
 ));
 $wp_customize->add_panel($singlePagePanel);

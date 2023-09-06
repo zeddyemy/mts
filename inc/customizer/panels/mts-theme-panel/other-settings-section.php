@@ -15,7 +15,7 @@ $wp_customize->add_section($otherSettingsSection);
 /**==========================================
  * SETTINGS AND CONTROLS FOR 'OTHER SETTINGS'
 ============================================*/
-// setting and control To disable About Section
+// setting and control To Change style of buttons on the site
 $wp_customize->add_setting(
     'button_style',
     array(

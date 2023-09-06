@@ -15,7 +15,7 @@ $wp_customize->add_section(
 /**========================================
  * SETTINGS AND CONTROLS FOR SIDE BAR
 ==========================================*/
-// Setting and Control To Disable or Enable Sidebar on the single page
+// Setting and Control To Disable or Enable Sidebar on the Blog page
 $wp_customize->add_setting(
     'toggle_blog_sidebar',
     array(
