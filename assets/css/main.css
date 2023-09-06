@@ -471,6 +471,26 @@ span {
 }
 
 
+/* Pagination */
+.pagination {
+    margin: 25px 0px;
+}
+.page-numbers {
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    padding: 5px 10px;
+    background: var(--box-bg-clr);
+    line-height: 1;
+    outline: 1px solid var(--outline);
+    font-family: var(--font-four);
+}
+.page-numbers.current {
+    background: var(--theme-clr);
+    color: #fff;
+}
+.page-numbers:hover {
+    background: var(--theme-clr);
+}
 
 /*--------------
 # Side Bar
