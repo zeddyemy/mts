@@ -1,11 +1,20 @@
+.portfoliosPage.layout {
+    min-height: 100vh;
+}
 .thePortfolios {
-    grid-template-columns: 1fr;
+    margin-top: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
+}
+@media screen and (min-width: 341px) {
+    .thePortfolios {
+        grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+    }
 }
 
 .folioCard {
     color: #fff;
     overflow: hidden;
-    min-height: 14.75rem;
+    height: 16.75rem;
     border: 1px solid var(--outline);
     background: var(--overlay-clr);
 }
@@ -38,20 +47,9 @@
     margin: 10px auto;
     color: inherit;
 }
-
-@media screen and (min-width: 576px) {
-    .thePortfolios {
-        grid-template-columns: 1fr 1fr;
-    }
-}
 @media screen and (min-width: 992px) {
-    .thePortfolios {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
     .folioCard .ovrLay {
         opacity: 0;
-        backdrop-filter: blur(5px);
-        background: var(--overlay-clr);
     }
     .folioCard:hover .ovrLay {
         opacity: 1;
@@ -60,5 +58,18 @@
 @media screen and (min-width: 1440px) {
     .folioCard label {
         font-size: 1.4em;
+    }
+}
+
+
+/* for front page */
+@media screen and (min-width: 576px) {
+    body.home .thePortfolios {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 992px) {
+    body.home .thePortfolios {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }

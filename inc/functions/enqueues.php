@@ -66,10 +66,6 @@ function mts_scripts() {
         }
     }
 
-    if (is_category() || is_search() || is_archive() || is_author()) {
-        wp_enqueue_style('blog', get_mts_assets('css') . 'blog.css');
-    }
-
     if (is_single() || is_page()) {
         // enqueue stylesheet for single post.
         wp_enqueue_style('single-css', get_mts_assets('css') . 'single.css');
@@ -96,6 +92,14 @@ function mts_scripts() {
     }
 
     if (is_page('blog')) {
+        wp_enqueue_style('blog', get_mts_assets('css') . 'blog.css');
+    }
+
+    if (is_post_type_archive('portfolios')) {
+        
+        wp_enqueue_style('portfolios', get_mts_assets('css') . 'portfolios.css');
+
+    } elseif (is_category() || is_search() || is_archive() || is_author()) {
         wp_enqueue_style('blog', get_mts_assets('css') . 'blog.css');
     }
 }
