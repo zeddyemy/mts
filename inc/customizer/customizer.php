@@ -84,6 +84,8 @@ if (!function_exists('mts_theme_mods')) {
 
             'pages_hero_header_img'         => get_theme_mod('pages_hero_header_img', get_mts_assets('img') . 'pages-img.jpg'),
             'toggle_pages_featured_img'     => get_theme_mod('toggle_pages_featured_img', false),
+
+            'toggle_blog_sidebar'           => get_theme_mod('toggle_blog_sidebar', true),
         );
 
         return apply_filters('mts_theme_mods', $mts_mods);
