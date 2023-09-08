@@ -25,8 +25,11 @@ include_once dirname(__FILE__) . '/mts-theme-panel/frontpage-panel.php';
 // Blog page Panel
 include_once dirname(__FILE__) . '/mts-theme-panel/blog-page-panel.php';
 
-// Single Page panel
+// Singular blog Page panel
 include_once dirname(__FILE__) . '/mts-theme-panel/single-page-panel.php';
+
+// Singular Portfolio Page panel
+include_once dirname(__FILE__) . '/mts-theme-panel/single-folio-page-panel.php';
 
 // Pages panel
 include_once dirname(__FILE__) . '/mts-theme-panel/pages-panel.php';
