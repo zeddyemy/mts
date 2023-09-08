@@ -43,6 +43,7 @@
     --shadow-small: 0 1px 3px 0 #0000001a, 0 1px 2px 0 #0000000f;
     --shadow-medium: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
     --shadow-large: 0 10px 15px -3px #0000001a, 0 4px 6px -2px #0000000d;
+    --preset-shadow-sharp: 6px 6px 0px #00000033;
 }
 @media screen and (min-width: 768px) {
     :root {

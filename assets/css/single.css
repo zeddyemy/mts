@@ -354,5 +354,5 @@ figcaption {
     padding: 5px 10px;
     border: 1px solid var(--outline);
     border-radius: 10px;
-    box-shadow: var(--wp--preset--shadow--sharp);
+    box-shadow: var(--preset-shadow-sharp);
 }
