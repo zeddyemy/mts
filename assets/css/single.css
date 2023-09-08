@@ -355,4 +355,5 @@ figcaption {
     border: 1px solid var(--outline);
     border-radius: 10px;
     box-shadow: var(--preset-shadow-sharp);
+    background-image: linear-gradient(transparent 0%, var(--theme-clr) 1000%);
 }
