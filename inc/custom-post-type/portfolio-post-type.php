@@ -170,6 +170,16 @@ if (!function_exists('custom_post_type_portfolios')) {
             echo '<div class="excerpt">' . $portfolioOverview . '</div>';
         endif;
     }
+
+    function short_portfolio_overview($length = 135) {
+        $portfolioOverview = get_post_meta(get_the_ID(), 'portfolio_overview', true);
+        if (strlen($portfolioOverview) > $length) {
+            $portfolioOverview = substr($portfolioOverview, 0, $length);
+            $portfolioOverview = rtrim($portfolioOverview, " \t\n\r\0\x0B"); // Remove trailing whitespace
+            $portfolioOverview .= '... <a style="color: var(--theme-clr); font-family: var(--font-four); font-weight: 800;"> Read More </a>';
+        }
+        return $portfolioOverview;
+    }
     
     // Display portfolio URL on Singular Portfolio Pages
     function get_portfolio_url() {

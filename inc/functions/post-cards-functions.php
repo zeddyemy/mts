@@ -41,7 +41,7 @@ function viewMore_service_card()
 function get_portfolio_card() {
     // Retrieve portfolio data
     $portfolio_title = get_the_title();
-    $portfolio_excerpt = get_the_excerpt();
+    $portfolio_overview = short_portfolio_overview();
     $portfolio_url = get_post_meta(get_the_ID(), 'portfolio_url', true); ?>
 
     <article class="card folioCard" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
@@ -53,7 +53,7 @@ function get_portfolio_card() {
         <div class="ovrLay flex flexCenter">
             <div class="cardBody txtShadowDrk">
                 <a href="<?php the_permalink() ?>" rel="bookmark"> <label><?php echo $portfolio_title; ?></label> </a>
-                <span> <?php echo $portfolio_excerpt ?></span>
+                <span> <?php echo $portfolio_overview ?></span>
             </div>
         </div>
     </article>
