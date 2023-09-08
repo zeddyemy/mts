@@ -74,6 +74,9 @@ function mts_scripts() {
             // enqueue stylesheet for the comment section.
             wp_enqueue_style('comment-css', get_mts_assets('css') . 'comments.css');
         }
+        if (is_singular('portfolios')) {
+            wp_enqueue_style('hero-header',     get_mts_assets('css') . 'hero-header.css');
+        }
     }
 
     if (is_page()) {
@@ -112,7 +115,7 @@ add_action('wp_enqueue_scripts', 'mts_scripts');
 
 // add noHero class to body tag
 function add_noHero_body_class($classes) {
-    if (!is_front_page() && !is_home() && !is_page()) {
+    if (!is_front_page() && !is_home() && !is_page() && !is_singular('portfolios')) {
         $classes[] = 'noHero';
     }
     return $classes;
