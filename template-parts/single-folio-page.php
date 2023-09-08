@@ -10,8 +10,12 @@
 */
 global $mtsThemeMods;
 $portfolioOverview = get_post_meta(get_the_ID(), 'portfolio_overview', true);
+$portfolioURL = get_post_meta(get_the_ID(), 'portfolio_url', true);
+$portfolioTools = get_post_meta(get_the_ID(), 'portfolio_tools', true);
 
-get_template_part('template-parts/single-folio-page-parts/hero-header', get_post_format());
+if ($mtsThemeMods['toggle_folio_hero_header']) {
+    get_template_part('template-parts/single-folio-page-parts/hero-header', get_post_format());
+}
 
 ?>
 
@@ -21,7 +25,7 @@ get_template_part('template-parts/single-folio-page-parts/hero-header', get_post
 
             while (have_posts()) : the_post();
 
-                if (!empty($portfolioOverview)) :
+                if (!empty($portfolioOverview) || !empty($portfolioURL) || !empty($portfolioTools)) :
                     get_template_part('template-parts/single-folio-page-parts/single-folio-overview', get_post_format());
                 endif;
 

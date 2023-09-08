@@ -7,8 +7,12 @@
  *
  * @package MTS
  */
-global $mtsThemeMods;
+global $mtsThemeMods, $mtsBodyClass;
 $mtsThemeMods = mts_theme_mods();
+
+if (!$mtsThemeMods['toggle_folio_hero_header']) {
+    $mtsBodyClass[] = 'noHero';
+}
 
 get_header();
 

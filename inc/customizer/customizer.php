@@ -91,7 +91,7 @@ if (!function_exists('mts_theme_mods')) {
 
             'toggle_folio_hero_header'      => get_theme_mod('toggle_folio_hero_header', true),
             'folio_hero_header_img'         => get_theme_mod('folio_hero_header_img', get_mts_assets('img') . 'img3.jpg'),
-            'toggle_folio_featuredImg'      => get_theme_mod('toggle_folio_featuredImg', true),
+            'toggle_folio_featuredImg'      => get_theme_mod('toggle_folio_featuredImg', false),
         );
 
         return apply_filters('mts_theme_mods', $mts_mods);

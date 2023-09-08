@@ -1,9 +1,12 @@
 <?php
 
 global $mtsThemeMods;
-global $mtsPageThemeMods;
 
-$thisPageHeroHeaderImg = $mtsThemeMods['pages_hero_header_img'];
+if ($mtsThemeMods['toggle_folio_featuredImg']) {
+    $thisPageHeroHeaderImg = get_the_post_thumbnail_url(get_the_ID(), 'full');
+} else {
+    $thisPageHeroHeaderImg = $mtsThemeMods['folio_hero_header_img'];
+}
 
 
 ?>

@@ -308,6 +308,9 @@ figcaption {
 
 
 /* Hero header for singular portfolio */
+body.noHero.single-portfolios .wrapper.singlePage.layout {
+    padding-top: 60px;
+}
 .portfolio-heroHeader {
     --heroHeader-height: 50vh !important;
     min-height: var(--heroHeader-height);
