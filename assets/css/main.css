@@ -417,10 +417,10 @@ span {
     min-height: 300px;
     position: relative;
     background: black;
-    width: auto !important;
     padding: 40px var(--site-pad);
     border-radius: var(--sec-radius);
     margin: 0px calc(0% - var(--site-pad));
+    width: calc(100% + var(--site-pad) + var(--site-pad)) !important;
 }
 .secCard::before{
     position: absolute;
