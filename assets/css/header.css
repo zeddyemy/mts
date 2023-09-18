@@ -376,6 +376,10 @@ li.menu-item-has-children ul.sub-menu.active {
         font-size: inherit;
         justify-content: space-between !important;
     }
+    li.menu-item-has-children ul.sub-menu li ul.sub-menu li {
+        line-height: 40px;
+        border-radius: var(--round-conners);
+    }
     ul.sub-menu li:hover {
         background: var(--outline);
     }
@@ -395,7 +399,7 @@ li.menu-item-has-children ul.sub-menu.active {
         border-radius: 0px;
         box-shadow: none;
         background: none;
-        margin-top: -10px;
+        margin-top: -5px;
     }
     li.menu-item-has-children ul.sub-menu li ul.sub-menu.active {
         display: block;
