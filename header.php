@@ -41,22 +41,16 @@ $mtsThemeMods = mts_theme_mods();
                     <span class="menuCloseBtn icoBtn"> <i class='bx bx-x'></i> </span>
                 </div>
                 <?php
+                $menu_args = array(
+                    'menu_class' => 'links',
+                    'menu_id' => 'items',
+                    'theme_location' => 'main-nav-menu',
+                    'container' => '',
+                );
                 if (has_nav_menu('main-nav-menu')) {
-                    wp_nav_menu(array(
-                        'menu_class' => 'links',
-                        'menu_id' => 'items',
-                        'theme_location' => 'main-nav-menu',
-                        'container' => '',
-                        'walker' => new Custom_Nav_Menu()
-                    ));
-                } else {
-                    wp_nav_menu(array(
-                        'menu_class' => 'links',
-                        'menu_id' => 'items',
-                        'theme_location' => 'main-nav-menu',
-                        'container' => ''
-                    ));
+                    $menu_args['walker'] = new Custom_Nav_Menu();
                 }
+                wp_nav_menu($menu_args);
                 ?>
             </nav>
             <div class="actionBtns flex flexCenter">

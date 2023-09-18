@@ -30,6 +30,17 @@ headerNav.addEventListener('click', (e) => {
             setTimeout(() => { searchBlock.classList.remove('active', 'closing'); }, 300);
         }
     }
+
+    // open & close nav submenu
+    if (e.target.classList.contains('arrow')) {
+        e.target.classList.toggle("active");
+        let dropdownContent = e.target.nextElementSibling;
+        if (dropdownContent.classList.contains('active')) {
+            dropdownContent.classList.remove('active');
+        } else {
+            dropdownContent.classList.add('active');
+        }
+    }
 });
 
 
