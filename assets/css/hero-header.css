@@ -1,5 +1,6 @@
 #heroHeader {
-    --heroHeader-height: 550px;
+    --heroHeader-height: 560;
+    --heroHeader-height: 100svh;
     min-height: var(--heroHeader-height);
     position: relative;
     color: #e9e9e9;
