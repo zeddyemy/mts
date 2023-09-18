@@ -19,7 +19,7 @@ function modify_post_thumbnail_html($html, $post_id, $post_thumbnail_id, $size, 
     if($mtsThemeMods['placeholder_img']) {
         $placeholder = $mtsThemeMods['placeholder_img'];
     }else {
-        $placeholder = get_template_directory_uri() . '/assets/img/placeholder.jpg';
+        $placeholder = get_mts_assets('img') . 'placeholder.jpg';
     }
 
     // Check to see if a 'lazyload' class exists in the array when calling "the_post_thumbnail()", if so output different <img/> html
