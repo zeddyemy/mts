@@ -44,7 +44,7 @@ function internal_css()
         <?php
         // if custom background color is not set
         if (!$mtsThemeMods['background_color']) {
-            echo 'body { background-image: var(--body-background); }';
+            echo 'body { background-color: var(--body-bg-clr); }';
         }
         ?>
     </style>

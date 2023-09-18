@@ -34,5 +34,5 @@ include_once dirname(__FILE__) . '/mts-theme-panel/single-folio-page-panel.php';
 // Pages panel
 include_once dirname(__FILE__) . '/mts-theme-panel/pages-panel.php';
 
-// Other settings section
-include_once dirname(__FILE__) . '/mts-theme-panel/other-settings-section.php';
+// Other settings panel
+include_once dirname(__FILE__) . '/mts-theme-panel/other-settings-panel.php';

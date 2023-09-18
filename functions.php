@@ -41,7 +41,7 @@ if (!function_exists('mts_setup')) {
 
         // Set up the WordPress core custom background feature.
         $defaults = array(
-            'default-color'          => '2869ff',
+            'default-color'          => '',
             'default-image'          => '',
             'default-repeat'         => '',
             'default-position-x'     => '',

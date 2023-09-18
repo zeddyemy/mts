@@ -115,7 +115,6 @@ body.dark-theme {
 
 body {
     color: var(--body-txt-clr);
-    background-color: var(--body-bg-clr);
     background-repeat: no-repeat;
     background-size: cover;
     transition: var(--transition);
