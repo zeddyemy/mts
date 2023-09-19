@@ -586,14 +586,79 @@ span {
 
 
 footer {
-    background-color: var(--box-bg-clr);
+    background-color: var(--footer-bg-clr);
     border-top: 2px solid var(--theme-clr);
 }
 footer p {
-    margin: 0px;
+    margin: 0px 0px 5px;
 }
+.footerColumns {
+    gap: 30px 35px;
+    padding: 40px var(--site-pad) 20px;
+}
+.footerColumns .column {
+    padding: 1px;
+}
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5,
+.footer h6 {
+    margin-bottom: 10px;
+    padding: 2px 2px 2px 5px;
+    font-size: 20px;
+    font-family: var(--font-two);
+    border-left: 5px solid var(--theme-clr);
+    color: var(--footer-txt-clr);
+}
+.footer a {
+    font-family: var(--font-two);
+}
+.footer a:hover {
+    color: var(--footer-txt-clr);
+}
+.footer-c ul li a {
+    font-family: var(--font-four);
+    color: var(--footer-txt-clr);
+}
+.footer-c ul li a:hover {
+    color: var(--theme-clr);
+}
+.footer-c ul {
+    list-style: inside !important;
+    padding-left: 0;
+}
+.footer-c ul li {
+    line-height: 2em;
+}
+.footer-c ul li::marker{
+    content: ">" "  " "  ";
+    color: var(--theme-clr);
+    font-weight: bold;
+    font-family: var(--font-two);
+}
+
+/* Calender in footer */
+.footer .widget_calendar #wp-calendar caption {
+    color: var(--footer-txt-clr);
+}
+.footer .widget_calendar #wp-calendar th,
+.footer .widget_calendar #wp-calendar tfoot td {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.footer .widget_calendar #wp-calendar tbody td {
+    color: var(--footer-txt-clr);
+}
+
 .footer-b {
-    padding: 30px 10px;
+    padding: 30px var(--site-pad);
+    text-align: center;
+    border-top: 1px solid var(--outline);
+    font-size: 15px;
+}
+.theme-author-link {
+    font-family: var(--font-four);
 }
 
 /* -- RESPONSIVENESS -- */

@@ -54,6 +54,46 @@ function mts_widgets_init() {
         'after_title' => '</h4>',
     ));
 
+    register_sidebar(array(
+        'name' => __('Footer First  Column', 'mts'),
+        'id' => 'footer-widget-one',
+        'description' => __('This Widget space is for the first Column in the footer.', 'mts'),
+        'before_widget' => '<div id="%1$s" class="footer-c widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widget-title">',
+        'after_title' => '</h4>',
+    ));
+
+    register_sidebar(array(
+        'name' => __('Footer Second  Column', 'mts'),
+        'id' => 'footer-widget-two',
+        'description' => __('This Widget space is for the Second Column in the footer.', 'mts'),
+        'before_widget' => '<div id="%1$s" class="footer-c widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widget-title">',
+        'after_title' => '</h4>',
+    ));
+
+    register_sidebar(array(
+        'name' => __('Footer Third  Column', 'mts'),
+        'id' => 'footer-widget-three',
+        'description' => __('This Widget space is for the Third Column in the footer.', 'mts'),
+        'before_widget' => '<div id="%1$s" class="footer-c widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widget-title">',
+        'after_title' => '</h4>',
+    ));
+
+    register_sidebar(array(
+        'name' => __('Footer fourth  Column', 'mts'),
+        'id' => 'footer-widget-four',
+        'description' => __('This Widget space is for the fourth Column in the footer.', 'mts'),
+        'before_widget' => '<div id="%1$s" class="footer-c widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widget-title">',
+        'after_title' => '</h4>',
+    ));
+
 }
 add_action( 'widgets_init', 'mts_widgets_init' );
 

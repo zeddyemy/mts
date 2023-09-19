@@ -14,6 +14,9 @@ function internal_css()
     $titleCaseMod  = $mtsThemeMods['title_text_transform'];
     $titleCase = ($titleCaseMod == 'capitalize') ? 'capitalize' : (($titleCaseMod == 'uppercase') ? 'uppercase' : 'lowercase');
 
+    $footerTxtColor = !empty($mtsThemeMods['footer_text_color']) ? $mtsThemeMods['footer_text_color'] : 'var(--body-txt-clr)';
+    $footerBgColor = !empty($mtsThemeMods['footer_bg_color']) ? $mtsThemeMods['footer_bg_color'] : 'var(--box-bg-clr-solid)';
+    
     $adminBar = is_admin_bar_showing(); ?>
 
     <style>
@@ -34,9 +37,9 @@ function internal_css()
         }
         body {
             --theme-clr: <?php echo $mtsThemeMods['mts_theme_color'];  ?>;
-            --footer-background-color: <?php echo $mtsThemeMods['footer_bg_color'];  ?>;
-            --footer-background-image: url(' <?php echo $mtsThemeMods['footer_bg_image']; ?> ');
-            --footer-text-color: <?php echo $mtsThemeMods['footer_text_color'];  ?>;
+            --footer-txt-clr: <?php echo $footerTxtColor;  ?> !important;
+            --footer-bg-clr: <?php echo $footerBgColor; ?> !important;
+            --footer-bg-image: url(' <?php echo $mtsThemeMods['footer_bg_image']; ?> ');
             --title-text-transform: <?php echo $titleCase; ?>;
             --navbar-text-transform: <?php echo $navbarCase; ?>;
         }

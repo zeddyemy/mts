@@ -58,7 +58,7 @@ function mts_copyright() {
         if ($copyright_dates[0]->firstdate != $copyright_dates[0]->lastdate) {
             $copyright .= '-' . $copyright_dates[0]->lastdate;
         }
-        $output = $copyright . " " . get_bloginfo('name') . " | All Rights Reserved.";
+        $output = '<p>'. $copyright . ' ' . get_bloginfo('name') . ' | All Rights Reserved. </p>';
     }
     return $output;
 }

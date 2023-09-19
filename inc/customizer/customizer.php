@@ -20,8 +20,8 @@ if (!function_exists('mts_theme_mods')) {
             'header_bg_color'               => get_theme_mod('header_bg_color', ''),
             'header_bg_image'               => get_theme_mod('header_bg_image'),
             
-            'footer_text_color'             => get_theme_mod('footer_text_color', '#f2f2f2'),
-            'footer_bg_color'               => get_theme_mod('footer_bg_color', '#212121;'),
+            'footer_text_color'             => get_theme_mod('footer_text_color', ''),
+            'footer_bg_color'               => get_theme_mod('footer_bg_color', ''),
             'footer_bg_image'               => get_theme_mod('footer_bg_image'),
 
             'nav_text_transform'            => get_theme_mod('nav_text_transform', 'capitalize'),
