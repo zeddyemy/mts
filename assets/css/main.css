@@ -652,10 +652,11 @@ footer p {
 }
 
 .footer-b {
-    padding: 30px var(--site-pad);
+    font-size: 14px;
     text-align: center;
+    color: var(--footer-txt-clr);
+    padding: 30px var(--site-pad);
     border-top: 1px solid var(--outline);
-    font-size: 15px;
 }
 .theme-author-link {
     font-family: var(--font-four);
