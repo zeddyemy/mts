@@ -31,5 +31,4 @@ $disableCategoryPageTitle  = get_theme_mod('disable_catPage_title');
 
     endif;
     wp_reset_postdata(); ?>
-    ?>
 </section>
