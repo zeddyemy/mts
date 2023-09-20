@@ -28,7 +28,7 @@ if (!function_exists('mts_theme_mods')) {
             'title_text_transform'          => get_theme_mod('title_text_transform', 'capitalize'),
 
             'toggle_hero_header_sec'        => get_theme_mod('toggle_hero_header_sec', true),
-            'hero_header_sec_img'           => get_theme_mod('hero_header_sec_img', get_mts_assets('img') . 'team.jpg'),
+            'hero_header_sec_img'           => get_theme_mod('hero_header_sec_img', get_mts_assets('img') . 'hands-1.jpg'),
             'hero_header_sec_title'         => get_theme_mod('hero_header_sec_title', 'Stay ahead of the curve with our forward thinking.'),
             'hero_header_sec_subtext'       => get_theme_mod('hero_header_sec_subtext', 'We take extreme pride at being the very best at what we do.'),
             'toggle_hero_header_sec_btn'    => get_theme_mod('toggle_hero_header_sec_btn', true),

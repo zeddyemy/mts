@@ -40,7 +40,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
 $wp_customize->add_setting(
     'hero_header_sec_img',
     array(
-        'default' => get_mts_assets('img') . 'team.jpg',
+        'default' => get_mts_assets('img') . 'hands-1.jpg',
         'transport' => 'refresh',
         'sanitize_callback' => 'esc_url_raw'
     )
