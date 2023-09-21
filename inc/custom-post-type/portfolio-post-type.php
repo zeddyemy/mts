@@ -30,7 +30,7 @@ if (!function_exists('custom_post_type_portfolios')) {
             'show_in_admin_bar'   => true,
             'can_export'          => true,
             'has_archive'         => true,
-            'exclude_from_search' => true,
+            'exclude_from_search' => false,
             'publicly_queryable'  => true,
             'query_var'           => true,
             'capability_type'     => 'post',

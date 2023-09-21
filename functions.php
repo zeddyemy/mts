@@ -118,3 +118,11 @@ if (isset($_GET['activated']) && is_admin()) {
         flush_rewrite_rules();
     }
 }
+
+function custom_search_filter($query) {
+    if ($query->is_search) {
+        $query->set('post_type', array('post', 'portfolios'));
+    }
+    return $query;
+}
+add_action('pre_get_posts', 'custom_search_filter');

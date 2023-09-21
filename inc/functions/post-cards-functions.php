@@ -38,13 +38,21 @@ function viewMore_service_card()
 
 
 // POST CARD FOR EACH PORTFOLIO POST TYPE
-function get_portfolio_card() {
+function get_portfolio_card()
+{
     // Retrieve portfolio data
     $portfolio_title = get_the_title();
     $portfolio_overview = short_portfolio_overview();
     $portfolio_url = get_post_meta(get_the_ID(), 'portfolio_url', true); ?>
 
     <article class="card folioCard" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
+        <?php if (is_search()) {
+            $postType = (get_post_type() === 'portfolios') ? 'Portfolio' : ((get_post_type() === 'post') ? 'Blog' : '');
+            if (!empty($postType)) { ?>
+                <span class="postType"> <?php echo $postType; ?> </span>
+        <?php }
+        }
+        ?>
         <div class="fitImg cardImg">
             <a href="<?php the_permalink() ?>">
                 <?php theme_post_thumb(); ?>
@@ -57,14 +65,22 @@ function get_portfolio_card() {
             </div>
         </div>
     </article>
-    <?php
+<?php
 }
 
 
 // POST CARD FOR EACH DEFAULT POST TYPE
 function get_default_card()
 { ?>
+
     <article class="card blogCard" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
+        <?php if (is_search()) {
+            $postType = (get_post_type() === 'portfolios') ? 'Portfolio' : ((get_post_type() === 'post') ? 'Blog' : '');
+            if (!empty($postType)) { ?>
+                <span class="postType"> <?php echo $postType; ?> </span>
+        <?php }
+        }
+        ?>
         <div class="fitImg cardImg">
             <a href="<?php the_permalink() ?>">
                 <?php theme_post_thumb(); ?>

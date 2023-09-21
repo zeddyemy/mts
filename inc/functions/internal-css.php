@@ -16,25 +16,27 @@ function internal_css()
 
     $footerTxtColor = !empty($mtsThemeMods['footer_text_color']) ? $mtsThemeMods['footer_text_color'] : 'var(--body-txt-clr)';
     $footerBgColor = !empty($mtsThemeMods['footer_bg_color']) ? $mtsThemeMods['footer_bg_color'] : 'var(--box-bg-clr-solid)';
-    
+
     $adminBar = is_admin_bar_showing(); ?>
 
     <style>
         #header {
             --navbar-background-color: <?php echo $headerBgColor; ?> !important;
         }
+
         @media screen and (max-width: 1024px) {
             .nav {
                 --header-text-color: <?php echo $headerTxtColor;  ?> !important;
             }
         }
-        
+
         .noHero #header,
         .headerBg {
             --header-text-color: <?php echo $headerTxtColor;  ?> !important;
             --header-background-color: <?php echo $headerBgColor; ?> !important;
             --header-background-image: url(' <?php echo $mtsThemeMods['header_bg_image']; ?> ');
         }
+
         body {
             --theme-clr: <?php echo $mtsThemeMods['mts_theme_color'];  ?>;
             --footer-txt-clr: <?php echo $footerTxtColor;  ?> !important;
@@ -49,7 +51,18 @@ function internal_css()
         if (!$mtsThemeMods['background_color']) {
             echo 'body { background-color: var(--body-bg-clr); }';
         }
-        ?>
+        
+        if (is_search()) { ?>
+            .postType {
+                z-index: 1;
+                position: absolute;
+                background: var(--theme-clr);
+                padding: 5px 10px;
+                border-radius: calc(var(--round-conners) - 10px);
+                left: 10px;
+                top: 10px;
+            }
+        <?php } ?>
     </style>
 <?php
 }

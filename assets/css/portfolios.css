@@ -14,7 +14,7 @@
 .folioCard {
     color: #fff;
     overflow: hidden;
-    height: 16.75rem;
+    height: 15.75rem;
     border: 1px solid var(--outline);
     background: var(--overlay-clr);
 }
@@ -41,6 +41,10 @@
     font-family: var(--font-four);
     font-size: .95em;
     display: inline-block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 
 .folioCard .btn {

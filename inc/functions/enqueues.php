@@ -110,6 +110,10 @@ function mts_scripts() {
 
         wp_enqueue_style('blog', get_mts_assets('css') . 'blog.css');
     }
+    if (is_search()) {
+        wp_enqueue_style('portfolios', get_mts_assets('css') . 'portfolios.css');
+        wp_enqueue_style('blog', get_mts_assets('css') . 'blog.css');
+    }
 }
 add_action('wp_enqueue_scripts', 'mts_scripts');
 
