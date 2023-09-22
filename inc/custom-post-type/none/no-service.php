@@ -13,11 +13,11 @@ function no_service_post()
             <?php if ($services_query->have_posts()) : ?>
                 <label>NO SELECTED SERVICES</label>
                 <span> Oops! Seems you haven't selected any of your services to display here yet. PLease Use the button below to go to the customizer and select any Three Services you want displayed here</span>
-                <?php mts_render_btn('Go To Customizer', wp_customize_url(), 'plainBtn'); ?>
+                <?php pureFolio_render_btn('Go To Customizer', wp_customize_url(), 'plainBtn'); ?>
             <?php else : ?>
                 <label>NO SERVICES</label>
                 <span> Oops! Seems you do not have any services yet. Please go to the dashboard to add a new service</span>
-                <?php mts_render_btn('Add New Service', admin_url('post-new.php?post_type=services'), 'plainBtn'); ?>
+                <?php pureFolio_render_btn('Add New Service', admin_url('post-new.php?post_type=services'), 'plainBtn'); ?>
             <?php endif; ?>
         </div>
     </section>

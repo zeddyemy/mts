@@ -1,11 +1,11 @@
 <?php
 
-global $mtsThemeMods;
+global $pureFolioThemeMods;
 
 // Custom query to retrieve Portfolios
 $portfolios_query = new WP_Query(array(
     'post_type' => 'portfolios',
-    'posts_per_page' => $mtsThemeMods['portfolios_count'],
+    'posts_per_page' => $pureFolioThemeMods['portfolios_count'],
 ));
 
 ?>
@@ -14,7 +14,7 @@ $portfolios_query = new WP_Query(array(
         <div class="card secCard col-12 fitImg" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
 
             <div class="secTitle flex flexCenter row" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
-                <span class="title"> <?php echo $mtsThemeMods['portfolios_sec_title']; ?> </span>
+                <span class="title"> <?php echo $pureFolioThemeMods['portfolios_sec_title']; ?> </span>
             </div>
 
             <?php if ($portfolios_query->have_posts()) : ?>

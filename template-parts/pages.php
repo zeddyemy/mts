@@ -10,14 +10,14 @@
 						4) The Side Bar.
 
 */
-global $mtsThemeMods;
-global $mtsPageThemeMods;
-$mainSecWidth = ($mtsPageThemeMods['toggle_sidebar']) ? 'col-8' : 'col-9';
+global $pureFolioThemeMods;
+global $pureFolioPageThemeMods;
+$mainSecWidth = ($pureFolioPageThemeMods['toggle_sidebar']) ? 'col-8' : 'col-9';
 
 ?>
 
 <?php
-    if ($mtsPageThemeMods['toggle_hero_header']) {
+    if ($pureFolioPageThemeMods['toggle_hero_header']) {
 		get_template_part('template-parts/pages-parts/hero-header', get_post_format());
     }
 ?>
@@ -41,7 +41,7 @@ $mainSecWidth = ($mtsPageThemeMods['toggle_sidebar']) ? 'col-8' : 'col-9';
 		endif; ?>
 	</section>
 
-	<?php if ($mtsPageThemeMods['toggle_sidebar']) { ?>
+	<?php if ($pureFolioPageThemeMods['toggle_sidebar']) { ?>
 		<div class="col-4 side">
 			<?php get_sidebar('pages'); ?>
 		</div>

@@ -1,6 +1,6 @@
 <?php
 
-global $mtsThemeMods;
+global $pureFolioThemeMods;
 
 ?>
 
@@ -8,7 +8,7 @@ global $mtsThemeMods;
 <article class="article-card card">
 	<header>
 		<h1 class="title article-card-title"><?php the_title(); ?></h1>
-		<?php if ($mtsThemeMods['toggle_single_excerpt'] == true) { ?>
+		<?php if ($pureFolioThemeMods['toggle_single_excerpt'] == true) { ?>
 			<div class="excerpt"><?php echo get_the_excerpt(); ?></div>
 		<?php } ?>
 		<div class="author-date">
@@ -18,11 +18,11 @@ global $mtsThemeMods;
 	</header>
 
 	<?php
-	if ($mtsThemeMods['toggle_share_btns'] == true) {
+	if ($pureFolioThemeMods['toggle_share_btns'] == true) {
 		social_share_btns();
 	}
 
-	if ($mtsThemeMods['toggle_single_featured_img'] == true) { ?>
+	if ($pureFolioThemeMods['toggle_single_featured_img'] == true) { ?>
 		<div class="featured-image">
 			<?php theme_post_thumb(); ?>
 		</div>

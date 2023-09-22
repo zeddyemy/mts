@@ -5,13 +5,13 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package MTS
+ * @package pureFolio
  */
-global $mtsThemeMods, $mtsBodyClass;
-$mtsThemeMods = mts_theme_mods();
+global $pureFolioThemeMods, $pureFolioBodyClass;
+$pureFolioThemeMods = pureFolio_theme_mods();
 
-if (!$mtsThemeMods['toggle_folio_hero_header']) {
-    $mtsBodyClass[] = 'noHero';
+if (!$pureFolioThemeMods['toggle_folio_hero_header']) {
+    $pureFolioBodyClass[] = 'noHero';
 }
 
 get_header();

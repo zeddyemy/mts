@@ -5,7 +5,7 @@
  * service, portfolio or default post type. (POST CARD)
  * 
  * @author Emmanuel Zeddy
- * @package MTS
+ * @package pureFolio
  */
 
 
@@ -27,11 +27,11 @@ function get_service_card()
 
 function viewMore_service_card()
 {
-    global $mtsThemeMods; ?>
+    global $pureFolioThemeMods; ?>
     <div class="card serCard" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
-        <label><?php echo esc_html($mtsThemeMods['additional_card_title']); ?></label>
-        <span><?php echo esc_html($mtsThemeMods['additional_card_content']); ?></span>
-        <?php mts_render_btn($mtsThemeMods['additional_card_btn'], get_post_type_archive_link('services'), 'plainBtn'); ?>
+        <label><?php echo esc_html($pureFolioThemeMods['additional_card_title']); ?></label>
+        <span><?php echo esc_html($pureFolioThemeMods['additional_card_content']); ?></span>
+        <?php pureFolio_render_btn($pureFolioThemeMods['additional_card_btn'], get_post_type_archive_link('services'), 'plainBtn'); ?>
     </div>
 
 <?php }

@@ -9,8 +9,8 @@
 
 */
 
-global $mtsThemeMods;
-$mainSecWidth = ($mtsThemeMods['toggle_blog_sidebar'] == true) ? 'col-8' : 'col-12';
+global $pureFolioThemeMods;
+$mainSecWidth = ($pureFolioThemeMods['toggle_blog_sidebar'] == true) ? 'col-8' : 'col-12';
 
 ?>
 
@@ -22,7 +22,7 @@ $mainSecWidth = ($mtsThemeMods['toggle_blog_sidebar'] == true) ? 'col-8' : 'col-
         ?>
     </section>
 
-    <?php if ($mtsThemeMods['toggle_blog_sidebar']) { ?>
+    <?php if ($pureFolioThemeMods['toggle_blog_sidebar']) { ?>
         <section class="col-4 side">
             <?php get_sidebar(); // The Side Bar. ?>
         </section>

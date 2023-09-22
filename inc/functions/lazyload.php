@@ -1,25 +1,25 @@
 <?php
 
 /**
- * MTS Enable lazy loading
+ * pureFolio Enable lazy loading
  *
  * @author Emmanuel Zeddy 
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
- * @package MTS
+ * @package pureFolio
  */
 
 // Modify Default HTML structure for post thumbnail
 function modify_post_thumbnail_html($html, $post_id, $post_thumbnail_id, $size, $attr) {
-    global $mtsThemeMods;
+    global $pureFolioThemeMods;
     $id = get_post_thumbnail_id(); // gets the id of the current post_thumbnail (in the loop)
     $src = wp_get_attachment_image_src($id, $size); // gets the image url specific to the passed in size (aka. custom image size)
     $alt = get_the_title($id); // gets the post thumbnail title
     $class = $attr['class']; // gets classes passed to the post thumbnail, defined here for easier function access
 
-    if($mtsThemeMods['placeholder_img']) {
-        $placeholder = $mtsThemeMods['placeholder_img'];
+    if($pureFolioThemeMods['placeholder_img']) {
+        $placeholder = $pureFolioThemeMods['placeholder_img'];
     }else {
-        $placeholder = get_mts_assets('img') . 'placeholder.jpg';
+        $placeholder = get_pureFolio_assets('img') . 'placeholder.jpg';
     }
 
     // Check to see if a 'lazyload' class exists in the array when calling "the_post_thumbnail()", if so output different <img/> html
@@ -35,6 +35,6 @@ add_filter('post_thumbnail_html', 'modify_post_thumbnail_html', 99, 5);
 
 
 function lazyload_scripts() {
-	wp_enqueue_script('lazysizes', get_mts_assets('library/lazysizes').'lazysizes.min.5.3.0.js');
+	wp_enqueue_script('lazysizes', get_pureFolio_assets('library/lazysizes').'lazysizes.min.5.3.0.js');
 }
 add_action( 'wp_enqueue_scripts', 'lazyload_scripts' );

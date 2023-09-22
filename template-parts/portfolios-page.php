@@ -8,7 +8,7 @@
 
 */
 
-global $mtsThemeMods;
+global $pureFolioThemeMods;
 
 ?>
 

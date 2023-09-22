@@ -1,25 +1,25 @@
 <?php
 
 /**
- * MTS functions and definitions
+ * pureFolio functions and definitions
  *
  * @author Emmanuel Zeddy 
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
- * @package MTS
+ * @package pureFolio
  */
 
 
-if (!function_exists('mts_setup')) {
+if (!function_exists('pureFolio_setup')) {
     /*--------------------------------------------------------------------------------
-	mts_setup - sets up theme
+	pureFolio_setup - sets up theme
 	- adds theme support for post formats, post thumbnails, HTML5 and automatic feed links
 	- registers a translation file
 	- registers navigation menus
 	---------------------------------------------------------------------------------*/
 
-    function mts_setup() {
+    function pureFolio_setup() {
         // Load TextDomain.
-        load_theme_textdomain('mts');
+        load_theme_textdomain('pureFolio');
 
         // Add default posts and comments RSS feed links to head.
         add_theme_support('automatic-feed-links');
@@ -28,7 +28,7 @@ if (!function_exists('mts_setup')) {
         add_theme_support('post-formats', array('aside', 'image', 'link', 'quote', 'status'));
 
         // use wp_nav_menu() in one location.
-        register_nav_menu('primary', __('Primary Menu', 'mts'));
+        register_nav_menu('primary', __('Primary Menu', 'pureFolio'));
 
         // HTML5
         add_theme_support('html5');
@@ -56,7 +56,7 @@ if (!function_exists('mts_setup')) {
         add_theme_support('customize-selective-refresh-widgets');
     }
 }
-add_action('after_setup_theme', 'mts_setup');
+add_action('after_setup_theme', 'pureFolio_setup');
 
 // REMOVE WP-EMOJI JAVASCRIPT & CSS
 remove_action('wp_head', 'print_emoji_detection_script', 7);

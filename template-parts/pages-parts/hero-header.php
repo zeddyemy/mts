@@ -1,11 +1,11 @@
 <?php
 
-global $mtsThemeMods;
-global $mtsPageThemeMods;
+global $pureFolioThemeMods;
+global $pureFolioPageThemeMods;
 
-$heroHeaderSubtext = $mtsPageThemeMods['hero_header_subtext'];
-$thisPageHeroHeaderImg = (!empty($mtsPageThemeMods['hero_header_img'])) ? $mtsPageThemeMods['hero_header_img'] :
-$mtsThemeMods['pages_hero_header_img'];
+$heroHeaderSubtext = $pureFolioPageThemeMods['hero_header_subtext'];
+$thisPageHeroHeaderImg = (!empty($pureFolioPageThemeMods['hero_header_img'])) ? $pureFolioPageThemeMods['hero_header_img'] :
+$pureFolioThemeMods['pages_hero_header_img'];
 
 
 ?>

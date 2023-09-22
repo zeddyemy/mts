@@ -10,24 +10,24 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package mts
+ * @package pureFolio
  */
 
-global $mtsThemeMods;
-global $mtsPageThemeMods;
+global $pureFolioThemeMods;
+global $pureFolioPageThemeMods;
 ?>
 
 
 
 <section class="article-card card">
 	<header>
-		<?php if (!$mtsPageThemeMods['toggle_hero_header']) { ?>
+		<?php if (!$pureFolioPageThemeMods['toggle_hero_header']) { ?>
 			<h2 class="article-card-title"> <?php the_title(); ?> </h2>
 		<?php } ?>
 	</header>
 
 
-	<?php if ($mtsThemeMods['toggle_pages_featured_img']) { ?>
+	<?php if ($pureFolioThemeMods['toggle_pages_featured_img']) { ?>
 		<div class="featured-image">
 			<?php theme_post_thumb(); ?>
 		</div>

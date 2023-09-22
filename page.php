@@ -10,15 +10,15 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package mts
+ * @package pureFolio
  */
 
-global $mtsThemeMods, $mtsPageThemeMods, $mtsBodyClass;
-$mtsThemeMods = mts_theme_mods();
-$mtsPageThemeMods = mts_page_theme_mods();
+global $pureFolioThemeMods, $pureFolioPageThemeMods, $pureFolioBodyClass;
+$pureFolioThemeMods = pureFolio_theme_mods();
+$pureFolioPageThemeMods = pureFolio_page_theme_mods();
 
-if (!$mtsPageThemeMods['toggle_hero_header']) {
-    $mtsBodyClass[] = 'noHero';
+if (!$pureFolioPageThemeMods['toggle_hero_header']) {
+    $pureFolioBodyClass[] = 'noHero';
 }
 
 get_header();

@@ -9,7 +9,7 @@
 
 */
 
-global $mtsThemeMods;
+global $pureFolioThemeMods;
 
 ?>
 

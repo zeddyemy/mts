@@ -5,10 +5,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package MTS
+ * @package pureFolio
  */
-global $mtsThemeMods;
-$mtsThemeMods = mts_theme_mods();
+global $pureFolioThemeMods;
+$pureFolioThemeMods = pureFolio_theme_mods();
 
 get_header();
 

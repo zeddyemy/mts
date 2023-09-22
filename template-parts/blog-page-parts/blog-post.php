@@ -1,6 +1,6 @@
 <?php
 
-global $mtsThemeMods;
+global $pureFolioThemeMods;
 
 $posts_per_page = get_option('posts_per_page'); // get the number from wordpress settings
 $paged = get_query_var('paged') ? get_query_var('paged') : 1; // get the current page number
@@ -16,9 +16,9 @@ $blog_query = new WP_Query(array(
 <section class="all-post">
     <?php if ($blog_query->have_posts()) : ?>
 
-        <?php if ($mtsThemeMods['toggle_blogPage_title']) : ?>
+        <?php if ($pureFolioThemeMods['toggle_blogPage_title']) : ?>
             <div class="all-post-title">
-                <div class="title"> <?php echo $mtsThemeMods['blogPage_title']; ?> </div>
+                <div class="title"> <?php echo $pureFolioThemeMods['blogPage_title']; ?> </div>
             </div>
         <?php endif; ?>
 

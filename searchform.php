@@ -4,7 +4,7 @@
  * The template for displaying search form of the theme
  *
  *
- * @package MTS
+ * @package pureFolio
  */
 ?>
 

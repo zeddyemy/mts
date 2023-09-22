@@ -1,6 +1,6 @@
 <?php
 
-global $mtsThemeMods;
+global $pureFolioThemeMods;
 
 ?>
 
@@ -8,7 +8,7 @@ global $mtsThemeMods;
 <article class="article-card overview card">
     <?php
     
-        if (!$mtsThemeMods['toggle_folio_hero_header']) {
+        if (!$pureFolioThemeMods['toggle_folio_hero_header']) {
             echo '<h1>' . the_title() . '</h1>';
         }
         get_portfolio_overview();

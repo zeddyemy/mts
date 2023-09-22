@@ -1,6 +1,6 @@
 <?php
 
-global $mtsThemeMods;
+global $pureFolioThemeMods;
 ?>
 
 <section id="about" class="about">
@@ -8,22 +8,22 @@ global $mtsThemeMods;
         <div class="container col-12 noPad flex flexCenter row">
             <div class="noPad flex flexCenter" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
                 <div class="txtContain">
-                    <?php if ($mtsThemeMods['toggle_about_title'] == true) : ?>
+                    <?php if ($pureFolioThemeMods['toggle_about_title'] == true) : ?>
                         <div class="secTitle flex flexStart row">
-                            <span class="title"> <?php echo $mtsThemeMods['about_sec_title']; ?> </span>
+                            <span class="title"> <?php echo $pureFolioThemeMods['about_sec_title']; ?> </span>
                         </div>
                     <?php endif; ?>
-                    <p><?php echo $mtsThemeMods['about_sec_content']; ?></p>
-                    <?php if ($mtsThemeMods['toggle_about_readMore_btn'] == true) :
-                        mts_render_btn($mtsThemeMods['about_readMore_btn_text'], $mtsThemeMods['about_readMore_btn_url']);
+                    <p><?php echo $pureFolioThemeMods['about_sec_content']; ?></p>
+                    <?php if ($pureFolioThemeMods['toggle_about_readMore_btn'] == true) :
+                        pureFolio_render_btn($pureFolioThemeMods['about_readMore_btn_text'], $pureFolioThemeMods['about_readMore_btn_url']);
                     endif; ?>
                 </div>
             </div>
-            <?php if ($mtsThemeMods['toggle_about_sec_img'] == true) : ?>
+            <?php if ($pureFolioThemeMods['toggle_about_sec_img'] == true) : ?>
                 <div class="noPad" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
                     <div class="card logo">
                         <div class="cardImg">
-                            <img src="<?php echo $mtsThemeMods['about_sec_img']; ?>" alt="<?php echo $mtsThemeMods['about_sec_title'] ?>">
+                            <img src="<?php echo $pureFolioThemeMods['about_sec_img']; ?>" alt="<?php echo $pureFolioThemeMods['about_sec_title'] ?>">
                         </div>
                     </div>
                 </div>

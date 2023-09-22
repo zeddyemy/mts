@@ -3,11 +3,11 @@
 /**
  * The header for our theme
  *
- * @package MTS
+ * @package pureFolio
  */
 
-global $mtsThemeMods, $mtsBodyClass;
-$mtsThemeMods = mts_theme_mods();
+global $pureFolioThemeMods, $pureFolioBodyClass;
+$pureFolioThemeMods = pureFolio_theme_mods();
 
 
 ?>
@@ -22,7 +22,7 @@ $mtsThemeMods = mts_theme_mods();
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class($mtsBodyClass); ?>>
+<body <?php body_class($pureFolioBodyClass); ?>>
     <header id="header">
         <div class="header-c">
             <div class="logo">

@@ -3,13 +3,13 @@
 /**
  * The main template file
  *
- * @package MTS
+ * @package pureFolio
  */
 
-global $mtsBodyClass;
-$mtsThemeMods = mts_theme_mods();
-if (!$mtsThemeMods['toggle_hero_header_sec']) {
-    $mtsBodyClass[] = 'noHero';
+global $pureFolioBodyClass;
+$pureFolioThemeMods = pureFolio_theme_mods();
+if (!$pureFolioThemeMods['toggle_hero_header_sec']) {
+    $pureFolioBodyClass[] = 'noHero';
 }
 
 get_header();

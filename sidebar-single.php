@@ -5,12 +5,12 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package mts
+ * @package pureFolio
  */
 
 ?>
 <div id="secondary" class="side-content widget-area single" role="complementary">
 
-    <?php mts_dynamic_sidebar('sidebar-single'); ?>
+    <?php pureFolio_dynamic_sidebar('sidebar-single'); ?>
 
 </div>

@@ -13,30 +13,30 @@
 
 */
 
-global $mtsThemeMods;
+global $pureFolioThemeMods;
 ?>
 
 <section class="wrapper col-12">
     <?php
-    if ($mtsThemeMods['toggle_hero_header_sec'] == true) {
+    if ($pureFolioThemeMods['toggle_hero_header_sec'] == true) {
         get_template_part('template-parts/frontpage-parts/hero-header', get_post_format());
     }
 
-    if ($mtsThemeMods['toggle_about_sec'] == true) {
+    if ($pureFolioThemeMods['toggle_about_sec'] == true) {
         get_template_part('template-parts/frontpage-parts/about-section', get_post_format());
     }
-    if ($mtsThemeMods['toggle_goal_sec'] == true) {
+    if ($pureFolioThemeMods['toggle_goal_sec'] == true) {
         get_template_part('template-parts/frontpage-parts/goal-section', get_post_format());
     }
-    if ($mtsThemeMods['toggle_services_sec'] == true) {
+    if ($pureFolioThemeMods['toggle_services_sec'] == true) {
         get_template_part('template-parts/frontpage-parts/services-section', get_post_format());
     }
 
-    if ($mtsThemeMods['toggle_portfolios_sec'] == true) {
+    if ($pureFolioThemeMods['toggle_portfolios_sec'] == true) {
         get_template_part('template-parts/frontpage-parts/portfolio-section', get_post_format());
     }
     
-    if ($mtsThemeMods['toggle_blog_sec'] == true) {
+    if ($pureFolioThemeMods['toggle_blog_sec'] == true) {
         get_template_part('template-parts/frontpage-parts/blog-section', get_post_format());
     }
     ?>

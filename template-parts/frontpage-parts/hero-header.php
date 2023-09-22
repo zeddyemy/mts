@@ -1,20 +1,20 @@
 <?php
 
-global $mtsThemeMods;
+global $pureFolioThemeMods;
 ?>
 
-<section id="heroHeader" class="heroHeader noPad fitImg" style="background-image: url('<?php echo $mtsThemeMods['hero_header_sec_img']; ?>');">
+<section id="heroHeader" class="heroHeader noPad fitImg" style="background-image: url('<?php echo $pureFolioThemeMods['hero_header_sec_img']; ?>');">
     <div class="container col-12">
         <div class="slide flex flexCenter">
             <div class="heroHeader-content flex flexCenter" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
-                <h1> <?php echo $mtsThemeMods['hero_header_sec_title']; ?> </h1>
+                <h1> <?php echo $pureFolioThemeMods['hero_header_sec_title']; ?> </h1>
 
-                <?php if (!empty($mtsThemeMods['hero_header_sec_subtext'])) { ?>
-                    <p> <?php echo $mtsThemeMods['hero_header_sec_subtext']; ?> </p>
+                <?php if (!empty($pureFolioThemeMods['hero_header_sec_subtext'])) { ?>
+                    <p> <?php echo $pureFolioThemeMods['hero_header_sec_subtext']; ?> </p>
                 <?php }
 
-                if ($mtsThemeMods['toggle_hero_header_sec_btn'] == true) {
-                    mts_render_btn($mtsThemeMods['hero_header_sec_btn_text'], $mtsThemeMods['hero_header_sec_btn_url']);
+                if ($pureFolioThemeMods['toggle_hero_header_sec_btn'] == true) {
+                    pureFolio_render_btn($pureFolioThemeMods['hero_header_sec_btn_text'], $pureFolioThemeMods['hero_header_sec_btn_url']);
                 } ?>
             </div>
         </div>

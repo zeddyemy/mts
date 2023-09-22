@@ -26,7 +26,7 @@ class initialize_clarusmod_customizer_settings {
         $wp_customize->register_panel_type('Clarusmod_Customize_Panel');
         $wp_customize->register_section_type('Clarusmod_Customize_Section');
 
-        // MTS Theme Panel
+        // Theme Panel
         include_once $this->panels_path;
     }
 }

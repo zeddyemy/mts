@@ -8,12 +8,12 @@
 						2) None template part.
 
 */
-global $mtsThemeMods;
+global $pureFolioThemeMods;
 $portfolioOverview = get_post_meta(get_the_ID(), 'portfolio_overview', true);
 $portfolioURL = get_post_meta(get_the_ID(), 'portfolio_url', true);
 $portfolioTools = get_post_meta(get_the_ID(), 'portfolio_tools', true);
 
-if ($mtsThemeMods['toggle_folio_hero_header']) {
+if ($pureFolioThemeMods['toggle_folio_hero_header']) {
     get_template_part('template-parts/single-folio-page-parts/hero-header', get_post_format());
 }
 

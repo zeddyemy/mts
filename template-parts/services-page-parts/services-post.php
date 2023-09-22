@@ -1,6 +1,6 @@
 <?php
 
-global $mtsThemeMods;
+global $pureFolioThemeMods;
 
 ?>
 

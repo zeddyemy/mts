@@ -3,11 +3,11 @@
 /**
  * The main template file
  *
- * @package MTS
+ * @package pureFolio
  */
-global $mtsThemeMods, $mtsBodyClass;
-$mtsThemeMods = mts_theme_mods();
-$mtsBodyClass[] = 'noHero';
+global $pureFolioThemeMods, $pureFolioBodyClass;
+$pureFolioThemeMods = pureFolio_theme_mods();
+$pureFolioBodyClass[] = 'noHero';
 
 get_header();
 

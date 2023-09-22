@@ -1,11 +1,11 @@
 <?php
 
-global $mtsThemeMods;
+global $pureFolioThemeMods;
 
-if ($mtsThemeMods['toggle_folio_featuredImg']) {
+if ($pureFolioThemeMods['toggle_folio_featuredImg']) {
     $thisPageHeroHeaderImg = get_the_post_thumbnail_url(get_the_ID(), 'full');
 } else {
-    $thisPageHeroHeaderImg = $mtsThemeMods['folio_hero_header_img'];
+    $thisPageHeroHeaderImg = $pureFolioThemeMods['folio_hero_header_img'];
 }
 
 

@@ -1,9 +1,9 @@
 <?php
 
 /**
- * MTS footer
+ * pureFolio footer
  *
- * @package MTS
+ * @package pureFolio
  */
 
 ?>
@@ -35,8 +35,8 @@
     </div>
     <div class="footer-b flex flexCenter">
         <?php
-        echo mts_copyright();
-        echo mts_author_url('https://zeddyemy.github.io', 'Emmanuel Olowu')
+        echo pureFolio_copyright();
+        echo pureFolio_author_url('https://zeddyemy.github.io', 'Emmanuel Olowu')
         ?>
 
     </div>

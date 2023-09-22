@@ -9,8 +9,8 @@
 						3) The Side Bar.
 
 */
-global $mtsThemeMods;
-$mainSecWidth = ($mtsThemeMods['toggle_single_sidebar'] == true) ? 'col-8' : 'col-9';
+global $pureFolioThemeMods;
+$mainSecWidth = ($pureFolioThemeMods['toggle_single_sidebar'] == true) ? 'col-8' : 'col-9';
 ?>
 
 <section class="wrapper singlePage col-12 flex layout">
@@ -31,7 +31,7 @@ $mainSecWidth = ($mtsThemeMods['toggle_single_sidebar'] == true) ? 'col-8' : 'co
         endif; ?>
     </section>
 
-    <?php if ($mtsThemeMods['toggle_single_sidebar'] == true) { ?>
+    <?php if ($pureFolioThemeMods['toggle_single_sidebar'] == true) { ?>
         <section class="col-4 side">
             <?php get_sidebar('single'); // The Side Bar. 
             ?>

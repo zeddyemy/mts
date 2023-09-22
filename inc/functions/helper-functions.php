@@ -1,15 +1,15 @@
 <?php
 
 /**
- * MTS Helper functions
+ * pureFolio Helper functions
  *
  * @author Emmanuel Zeddy 
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
- * @package MTS
+ * @package pureFolio
  */
 
 // function to register nav menus
-function mts_menu() {
+function pureFolio_menu() {
     register_nav_menus(
         array(
             'main-nav-menu' => __( 'Main Menu' ),
@@ -17,15 +17,15 @@ function mts_menu() {
         )
     );
 }
-add_action( 'init', 'mts_menu' );
+add_action( 'init', 'pureFolio_menu' );
 
 // FUNCTION TO FETCH POST THUMBNAIL
 function theme_post_thumb($class='') {
 
-    global $mtsThemeMods;
+    global $pureFolioThemeMods;
     $id = get_post_thumbnail_id(); // gets the id of the current post_thumbnail (in the loop)
     $alt = get_the_title($id); // gets the post thumbnail title
-    $userSetImgPlaceholder = $mtsThemeMods['placeholder_img'];
+    $userSetImgPlaceholder = $pureFolioThemeMods['placeholder_img'];
     $defaultImgPlaceholder = get_template_directory_uri() . '/assets/img/placeholder.jpg';
 
     if ( has_post_thumbnail() ) {
@@ -40,7 +40,7 @@ function theme_post_thumb($class='') {
 }
 
 // FUNCTION FOR COPYRIGHT DATE IN FOOTER
-function mts_copyright() {
+function pureFolio_copyright() {
     global $wpdb;
     $copyright_dates = $wpdb->get_results("
 		SELECT
@@ -64,7 +64,7 @@ function mts_copyright() {
 }
 
 // Format URL To Make Sure It Has "https://"
-function mts_format_url( $url ) {
+function pureFolio_format_url( $url ) {
     // Check if the URL starts with "http://" or "https://"
     if ( ! empty( $url ) && ! preg_match( '/^https?:\/\//i', $url ) ) :
         $url = 'https://' . $url;
@@ -74,18 +74,18 @@ function mts_format_url( $url ) {
 }
 
 // FUNCTION TO DISPLAY A LINK TO THEME AUTHOR'S PAGE
-function mts_author_url($url, $name) {
-    $url = mts_format_url($url);
+function pureFolio_author_url($url, $name) {
+    $url = pureFolio_format_url($url);
 
 	return '<div class="theme-author-link">' .
 		sprintf(
-			esc_html__('Designed by: %s', 'mts'),
-			'<a href="' . esc_url($url) . '" target="_blank" rel="noopener noreferrer" title="' . esc_attr__($name, 'mts') . '">' . esc_html__($name, 'mts') . '</a>'
+			esc_html__('Designed by: %s', 'pureFolio'),
+			'<a href="' . esc_url($url) . '" target="_blank" rel="noopener noreferrer" title="' . esc_attr__($name, 'pureFolio') . '">' . esc_html__($name, 'pureFolio') . '</a>'
 		) . '</div>';
 }
 
 // Theme's assets url
-function get_mts_assets($type = '') {
+function get_pureFolio_assets($type = '') {
     $assetsPath = !empty($type) ? 'assets/' . $type : 'assets';
     $url = trailingslashit(get_template_directory_uri()) . $assetsPath;
     
@@ -93,9 +93,9 @@ function get_mts_assets($type = '') {
 }
 
 // Function to render a button
-function mts_render_btn($btn_txt='Button', $url='#', $class='') {
-    global $mtsThemeMods;
-    $class = $mtsThemeMods['button_style'] . ' ' . $class;
+function pureFolio_render_btn($btn_txt='Button', $url='#', $class='') {
+    global $pureFolioThemeMods;
+    $class = $pureFolioThemeMods['button_style'] . ' ' . $class;
     echo '<a href="' . esc_url($url) . '">
             <span class="btn ' . esc_attr($class) . '">' . esc_html($btn_txt) . '</span>
         </a>';
@@ -127,13 +127,13 @@ function installPage($title, $new_page_content='', $new_page_template = '') {
 
 // Function to add Social share buttons to blog post
 function social_share_btns() {
-    global $mtsThemeMods;
-    $facebook = $mtsThemeMods['toggle_facebook_btn'];
-    $x = $mtsThemeMods['toggle_x_btn'];
-    $whatsapp = $mtsThemeMods['toggle_whatsapp_btn'];
-    $telegram = $mtsThemeMods['toggle_telegram_btn'];
-    $pinterest = $mtsThemeMods['toggle_pinterest_btn'];
-    $linkedin = $mtsThemeMods['toggle_linkedin_btn'];
+    global $pureFolioThemeMods;
+    $facebook = $pureFolioThemeMods['toggle_facebook_btn'];
+    $x = $pureFolioThemeMods['toggle_x_btn'];
+    $whatsapp = $pureFolioThemeMods['toggle_whatsapp_btn'];
+    $telegram = $pureFolioThemeMods['toggle_telegram_btn'];
+    $pinterest = $pureFolioThemeMods['toggle_pinterest_btn'];
+    $linkedin = $pureFolioThemeMods['toggle_linkedin_btn'];
     ?>
     <div class="social-share">
 
