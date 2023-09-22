@@ -22,9 +22,10 @@ function singlePage_internal_css() {
 
             <?php if ($toggle_share_btns == true) { ?>
                 .social-share {
-                    margin: 5px auto;
-                    display: flex;
                     gap: 10px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 5px auto;
                 }
 
                 .social-share a {
