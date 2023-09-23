@@ -43,7 +43,7 @@ if (!function_exists('pureFolio_theme_mods')) {
             'about_readMore_btn_text'       => get_theme_mod('about_readMore_btn_text', 'Read More'),
             'about_readMore_btn_url'        => pureFolio_format_url(get_theme_mod('about_readMore_btn_url', 'about.com')),
             'toggle_about_sec_img'          => get_theme_mod('toggle_about_sec_img', true),
-            'about_sec_img'                 => get_theme_mod('about_sec_img'),
+            'about_sec_img'                 => get_theme_mod('about_sec_img', get_pureFolio_assets('img') . 'pure-folio.jpg'),
 
             'toggle_goal_sec'               => get_theme_mod('toggle_goal_sec', true),
             'goal_sec_img'                  => get_theme_mod('goal_sec_img', get_pureFolio_assets('img') . 'team.jpg'),
