@@ -61,7 +61,7 @@ if (!function_exists('custom_post_type_services')) {
     
         function render_service_icon_meta_box($post) {
             $selected_icon = get_post_meta($post->ID, 'service_icon', true);
-            $icon_choices = get_boxicons_choices(true);
+            $icon_choices = get_icons_choices(true);
     
             echo '<label for="service_icon" style="display:block;margin:10px 0px;font-weight:bold;">Select an Icon:</label>';
             echo '<select name="service_icon" id="service_icon">';

@@ -177,6 +177,48 @@ function social_share_btns() {
 }
 
 
+// Get All Boxicons in form of an array
+if (!function_exists('get_icons_choices')) {
+    function get_icons_choices($include_none = false)
+    {
+        // Get the list of available icons
+        $icon_path = get_pureFolio_assets('library/boxicons/css') . 'icon.classes.css';
+        $icon_file = file_get_contents($icon_path);
+        preg_match_all('/\.(bx[l|s]?)\-(.*?):before/', $icon_file, $matches);
+        $prefixes = $matches[1];
+        $icons = $matches[2];
+
+        $icon_choices = array();
+        if ($include_none) {
+            $icon_choices['none'] = '&mdash; Select Icon &mdash;';
+        }
+
+        foreach ($icons as $index => $icon) {
+            $prefix = $prefixes[$index];
+            $name = ucwords(str_replace('-', ' ', $icon));
+            if ($prefix === 'bxs') {
+                $name .= ' Solid';
+            } elseif ($prefix === 'bxl') {
+                $name .= ' Logo';
+            }
+            $icon_choices['bx ' . $prefix . '-' . $icon] = $name;
+        }
+        // Sort the icon choices alphabetically while keeping "None" at the top
+        uasort($icon_choices, function ($a, $b) {
+            if ($a === '-- Select Icon --') {
+                return -1;
+            } elseif ($b === '-- Select Icon --') {
+                return 1;
+            } else {
+                return strcasecmp($a, $b);
+            }
+        });
+
+        return $icon_choices;
+    }
+    $select_icon_choices = get_icons_choices(true);
+}
+
 // Get all Published Pages except blog page
 $blog_page = get_page_by_title( 'Blog' );
 $args = array(
