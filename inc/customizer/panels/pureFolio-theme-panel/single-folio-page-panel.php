@@ -4,7 +4,7 @@
  * SINGLE PAGE PANEL
 =======================================*/
 $singleFolioPagePanel = new Clarusmod_Customize_Panel($wp_customize, 'single_folio_panel_id', array(
-    'title' => 'Singular Portfolio Page',
+    'title' => 'Single Portfolio Page',
     'description' => esc_html__('Customize how a singular portfolio looks like', 'pureFolio'),
     'priority' => 60,
     'panel' => 'pureFolioTheme_panel_id',

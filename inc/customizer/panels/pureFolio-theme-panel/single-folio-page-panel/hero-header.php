@@ -7,7 +7,7 @@ $wp_customize->add_section(
     'folio_hero_header',
     array(
         'title'    => __("Hero Header", "pureFolio"),
-        'description' => esc_html__("Customizer the Hero Header of the singular portfolio page.", "pureFolio"),
+        'description' => esc_html__("Customizer the Hero Header of the singule portfolio page.", "pureFolio"),
         'priority' => 10,
         'panel' => 'single_folio_panel_id',
     )

@@ -28,7 +28,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
     'toggle_services_sec',
     array(
         'label' => __('Services Section', 'pureFolio'),
-        'description' => esc_html__('Use The Toggle Button to Disable or Enable the Services section', 'pureFolio'),
+        'description' => esc_html__('Toggle the display of the Services section on the front page', 'pureFolio'),
         'section' => 'services_Sec',
         'settings'   => 'toggle_services_sec',
     )

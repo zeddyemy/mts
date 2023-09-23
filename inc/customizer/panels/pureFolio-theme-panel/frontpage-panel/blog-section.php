@@ -28,7 +28,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
     'toggle_blog_sec',
     array(
         'label' => __('Blog Section', 'pureFolio'),
-        'description' => esc_html__('Use The Toggle Button to Disable or Enable the Blog section', 'pureFolio'),
+        'description' => esc_html__('Toggle the display of the Blog section on the front page', 'pureFolio'),
         'section' => 'blog_Sec',
         'settings'   => 'toggle_blog_sec',
     )

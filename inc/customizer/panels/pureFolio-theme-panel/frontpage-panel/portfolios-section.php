@@ -28,7 +28,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
     'toggle_portfolios_sec',
     array(
         'label' => __('Portfolios Section', 'pureFolio'),
-        'description' => esc_html__('Use The Toggle Button to Disable or Enable the Portfolios section', 'pureFolio'),
+        'description' => esc_html__('Toggle the display of the Portfolios section on the front page', 'pureFolio'),
         'section' => 'portfolios_sec',
         'settings'   => 'toggle_portfolios_sec',
     )

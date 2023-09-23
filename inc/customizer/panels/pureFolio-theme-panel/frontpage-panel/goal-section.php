@@ -7,7 +7,7 @@ $wp_customize->add_section(
     'ourGoal_Sec',
     array(
         'title'    => __("Goal Section", "pureFolio" ),
-		'description' => esc_html__( "Your Goal as an Individual or as a Brand" ),
+		'description' => esc_html__("Highlight your objectives and aspirations with the Goal section on your front page. This section empowers you to control the visibility, title, and content of your goals, allowing you to share your mission as a user or brand. Enhance the visual appeal with a customizable background image, and use tags to briefly express your goals, such as 'innovative,' 'insightful,' and more." ),
 		'priority' => 20,
 		'panel' => 'frontpage_panel_id',
 	)
@@ -28,7 +28,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
     'toggle_goal_sec',
     array(
         'label' => __('Goal Section', 'pureFolio'),
-        'description' => esc_html__('Use The Toggle Button to Disable or Enable the Goal section'),
+        'description' => esc_html__('Toggle the display of the Goal section on the front page'),
 
         'section' => 'ourGoal_Sec',
         'settings'   => 'toggle_goal_sec',
@@ -49,8 +49,8 @@ $wp_customize->add_control(new WP_Customize_Image_Control(
     $wp_customize,
     'goal_sec_img',
     array(
-        'label' => __('Goal Background Image'),
-        'description' => esc_html__('This is the Image that appears right before the written Goal for your brand. You can change it to your own image below. '),
+        'label' => __('Goal Background Image', 'pureFolio'),
+        'description' => esc_html__('Add a background image to enhance the aesthetics of the Goal section.', 'pureFolio'),
         'section' => 'ourGoal_Sec',
         'settings' => 'goal_sec_img',
         'button_labels' => array( // Optional.
@@ -77,8 +77,8 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
     'goal_sec_title',
     array(
-        'label' => "Title",
-        'description' => __('Change The title of the Goal Section.'),
+        'label' => __('Title', 'pureFolio'),
+        'description' => __('Customize the title for your Goal Section. (Default: Our Goal)', 'pureFolio'),
         'settings' => 'goal_sec_title',
         'section' => 'ourGoal_Sec',
         'type' => 'text',
@@ -100,7 +100,7 @@ $wp_customize->add_control(new Clarusmod_TinyMCE_Custom_control(
     'goal_sec_content',
     array(
         'label' => "Content",
-        'description' => __('Type in your goals as a brand here.'),
+        'description' => __('Use the rich text editor below to articulate your goals as a user or brand.'),
         'settings' => 'goal_sec_content',
         'section' => 'ourGoal_Sec',
         'input_attrs' => array(
@@ -123,7 +123,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
     'toggle_goal_tags',
     array(
         'label' => __('Goal Tags', 'pureFolio'),
-        'description' => esc_html__('Use The Toggle Button to Disable or Enable the Goal Tags'),
+        'description' => esc_html__('Toggle the display of Goal Tags'),
         'section' => 'ourGoal_Sec',
         'settings'   => 'toggle_goal_tags',
         'capability' => 'edit_theme_options',
@@ -145,7 +145,7 @@ $wp_customize->add_control(new Clarusmod_Repeater_Custom_Control(
     'goal_tags',
     array(
         'label' => __('Add Tags', 'pureFolio'),
-        'description' => esc_html__('Use the input field to add as many tags as you desire.', 'pureFolio'),
+        'description' => esc_html__('Define your goals using tags or phrases that represent your aspirations. You can add multiple tags to showcase various goals.', 'pureFolio'),
         'section' => 'ourGoal_Sec',
         'settings'   => 'goal_tags',
         'button_labels' => array(

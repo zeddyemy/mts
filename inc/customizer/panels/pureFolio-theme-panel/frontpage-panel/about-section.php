@@ -7,7 +7,7 @@ $wp_customize->add_section(
 	'about_Sec',
 	array(
 		'title'    => __("About Section", "pureFolio"),
-		'description' => esc_html__('Short info/thesis about you or your Brand.'),
+		'description' => esc_html__('Tailor your About section on the front page to introduce yourself or your brand in a captivating way. Control the visibility of the About section, title, content, and imagery. Personalize the title, add rich content, and showcase your story with optional \'Read More\' button customization. Upload your image or brand logo for a personalized touch.', 'pureFolio'),
 		'priority' => 10,
 		'panel' => 'frontpage_panel_id',
 	)
@@ -29,7 +29,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
 	'toggle_about_sec',
 	array(
 		'label' => __('About Section', 'pureFolio'),
-		'description' => esc_html__('Use The Toggle Button to Disable or Enable the about section'),
+		'description' => esc_html__('Toggle the display of the about section on the front page.'),
 		'section' => 'about_Sec',
 		'settings'   => 'toggle_about_sec',
 		'capability' => 'edit_theme_options',
@@ -48,7 +48,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
 	'toggle_about_title',
 	array(
 		'label' => __('Title', 'pureFolio'),
-		'description' => esc_html__('Hide The title if you do not want it'),
+		'description' => esc_html__('toggle the display of the title in about section.'),
 		'section' => 'about_Sec',
 		'settings'   => 'toggle_about_title',
 		'capability' => 'edit_theme_options',
@@ -69,7 +69,7 @@ $wp_customize->add_control(
 	'about_sec_title',
 	array(
 		'label' => "Edit Title",
-		'description' => __('Edit The title of the about Section.'),
+		'description' => __('Customize the title for your about Section.'),
 		'settings' => 'about_sec_title',
 		'section' => 'about_Sec',
 		'type' => 'text',
@@ -91,7 +91,7 @@ $wp_customize->add_control(new Clarusmod_TinyMCE_Custom_control(
 	'about_sec_content',
 	array(
 		'label' => "Content",
-		'description' => __('Type in your short speech here.'),
+		'description' => __('Type in a short description or information about yourself or your brand using the rich text editor below.'),
 		'settings' => 'about_sec_content',
 		'section' => 'about_Sec',
 		'input_attrs' => array(
@@ -114,7 +114,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
 	'toggle_about_readMore_btn',
 	array(
 		'label' => "Read More Button",
-		'description' => __('Disable or Enable The Read More Button'),
+		'description' => __('Toggle the display of the "Read More" Button'),
 		'section' => 'about_Sec',
 		'settings' => 'toggle_about_readMore_btn',
 		'capability' => 'edit_theme_options',
@@ -137,7 +137,7 @@ $wp_customize->add_control(new Clarusmod_Url_Custom_Control(
 	'about_readMore_btn_url',
 	array(
 		'label' => "Read More Button Url",
-		'description' => __('Change The URL for the Read More Button'),
+		'description' => __('Enter the URL for the "Read More" button'),
 		'settings' => 'about_readMore_btn_url',
 		'section' => 'about_Sec',
 	)
@@ -158,7 +158,7 @@ $wp_customize->add_control(
 	'about_readMore_btn_text',
 	array(
 		'label' => "Change Button Text",
-		'description' => __('Change The Text for the Read More Button'),
+		'description' => __('Customize the Text displayed on the "Read More" Button'),
 		'settings' => 'about_readMore_btn_text',
 		'section' => 'about_Sec',
 		'type' => 'text',
@@ -181,7 +181,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
 	'toggle_about_sec_img',
 	array(
 		'label' => "About Section Image",
-		'description' => __('Disable or Enable The Image that is displayed next to your about content'),
+		'description' => __('Toggle the display of the image next to your about content'),
 		'settings' => 'toggle_about_sec_img',
 		'section' => 'about_Sec',
 	)
@@ -201,8 +201,8 @@ $wp_customize->add_control(new WP_Customize_Image_Control(
 	$wp_customize,
 	'about_sec_img',
 	array(
-		'label' => __('Change About Section Image'),
-		'description' => esc_html__('You can change This to be an image of Yourself or Brand.'),
+		'label' => __('About Section Image (if applicable)'),
+		'description' => esc_html__('Upload an image of Yourself or Brand (if applicable).'),
 		'section' => 'about_Sec',
 		'settings' => 'about_sec_img',
 		'button_labels' => array( // Optional.
