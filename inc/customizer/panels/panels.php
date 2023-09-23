@@ -4,7 +4,7 @@
  * pureFolio THEME SETTINGS PANEL
 =======================================*/
 $pureFolioThemePanel = new Clarusmod_Customize_Panel($wp_customize, 'pureFolioTheme_panel_id', array(
-    'title' => 'pureFolio Theme Settings',
+    'title' => 'Pure Folio Theme Settings',
     'priority' => 10,
 ));
 $wp_customize->add_panel($pureFolioThemePanel);
