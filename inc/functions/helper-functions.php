@@ -221,6 +221,11 @@ if (!function_exists('get_icons_choices')) {
 
 // Get all Published Pages except blog page
 $blog_page = get_page_by_title( 'Blog' );
+if ($blog_page) {
+    $blog_pageID = $blog_page->ID;
+} else {
+    $blog_pageID = '';
+}
 $args = array(
     'sort_order'    => 'asc',
     'sort_column'   => 'post_title',

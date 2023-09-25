@@ -28,7 +28,7 @@ $pureFolioThemeMods = pureFolio_theme_mods();
             <div class="logo">
                 <a href="<?php echo get_bloginfo('wpurl'); ?>">
                     <h1>
-                        <span>M</span>er<span>id</span>ian
+                        <?php echo get_bloginfo('name'); ?>
                     </h1>
                 </a>
             </div>

@@ -419,7 +419,7 @@ li.menu-item-has-children ul.sub-menu.active {
 
 @media screen and (min-width: 1280px) {
     .header-c>nav {
-        max-width: 75%;
+        max-width: 72%;
     }
     .header-c .icoBtn {
         width: 35px;
