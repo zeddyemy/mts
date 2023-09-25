@@ -25,7 +25,7 @@
     margin: 15px auto;
     width: 10%;
     border-radius: 31px;
-    border: 1px solid var(--theme-clr);
+    border: 2px solid var(--theme-clr);
     transition: var(--transition);
 }
 .serCard:hover label::after {
@@ -48,8 +48,5 @@
 @media screen and (min-width: 1440px) {
     .serCard label {
         font-size: 1.4em;
-    }
-    .serCard label::after {
-        border: 2px solid var(--theme-clr);
     }
 }
