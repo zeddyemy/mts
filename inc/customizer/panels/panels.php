@@ -19,6 +19,9 @@ include_once dirname(__FILE__) . '/pureFolio-theme-panel/colors-panel.php';
 // Header Panel
 include_once dirname(__FILE__) . '/pureFolio-theme-panel/header-panel.php';
 
+// Footer Panel
+include_once dirname(__FILE__) . '/pureFolio-theme-panel/footer-panel.php';
+
 // Frontpage Panel
 include_once dirname(__FILE__) . '/pureFolio-theme-panel/frontpage-panel.php';
 

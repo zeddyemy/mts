@@ -23,6 +23,9 @@ if (!function_exists('pureFolio_theme_mods')) {
             'footer_text_color'             => get_theme_mod('footer_text_color', ''),
             'footer_bg_color'               => get_theme_mod('footer_bg_color', ''),
             'footer_bg_image'               => get_theme_mod('footer_bg_image'),
+            'toggle_footer_copyright'       => get_theme_mod('toggle_footer_copyright'),
+            'toggle_footer_dev_credits'     => get_theme_mod('toggle_footer_dev_credits'),
+            'toggle_footer_platform_info'   => get_theme_mod('toggle_footer_platform_info'),
 
             'nav_text_transform'            => get_theme_mod('nav_text_transform', 'capitalize'),
             'title_text_transform'          => get_theme_mod('title_text_transform', 'capitalize'),
