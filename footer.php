@@ -6,6 +6,8 @@
  * @package pureFolio
  */
 
+global $pureFolioThemeMods;
+
 if (is_active_sidebar('footer-widget-one') || is_active_sidebar('footer-widget-two') || is_active_sidebar('footer-widget-three') || is_active_sidebar('footer-widget-four')) {
     $footerColumns = true;
 } else {
@@ -44,8 +46,15 @@ if (is_active_sidebar('footer-widget-one') || is_active_sidebar('footer-widget-t
 
     <div class="footer-b flex flexCenter">
         <?php
-        echo pureFolio_copyright();
-        echo pureFolio_author_url('https://zeddyemy.github.io', 'Emmanuel Olowu')
+        if ($pureFolioThemeMods['toggle_footer_copyright']) {
+            echo pureFolio_copyright();
+        }
+        if ($pureFolioThemeMods['toggle_footer_dev_credits']) {
+            echo pureFolio_author_url('https://zeddyemy.github.io', 'Emmanuel Olowu');
+        }
+        if ($pureFolioThemeMods['toggle_footer_platform_info']) {
+            echo the_wp_link();
+        }
         ?>
 
     </div>

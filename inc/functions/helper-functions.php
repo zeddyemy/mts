@@ -84,6 +84,14 @@ function pureFolio_author_url($url, $name) {
 		) . '</div>';
 }
 
+function the_wp_link() {
+    return '<div class="wp-link">' .
+    sprintf(
+        esc_html__('Proudly Powered by: %s', 'pureFolio'),
+        '<a href="' . esc_url('http://wordpress.org/') . '" target="_blank" rel="noopener noreferrer" title="' . esc_attr__('WordPress', 'pureFolio') . '">' . esc_html__('WordPress', 'pureFolio') . '</a>'
+    ) . '</div>';
+}
+
 // Theme's assets url
 function get_pureFolio_assets($type = '') {
     $assetsPath = !empty($type) ? 'assets/' . $type : 'assets';

@@ -1055,8 +1055,10 @@ figure.wp-block-image figcaption {
     padding: 30px var(--site-pad);
     border-top: 1px solid var(--outline);
 }
+.wp-link,
 .theme-author-link {
     font-family: var(--font-four);
+    margin: 0px 0px 5px;
 }
 
 /* -- RESPONSIVENESS -- */
