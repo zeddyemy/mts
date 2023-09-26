@@ -1088,6 +1088,9 @@ figure.wp-block-image figcaption {
     .blogCard .cardBody .title {
         font-size: 1.375rem;
     }
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+    }
 }
 @media screen and (min-width: 1024px) {
     .imgBg {
