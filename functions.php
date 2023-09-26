@@ -62,6 +62,9 @@ add_action('after_setup_theme', 'pureFolio_setup');
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
 
+// Generate Boxicons in JSON
+require get_template_directory() . '/inc/functions/generate-json-icons.php';
+
 // Helper Functions
 require get_template_directory() . '/inc/functions/helper-functions.php';
 

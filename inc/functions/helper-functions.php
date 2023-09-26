@@ -185,32 +185,39 @@ function social_share_btns() {
 }
 
 
-// Get All Boxicons in form of an array
+/**
+ * Get Boxicons choices as an associative array.
+ *
+ * @param bool $include_none Whether to include a "none" option.
+ * @return array Associative array of icon choices.
+ */
 if (!function_exists('get_icons_choices')) {
-    function get_icons_choices($include_none = false)
-    {
-        // Get the list of available icons
-        $icon_path = get_pureFolio_assets('library/boxicons/css') . 'icon.classes.css';
-        $icon_file = file_get_contents($icon_path);
-        preg_match_all('/\.(bx[l|s]?)\-(.*?):before/', $icon_file, $matches);
-        $prefixes = $matches[1];
-        $icons = $matches[2];
-
+    function get_icons_choices($include_none = false) {
         $icon_choices = array();
+        
+        // Get the path to your JSON file
+        $boxicons_json_file_path = get_pureFolio_assets('library/boxicons/json') . 'icons.json';
+        
+        $request = wp_remote_get($boxicons_json_file_path);
+        if (is_wp_error($request)) {
+            return array();
+        }
+
+        $body = wp_remote_retrieve_body($request);
+        $icon_choices = json_decode($body, true); // Force decoding as an associative array
+
+        
+        // Check for JSON decoding errors
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            // Handle the error here, e.g., log it or return a default value
+            return array();
+        }
+        
+        // Optionally, add a "none" option
         if ($include_none) {
             $icon_choices['none'] = '&mdash; Select Icon &mdash;';
         }
-
-        foreach ($icons as $index => $icon) {
-            $prefix = $prefixes[$index];
-            $name = ucwords(str_replace('-', ' ', $icon));
-            if ($prefix === 'bxs') {
-                $name .= ' Solid';
-            } elseif ($prefix === 'bxl') {
-                $name .= ' Logo';
-            }
-            $icon_choices['bx ' . $prefix . '-' . $icon] = $name;
-        }
+        
         // Sort the icon choices alphabetically while keeping "None" at the top
         uasort($icon_choices, function ($a, $b) {
             if ($a === '-- Select Icon --') {
@@ -224,7 +231,6 @@ if (!function_exists('get_icons_choices')) {
 
         return $icon_choices;
     }
-    $select_icon_choices = get_icons_choices(true);
 }
 
 // Get all Published Pages except blog page

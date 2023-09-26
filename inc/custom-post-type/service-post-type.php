@@ -66,9 +66,11 @@ if (!function_exists('custom_post_type_services')) {
             echo '<label for="service_icon" style="display:block;margin:10px 0px;font-weight:bold;">Select an Icon:</label>';
             echo '<select name="service_icon" id="service_icon">';
             
-            foreach ($icon_choices as $value => $label) {
-                $selected = ($selected_icon === $value || (empty($selected_icon) && $value === 'bx bx-home')) ? 'selected="selected"' : '';
-                echo '<option value="' . esc_attr($value) . '"' . $selected . '>' . esc_html($label) . '</option>';
+            if (is_array($icon_choices)) {
+                foreach ($icon_choices as $value => $label) {
+                    $selected = ($selected_icon === $value || (empty($selected_icon) && $value === 'bx bx-home')) ? 'selected="selected"' : '';
+                    echo '<option value="' . esc_attr($value) . '"' . $selected . '>' . esc_html($label) . '</option>';
+                }
             }
     
             echo '</select>';
