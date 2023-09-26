@@ -14,7 +14,7 @@ $portfolios_query = new WP_Query(array(
         <div class="card secCard col-12 fitImg" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
 
             <div class="secTitle flex flexCenter row" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
-                <span class="title"> <?php echo $pureFolioThemeMods['portfolios_sec_title']; ?> </span>
+                <h2 class="title"> <?php echo $pureFolioThemeMods['portfolios_sec_title']; ?> </h2>
             </div>
 
             <?php if ($portfolios_query->have_posts()) : ?>

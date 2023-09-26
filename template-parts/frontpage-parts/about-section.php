@@ -10,7 +10,7 @@ global $pureFolioThemeMods;
                 <div class="txtContain">
                     <?php if ($pureFolioThemeMods['toggle_about_title'] == true) : ?>
                         <div class="secTitle flex flexStart row">
-                            <span class="title"> <?php echo $pureFolioThemeMods['about_sec_title']; ?> </span>
+                            <h2 class="title"> <?php echo $pureFolioThemeMods['about_sec_title']; ?> </h2>
                         </div>
                     <?php endif; ?>
                     <p><?php echo $pureFolioThemeMods['about_sec_content']; ?></p>
