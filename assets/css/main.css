@@ -430,6 +430,7 @@ span {
     right: 0;
     border-radius: var(--sec-radius);
     background: var(--overlay-clr);
+    backdrop-filter: blur(3px);
 }
 .secCard .title {
     color: #fff;
