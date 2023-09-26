@@ -14,6 +14,7 @@ if (!function_exists('pureFolio_theme_mods')) {
             'placeholder_img'               => get_theme_mod('placeholder_img'),
             'background_color'              => get_theme_mod('background_color', get_theme_support('custom-background', 'default-color')),
 
+            'short_site_title'              => get_theme_mod('short_site_title', ''),
             'your_theme_logo'               => get_theme_mod('your_theme_logo'),
             'pureFolio_theme_color'               => get_theme_mod('pureFolio_theme_color', '#2869ff'),
             'header_text_color'             => get_theme_mod('header_text_color', ''),

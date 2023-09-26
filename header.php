@@ -9,6 +9,7 @@
 global $pureFolioThemeMods, $pureFolioBodyClass;
 $pureFolioThemeMods = pureFolio_theme_mods();
 
+$siteName = !empty($pureFolioThemeMods['short_site_title']) ? $pureFolioThemeMods['short_site_title'] : get_bloginfo('name');
 
 ?>
 <!DOCTYPE html>
@@ -28,8 +29,9 @@ $pureFolioThemeMods = pureFolio_theme_mods();
             <div class="logo">
                 <a href="<?php echo get_bloginfo('wpurl'); ?>">
                     <h1>
-                        <?php echo get_bloginfo('name'); ?>
+                        <?php echo $siteName; ?>
                     </h1>
+                    <span class="tagline"><?php echo bloginfo('description'); ?></span>
                 </a>
             </div>
             <nav class=" nav nav-links">

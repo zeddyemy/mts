@@ -37,6 +37,12 @@
     position: inherit;
     font-size: 0.8em;
 }
+.header-c>.logo h1 {
+    margin: 0px;
+}
+.header-c>.logo .tagline {
+    font-weight: bolder;
+}
 .header-c .h1 {
     margin: 0px;
 }
