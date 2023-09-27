@@ -344,6 +344,7 @@ span {
     width: 100%;
     padding: 40px 8px;
     text-align: center;
+    background: var(--box-bg-clr);
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
 }
@@ -471,6 +472,53 @@ span {
     }
 }
 
+
+/* Style For when there is no content on Page*/
+.content-none {
+    width: 100%;
+    padding: 50px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bolder;
+    color: var(--body-txt-clr);
+    transition: var(--transition);
+    font-family: var(--font-four);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+@media screen and (min-width: 768px) { .content-none { width: 60%; } }
+.content-none.isArchive {
+    background: transparent;
+    box-shadow: none;
+}
+.content-none h2,
+.content-none p {
+    color: var(--body-txt-clr);
+}
+.content-none p,
+.content-none p a {
+    font-family: var(--font-four);
+}
+.content-none form {
+    margin: 0;
+    margin-top: 10px !important;
+}
+.content-none input[type="text"] {
+    background: #fffffffc;
+    box-shadow: var(--box-shadow);
+}
+.content-none .search-btn {
+    padding: 10px;
+    background: #ddd;
+    color: #aaa;
+    border-radius: 0 50% 50% 0;
+    margin: 1px;
+    top: 0;
+    right: 0px;
+}
+.content-none .search-btn:hover {
+    background: #eee;
+}
 
 /* Pagination */
 .pagination {

@@ -1,5 +1,5 @@
 .pages-heroHeader {
-    --heroHeader-height: 60vh !important;
+    --heroHeader-height: 53svh !important;
     min-height: var(--heroHeader-height);
     position: relative;
     color: #e9e9e9;

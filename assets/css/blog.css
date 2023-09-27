@@ -1,4 +1,7 @@
 /*container for the post cards*/
+.blogPage.layout {
+    min-height: 90vh;
+}
 .blogCards {
     margin-top: 10px;
     grid-template-columns: repeat(auto-fit, minmax(20ch, 1fr));
