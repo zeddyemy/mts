@@ -476,7 +476,7 @@ span {
 /* Style For when there is no content on Page*/
 .content-none {
     width: 100%;
-    padding: 50px;
+    padding: 15px;
     margin: 0 auto;
     text-align: center;
     font-weight: bolder;
@@ -486,7 +486,7 @@ span {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
-@media screen and (min-width: 768px) { .content-none { width: 60%; } }
+@media screen and (min-width: 768px) { .content-none { width: 60%; padding: 50px;} }
 .content-none.isArchive {
     background: transparent;
     box-shadow: none;
