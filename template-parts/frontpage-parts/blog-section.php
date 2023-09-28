@@ -3,6 +3,7 @@
 global $pureFolioThemeMods;
 $query = new WP_Query(array(
     'post_type' => 'post',
+    'orderby' => 'rand',
     'posts_per_page' => 3,
 ));
 
