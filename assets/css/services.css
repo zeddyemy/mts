@@ -40,10 +40,6 @@
 .serCard .btn {
     margin: 10px auto;
 }
-.serCard .btn:hover {
-    background-color: var(--theme-clr);
-    color: #e9e9e9;
-}
 
 @media screen and (min-width: 1440px) {
     .serCard label {

@@ -231,9 +231,11 @@ span {
 .btn {
     --btn-clr: #fff;
     --btn-radius: 0px;
+    --btn-hover-clr: #f3fffd52;
     border: none;
     outline: none;
     cursor: pointer;
+    overflow: hidden;
     font-weight: bold;
     text-align: center;
     position: relative;
@@ -246,9 +248,28 @@ span {
     box-shadow: var(--box-shadow);
     transition: var(--transition);
     border-radius: var(--btn-radius);
+    isolation: isolate;
 }
 .btn:active {
     transform: scale(0.92);
+}
+.btn::after {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    transform: translateX(-100%);
+    background-color: var(--btn-hover-clr);
+    transition: transform .4s ease-in, background-color .4s linear;
+    border-radius: var(--btn-radius);
+}
+.btn:hover::after,
+.btn:focus-visible::after {
+    transform: translateX(0);
+    transition: transform .4s ease-out, background-color .4s linear;
 }
 .btn[class*="-pill"],
 .btn.pill {
@@ -264,10 +285,9 @@ span {
     border: 1px solid var(--theme-clr);
     color: var(--body-txt-clr);
 }
-.btn[class*="ghost-"]:hover,
-.plainBtn:hover {
-    background: var(--theme-clr);
-    color: var(--btn-clr);
+.btn[class*="ghost-"]::after,
+.plainBtn::after {
+    --btn-hover-clr: var(--theme-clr-trans);
 }
 @media screen and (min-width: 1440px) {
     .btn {

@@ -39,6 +39,7 @@ function internal_css()
 
         body {
             --theme-clr: <?php echo $pureFolioThemeMods['pureFolio_theme_color'];  ?>;
+            --theme-clr-trans: <?php echo $pureFolioThemeMods['pureFolio_theme_color'].'4f';  ?>;
             --footer-txt-clr: <?php echo $footerTxtColor;  ?> !important;
             --footer-bg-clr: <?php echo $footerBgColor; ?> !important;
             --footer-bg-image: url(' <?php echo $pureFolioThemeMods['footer_bg_image']; ?> ');
@@ -51,17 +52,17 @@ function internal_css()
         if (!$pureFolioThemeMods['background_color']) {
             echo 'body { background-color: var(--body-bg-clr); }';
         }
-        
-        if (is_search()) { ?>
-            .postType {
-                z-index: 1;
-                position: absolute;
-                background: var(--theme-clr);
-                padding: 5px 10px;
-                border-radius: calc(var(--round-conners) - 10px);
-                left: 10px;
-                top: 10px;
-            }
+
+        if (is_search()) { ?>.postType {
+            z-index: 1;
+            position: absolute;
+            background: var(--theme-clr);
+            padding: 5px 10px;
+            border-radius: calc(var(--round-conners) - 10px);
+            left: 10px;
+            top: 10px;
+        }
+
         <?php } ?>
     </style>
 <?php
