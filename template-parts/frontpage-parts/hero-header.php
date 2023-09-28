@@ -19,7 +19,7 @@ global $pureFolioThemeMods;
             </div>
         </div>
     </div>
-    <a href="#about" class="mouse smoothscroll" data-scrollto="about">
+    <a href="#about" class="mouse smoothscroll" data-scrollto="about" aria-label="Explore our site">
         <span class="mouse-icon">
             <span class="mouse-wheel"></span>
         </span>

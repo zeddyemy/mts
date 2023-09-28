@@ -25,8 +25,7 @@ function get_service_card()
 
 <?php }
 
-function viewMore_service_card()
-{
+function viewMore_service_card() {
     global $pureFolioThemeMods; ?>
     <div class="card serCard" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
         <label><?php echo esc_html($pureFolioThemeMods['additional_card_title']); ?></label>
@@ -38,8 +37,7 @@ function viewMore_service_card()
 
 
 // POST CARD FOR EACH PORTFOLIO POST TYPE
-function get_portfolio_card()
-{
+function get_portfolio_card() {
     // Retrieve portfolio data
     $portfolio_title = get_the_title();
     $portfolio_overview = short_portfolio_overview();
@@ -54,13 +52,13 @@ function get_portfolio_card()
         }
         ?>
         <div class="fitImg cardImg">
-            <a href="<?php the_permalink() ?>">
+            <a href="<?php the_permalink() ?>" aria-label="<?php echo $portfolio_title; ?>" title="<?php echo $portfolio_title; ?>">
                 <?php theme_post_thumb(); ?>
             </a>
         </div>
         <div class="ovrLay flex flexCenter">
             <div class="cardBody txtShadowDrk">
-                <a href="<?php the_permalink() ?>" rel="bookmark"> <label><?php echo $portfolio_title; ?></label> </a>
+                <a href="<?php the_permalink() ?>" rel="bookmark" aria-label="<?php echo $portfolio_title; ?>" title="<?php echo $portfolio_title; ?>"> <label><?php echo $portfolio_title; ?></label> </a>
                 <span> <?php echo $portfolio_overview ?></span>
             </div>
         </div>
@@ -70,8 +68,7 @@ function get_portfolio_card()
 
 
 // POST CARD FOR EACH DEFAULT POST TYPE
-function get_default_card()
-{ ?>
+function get_default_card() { ?>
 
     <article class="card blogCard" data-aos="fade-up" data-aos-easing="ease-in-out-quart">
         <?php if (is_search()) {
@@ -82,14 +79,14 @@ function get_default_card()
         }
         ?>
         <div class="fitImg cardImg">
-            <a href="<?php the_permalink() ?>">
+            <a href="<?php the_permalink() ?>" aria-label="<?php the_title() ?>" title="<?php the_title() ?>">
                 <?php theme_post_thumb(); ?>
             </a>
         </div>
         <div class="ovrLay">
             <div class="cardBody txtShadowDrk">
                 <h3 class="title">
-                    <a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?> </a>
+                    <a href="<?php the_permalink() ?>" aria-label="<?php the_title() ?>" title="<?php the_title() ?>" rel="bookmark"><?php the_title(); ?> </a>
                 </h3>
             </div>
         </div>
