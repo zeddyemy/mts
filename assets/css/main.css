@@ -738,6 +738,7 @@ span {
     height: var(--search-height);
 	transition: var(--transition);
 	background: var(--body-bg-clr);
+    color: var(--body-txt-clr);
     border: 1px solid var(--outline);
     border-radius: var(--search-radius) 0 0 var(--search-radius);
 }
