@@ -47,9 +47,13 @@ $siteName = !empty($pureFolioThemeMods['short_site_title']) ? $pureFolioThemeMod
                     'menu_class' => 'links',
                     'menu_id' => 'items',
                     'theme_location' => 'main-nav-menu',
-                    'container' => '',
+                    'container' => 'div',
+                    'container_class' => 'links',
+                    'container_id' => 'items',
                 );
                 if (has_nav_menu('main-nav-menu')) {
+                    $menu_args['menu_class'] = '';
+                    $menu_args['menu_id'] = '';
                     $menu_args['walker'] = new Custom_Nav_Menu();
                 }
                 wp_nav_menu($menu_args);

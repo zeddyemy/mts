@@ -124,6 +124,11 @@
     padding: 20px 0px;
     list-style: none;
 }
+.header-c .links ul li {
+    cursor: pointer;
+    position: relative;
+    isolation: isolate;
+}
 .header-c .links>ul>li,
 .header-c .links>li {
     position: relative;
@@ -142,6 +147,8 @@
     font-family: var(--font-four);
     text-transform: var(--navbar-text-transform);
     color: var(--header-text-color);
+    position: relative;
+    isolation: isolate;
 }
 
 .links li.menu-item-has-children i.bx {
@@ -344,12 +351,35 @@ li.menu-item-has-children ul.sub-menu.active {
     .header-c .links>ul {
         padding: 0px;
     }
+    .header-c .links>ul>li,
+    .header-c .links>li {
+        line-height: 1;
+    }
     .header-c .links li {
         border-bottom: none !important;
-        padding: 0px !important;
     }
     .header-c .links li a {
         font-size: 15px;
+    }
+    .header-c .links>ul>li>a {
+        line-height: 1;
+    }
+    .header-c .links>ul>li::after {
+        content: "";
+        position: absolute;
+        bottom: 0px !important;
+        z-index: -1;
+        border-bottom: 2px solid transparent;
+        inset: 0;
+        scale: 0 1;
+        transform-origin: right;
+        transition: scale .3s ease-out, border-bottom .3s linear;
+    }
+    .header-c .links>ul>li:hover::after {
+        scale: 1 1;
+        transform-origin: left;
+        border-bottom: 2px solid var(--header-text-color);
+        transition: scale .2s ease-in, border-bottom .2s linear;
     }
 
     .header-c .links li.menu-item-has-children {
@@ -359,7 +389,7 @@ li.menu-item-has-children ul.sub-menu.active {
     }
     li.menu-item-has-children ul.sub-menu {
         position: absolute;
-        top: 50px;
+        top: 35px;
         right: -35px;
         margin: 0px;
         display: block;
@@ -378,7 +408,6 @@ li.menu-item-has-children ul.sub-menu.active {
         padding: 0px 15px;
         cursor: pointer;
         overflow: hidden;
-        line-height: unset;
         font-size: inherit;
         justify-content: space-between !important;
     }
